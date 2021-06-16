@@ -1,0 +1,27 @@
+{
+  "name": "azure-naming-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lodash": "~4.17.21",
+    "handlebars": "~4.7.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "azure",
+    "naming",
+    "convention",
+    "bicep",
+    "arm-templates",
+    "infrastructure-as-code"
+  ],
+  "author": "Nikolaos Antoniou (@nianton)",
+  "license": "ISC"
+}

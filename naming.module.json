@@ -1,0 +1,1032 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.4.63.48766",
+      "templateHash": "17700411675052524298"
+    }
+  },
+  "parameters": {
+    "prefix": {
+      "type": "array",
+      "defaultValue": [],
+      "metadata": {
+        "description": "It is not recommended that you use prefix by azure you should be using a suffix for your resources."
+      }
+    },
+    "suffix": {
+      "type": "array",
+      "defaultValue": [],
+      "metadata": {
+        "description": "It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible"
+      }
+    },
+    "uniqueSeed": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().id]",
+      "metadata": {
+        "description": "Custom value for the random characters to be used -defaults to resourceGroup Id"
+      }
+    },
+    "uniqueLength": {
+      "type": "int",
+      "defaultValue": 4,
+      "metadata": {
+        "description": "Max length of the uniqueness suffix to be added"
+      }
+    },
+    "useDashes": {
+      "type": "bool",
+      "defaultValue": true,
+      "metadata": {
+        "description": "Use dashes as separator where applicable"
+      }
+    },
+    "useLowerCase": {
+      "type": "bool",
+      "defaultValue": true,
+      "metadata": {
+        "description": "Create names using lowercase letters"
+      }
+    }
+  },
+  "functions": [],
+  "variables": {
+    "uniquePart": "[substring(uniqueString(parameters('uniqueSeed')), 0, parameters('uniqueLength'))]",
+    "delimiter": "[if(parameters('useDashes'), '-', '')]",
+    "strPrefixJoined": "[if(empty(parameters('prefix')), '', format('{0}{1}', replace(replace(replace(string(parameters('prefix')), '[\"', ''), '\"]', ''), '\",\"', variables('delimiter')), variables('delimiter')))]",
+    "strPrefix": "[if(parameters('useLowerCase'), toLower(variables('strPrefixJoined')), variables('strPrefixJoined'))]",
+    "strSuffixJoined": "[if(empty(parameters('suffix')), '', format('{0}{1}', variables('delimiter'), replace(replace(replace(string(parameters('suffix')), '[\"', ''), '\"]', ''), '\",\"', variables('delimiter'))))]",
+    "strSuffix": "[if(parameters('useLowerCase'), toLower(variables('strSuffixJoined')), variables('strSuffixJoined'))]",
+    "placeholder": "[[****]",
+    "nameTemplate": "[format('{0}{1}{2}', variables('strPrefix'), variables('placeholder'), variables('strSuffix'))]",
+    "nameUniqueTemplate": "[format('{0}{1}{2}{3}{4}', variables('strPrefix'), variables('placeholder'), variables('strSuffix'), variables('delimiter'), variables('uniquePart'))]",
+    "nameSafeTemplate": "[toLower(replace(variables('nameTemplate'), variables('delimiter'), ''))]",
+    "nameUniqueSafeTemplate": "[toLower(replace(variables('nameUniqueTemplate'), variables('delimiter'), ''))]"
+  },
+  "resources": [],
+  "outputs": {
+    "names": {
+      "type": "object",
+      "value": {
+        "analysisServicesServer": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'as'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'as')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'as'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'as')), 63))]",
+          "slug": "as"
+        },
+        "apiManagement": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'apim'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'apim')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'apim'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'apim')), 50))]",
+          "slug": "apim"
+        },
+        "appConfiguration": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'appcg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'appcg')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'appcg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'appcg')), 50))]",
+          "slug": "appcg"
+        },
+        "appServicePlan": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'plan'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'plan')), 40))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'plan'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'plan')), 40))]",
+          "slug": "plan"
+        },
+        "appService": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'app'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'app')), 60))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'app'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'app')), 60))]",
+          "slug": "app"
+        },
+        "applicationGateway": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'agw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'agw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'agw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'agw')), 80))]",
+          "slug": "agw"
+        },
+        "applicationInsights": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'appi'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'appi')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'appi'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'appi')), 260))]",
+          "slug": "appi"
+        },
+        "applicationSecurityGroup": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asg')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asg')), 80))]",
+          "slug": "asg"
+        },
+        "automationAccount": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'aa'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'aa')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aa'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aa')), 50))]",
+          "slug": "aa"
+        },
+        "automationCertificate": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'aacert'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'aacert')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aacert'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aacert')), 128))]",
+          "slug": "aacert"
+        },
+        "automationCredential": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'aacred'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'aacred')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aacred'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aacred')), 128))]",
+          "slug": "aacred"
+        },
+        "automationRunbook": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'aacred'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'aacred')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aacred'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aacred')), 63))]",
+          "slug": "aacred"
+        },
+        "automationSchedule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'aasched'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'aasched')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aasched'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aasched')), 128))]",
+          "slug": "aasched"
+        },
+        "automationVariable": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'aavar'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'aavar')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aavar'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aavar')), 128))]",
+          "slug": "aavar"
+        },
+        "availabilitySet": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'avail'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'avail')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'avail'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'avail')), 80))]",
+          "slug": "avail"
+        },
+        "bastionHost": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'snap'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'snap')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snap'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snap')), 80))]",
+          "slug": "snap"
+        },
+        "batchAccount": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'ba'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'ba')), 24))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'ba'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'ba')), 24))]",
+          "slug": "ba"
+        },
+        "batchApplication": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'baapp'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'baapp')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'baapp'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'baapp')), 64))]",
+          "slug": "baapp"
+        },
+        "batchCertificate": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'bacert'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'bacert')), 45))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bacert'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bacert')), 45))]",
+          "slug": "bacert"
+        },
+        "batchPool": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'bapool'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'bapool')), 24))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bapool'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bapool')), 24))]",
+          "slug": "bapool"
+        },
+        "botChannelDirectline": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'botline'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'botline')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botline'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botline')), 64))]",
+          "slug": "botline"
+        },
+        "botChannelEmail": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'botmail'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'botmail')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botmail'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botmail')), 64))]",
+          "slug": "botmail"
+        },
+        "botChannelMsTeams": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'botteams'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'botteams')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botteams'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botteams')), 64))]",
+          "slug": "botteams"
+        },
+        "botChannelSlack": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'botslack'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'botslack')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botslack'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botslack')), 64))]",
+          "slug": "botslack"
+        },
+        "botChannelsRegistration": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'botchan'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'botchan')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botchan'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botchan')), 64))]",
+          "slug": "botchan"
+        },
+        "botConnection": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'botcon'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'botcon')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botcon'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'botcon')), 64))]",
+          "slug": "botcon"
+        },
+        "botWebApp": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'bot'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'bot')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bot'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bot')), 64))]",
+          "slug": "bot"
+        },
+        "cdnEndpoint": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'cdn'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'cdn')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cdn'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cdn')), 50))]",
+          "slug": "cdn"
+        },
+        "cdnProfile": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'cdnprof'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'cdnprof')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cdnprof'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cdnprof')), 260))]",
+          "slug": "cdnprof"
+        },
+        "cognitiveAccount": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'cog'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'cog')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cog'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cog')), 64))]",
+          "slug": "cog"
+        },
+        "containerGroup": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'cg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'cg')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cg')), 63))]",
+          "slug": "cg"
+        },
+        "containerRegistry": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'acr'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'acr')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'acr'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'acr')), 63))]",
+          "slug": "acr"
+        },
+        "containerRegistryWebhook": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'crwh'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'crwh')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'crwh'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'crwh')), 50))]",
+          "slug": "crwh"
+        },
+        "cosmosdbAccount": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'cosmos'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'cosmos')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cosmos'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cosmos')), 63))]",
+          "slug": "cosmos"
+        },
+        "customProvider": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'prov'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'prov')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'prov'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'prov')), 64))]",
+          "slug": "prov"
+        },
+        "dashboard": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dsb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dsb')), 160))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dsb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dsb')), 160))]",
+          "slug": "dsb"
+        },
+        "dataFactory": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adf'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adf')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adf'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adf')), 63))]",
+          "slug": "adf"
+        },
+        "dataFactoryDatasetMysql": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfmysql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfmysql')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfmysql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfmysql')), 260))]",
+          "slug": "adfmysql"
+        },
+        "dataFactoryDatasetPostgresql": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfpsql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfpsql')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfpsql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfpsql')), 260))]",
+          "slug": "adfpsql"
+        },
+        "dataFactoryDatasetSqlServerTable": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfmssql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfmssql')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfmssql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfmssql')), 260))]",
+          "slug": "adfmssql"
+        },
+        "dataFactoryIntegrationRuntimeManaged": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfir'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfir')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfir'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfir')), 63))]",
+          "slug": "adfir"
+        },
+        "dataFactoryLinkedServiceDataLakeStorageGen2": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvst'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvst')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvst'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvst')), 260))]",
+          "slug": "adfsvst"
+        },
+        "dataFactoryLinkedServiceKeyVault": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvkv'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvkv')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvkv'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvkv')), 260))]",
+          "slug": "adfsvkv"
+        },
+        "dataFactoryLinkedServiceMysql": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvmysql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvmysql')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvmysql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvmysql')), 260))]",
+          "slug": "adfsvmysql"
+        },
+        "dataFactoryLinkedServicePostgresql": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvpsql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvpsql')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvpsql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvpsql')), 260))]",
+          "slug": "adfsvpsql"
+        },
+        "dataFactoryLinkedServiceSqlServer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvmssql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfsvmssql')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvmssql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfsvmssql')), 260))]",
+          "slug": "adfsvmssql"
+        },
+        "dataFactoryPipeline": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adfpl'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adfpl')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfpl'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adfpl')), 260))]",
+          "slug": "adfpl"
+        },
+        "dataFactoryTriggerSchedule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'adftg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'adftg')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adftg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'adftg')), 260))]",
+          "slug": "adftg"
+        },
+        "dataLakeAnalyticsAccount": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'dla'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'dla')), 24))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'dla'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'dla')), 24))]",
+          "slug": "dla"
+        },
+        "dataLakeAnalyticsFirewallRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dlfw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dlfw')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dlfw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dlfw')), 50))]",
+          "slug": "dlfw"
+        },
+        "dataLakeStore": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'dls'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'dls')), 24))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'dls'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'dls')), 24))]",
+          "slug": "dls"
+        },
+        "dataLakeStoreFirewallRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dlsfw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dlsfw')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dlsfw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dlsfw')), 50))]",
+          "slug": "dlsfw"
+        },
+        "databaseMigrationProject": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'migr'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'migr')), 57))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'migr'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'migr')), 57))]",
+          "slug": "migr"
+        },
+        "databaseMigrationService": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dms'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dms')), 62))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dms'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dms')), 62))]",
+          "slug": "dms"
+        },
+        "databricksWorkspace": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dbw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dbw')), 30))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dbw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dbw')), 30))]",
+          "slug": "dbw"
+        },
+        "devTestLab": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'lab'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'lab')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lab'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lab')), 50))]",
+          "slug": "lab"
+        },
+        "devTestLinuxVirtualMachine": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'labvm'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'labvm')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'labvm'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'labvm')), 64))]",
+          "slug": "labvm"
+        },
+        "devTestWindowsVirtualMachine": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'labvm'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'labvm')), 15))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'labvm'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'labvm')), 15))]",
+          "slug": "labvm"
+        },
+        "diskEncryptionSet": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'des'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'des')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'des'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'des')), 80))]",
+          "slug": "des"
+        },
+        "dnsZone": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dns'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dns')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dns'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dns')), 63))]",
+          "slug": "dns"
+        },
+        "eventGridDomain": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'egd'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'egd')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egd'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egd')), 50))]",
+          "slug": "egd"
+        },
+        "eventGridDomainTopic": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'egdt'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'egdt')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egdt'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egdt')), 50))]",
+          "slug": "egdt"
+        },
+        "eventGridEventSubscription": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'egs'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'egs')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egs'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egs')), 64))]",
+          "slug": "egs"
+        },
+        "eventGridTopic": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'egt'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'egt')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egt'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'egt')), 50))]",
+          "slug": "egt"
+        },
+        "eventHub": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'evh'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'evh')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'evh'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'evh')), 50))]",
+          "slug": "evh"
+        },
+        "eventHubAuthorizationRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ehar'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ehar')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehar'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehar')), 50))]",
+          "slug": "ehar"
+        },
+        "eventHubConsumerGroup": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ehcg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ehcg')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehcg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehcg')), 50))]",
+          "slug": "ehcg"
+        },
+        "eventHubNamespace": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ehn'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ehn')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehn'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehn')), 50))]",
+          "slug": "ehn"
+        },
+        "eventHubNamespaceAuthorizationRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ehnar'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ehnar')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehnar'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehnar')), 50))]",
+          "slug": "ehnar"
+        },
+        "eventHubNamespaceDisasterRecoveryConfig": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ehdr'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ehdr')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehdr'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ehdr')), 50))]",
+          "slug": "ehdr"
+        },
+        "expressRouteCircuit": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'erc'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'erc')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'erc'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'erc')), 80))]",
+          "slug": "erc"
+        },
+        "expressRouteGateway": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ergw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ergw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ergw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ergw')), 80))]",
+          "slug": "ergw"
+        },
+        "firewall": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'fw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'fw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fw')), 80))]",
+          "slug": "fw"
+        },
+        "frontDoor": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'fd'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'fd')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fd'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fd')), 64))]",
+          "slug": "fd"
+        },
+        "frontDoorFirewallPolicy": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'fdfw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'fdfw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fdfw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fdfw')), 80))]",
+          "slug": "fdfw"
+        },
+        "functionApp": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'func'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'func')), 60))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'func'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'func')), 60))]",
+          "slug": "func"
+        },
+        "hdInsightHadoopCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'hadoop'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'hadoop')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'hadoop'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'hadoop')), 59))]",
+          "slug": "hadoop"
+        },
+        "hdInsightHbaseCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'hbase'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'hbase')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'hbase'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'hbase')), 59))]",
+          "slug": "hbase"
+        },
+        "hdInsightInteractiveQueryCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'iqr'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'iqr')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iqr'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iqr')), 59))]",
+          "slug": "iqr"
+        },
+        "hdInsightKafkaCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'kafka'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'kafka')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kafka'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kafka')), 59))]",
+          "slug": "kafka"
+        },
+        "hdInsightMlServicesCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mls'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mls')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mls'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mls')), 59))]",
+          "slug": "mls"
+        },
+        "hdInsightRserverCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'rsv'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'rsv')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rsv'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rsv')), 59))]",
+          "slug": "rsv"
+        },
+        "hdInsightSparkCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'spark'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'spark')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'spark'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'spark')), 59))]",
+          "slug": "spark"
+        },
+        "hdInsightStormCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'storm'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'storm')), 59))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'storm'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'storm')), 59))]",
+          "slug": "storm"
+        },
+        "image": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'img'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'img')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'img'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'img')), 80))]",
+          "slug": "img"
+        },
+        "iotCentralApplication": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'iotapp'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'iotapp')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iotapp'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iotapp')), 63))]",
+          "slug": "iotapp"
+        },
+        "iotHub": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'iot'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'iot')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iot'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iot')), 50))]",
+          "slug": "iot"
+        },
+        "iotHubConsumerGroup": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'iotcg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'iotcg')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iotcg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'iotcg')), 50))]",
+          "slug": "iotcg"
+        },
+        "iotHubDps": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dps'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dps')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dps'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dps')), 64))]",
+          "slug": "dps"
+        },
+        "iotHubDpsCertificate": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dpscert'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dpscert')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dpscert'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dpscert')), 64))]",
+          "slug": "dpscert"
+        },
+        "keyVault": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'kv'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'kv')), 24))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kv'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kv')), 24))]",
+          "slug": "kv"
+        },
+        "keyVaultCertificate": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'kvc'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'kvc')), 127))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kvc'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kvc')), 127))]",
+          "slug": "kvc"
+        },
+        "keyVaultKey": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'kvk'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'kvk')), 127))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kvk'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kvk')), 127))]",
+          "slug": "kvk"
+        },
+        "keyVaultSecret": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'kvs'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'kvs')), 127))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kvs'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kvs')), 127))]",
+          "slug": "kvs"
+        },
+        "kubernetesCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'aks'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'aks')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aks'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'aks')), 63))]",
+          "slug": "aks"
+        },
+        "kustoCluster": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'kc'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'kc')), 22))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'kc'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'kc')), 22))]",
+          "slug": "kc"
+        },
+        "kustoDatabase": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'kdb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'kdb')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kdb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kdb')), 260))]",
+          "slug": "kdb"
+        },
+        "kustoEventHubDataConnection": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'kehc'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'kehc')), 40))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kehc'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'kehc')), 40))]",
+          "slug": "kehc"
+        },
+        "loadBalancer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'lb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'lb')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lb')), 80))]",
+          "slug": "lb"
+        },
+        "loadBalancerNatRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'lbnatrl'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'lbnatrl')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lbnatrl'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lbnatrl')), 80))]",
+          "slug": "lbnatrl"
+        },
+        "linuxVirtualMachine": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vm'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vm')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vm'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vm')), 64))]",
+          "slug": "vm"
+        },
+        "linuxVirtualMachineScaleSet": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vmss'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vmss')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss')), 64))]",
+          "slug": "vmss"
+        },
+        "localNetworkGateway": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'lgw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'lgw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lgw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'lgw')), 80))]",
+          "slug": "lgw"
+        },
+        "logAnalyticsWorkspace": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'log'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'log')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'log'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'log')), 63))]",
+          "slug": "log"
+        },
+        "machineLearningWorkspace": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mlw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mlw')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mlw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mlw')), 260))]",
+          "slug": "mlw"
+        },
+        "managedDisk": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dsk'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dsk')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dsk'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dsk')), 80))]",
+          "slug": "dsk"
+        },
+        "mapsAccount": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'map'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'map')), 98))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'map'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'map')), 98))]",
+          "slug": "map"
+        },
+        "mariadbDatabase": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mariadb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mariadb')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mariadb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mariadb')), 63))]",
+          "slug": "mariadb"
+        },
+        "mariadbFirewallRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mariafw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mariafw')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mariafw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mariafw')), 128))]",
+          "slug": "mariafw"
+        },
+        "mariadbServer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'maria'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'maria')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'maria'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'maria')), 63))]",
+          "slug": "maria"
+        },
+        "mariadbVirtualNetworkRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mariavn'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mariavn')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mariavn'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mariavn')), 128))]",
+          "slug": "mariavn"
+        },
+        "mssqlDatabase": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sqldb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sqldb')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqldb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqldb')), 128))]",
+          "slug": "sqldb"
+        },
+        "mssqlElasticpool": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sqlep'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sqlep')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlep'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlep')), 128))]",
+          "slug": "sqlep"
+        },
+        "mssqlServer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sql')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sql')), 63))]",
+          "slug": "sql"
+        },
+        "mysqlDatabase": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mysqldb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mysqldb')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysqldb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysqldb')), 63))]",
+          "slug": "mysqldb"
+        },
+        "mysqlFirewallRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mysqlfw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mysqlfw')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysqlfw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysqlfw')), 128))]",
+          "slug": "mysqlfw"
+        },
+        "mysqlServer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mysql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mysql')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysql')), 63))]",
+          "slug": "mysql"
+        },
+        "mysqlVirtualNetworkRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'mysqlvn'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'mysqlvn')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysqlvn'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'mysqlvn')), 128))]",
+          "slug": "mysqlvn"
+        },
+        "networkInterface": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'nic'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'nic')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nic'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nic')), 80))]",
+          "slug": "nic"
+        },
+        "networkSecurityGroup": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'nsg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'nsg')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nsg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nsg')), 80))]",
+          "slug": "nsg"
+        },
+        "networkSecurityGroupRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'nsgr'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'nsgr')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nsgr'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nsgr')), 80))]",
+          "slug": "nsgr"
+        },
+        "networkSecurityRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'nsgr'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'nsgr')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nsgr'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nsgr')), 80))]",
+          "slug": "nsgr"
+        },
+        "networkWatcher": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'nw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'nw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nw')), 80))]",
+          "slug": "nw"
+        },
+        "notificationHub": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'nh'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'nh')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nh'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'nh')), 260))]",
+          "slug": "nh"
+        },
+        "notificationHubAuthorizationRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dnsrec'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dnsrec')), 256))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dnsrec'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dnsrec')), 256))]",
+          "slug": "dnsrec"
+        },
+        "notificationHubNamespace": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dnsrec'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dnsrec')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dnsrec'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dnsrec')), 50))]",
+          "slug": "dnsrec"
+        },
+        "pointToSiteVpnGateway": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vpngw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vpngw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vpngw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vpngw')), 80))]",
+          "slug": "vpngw"
+        },
+        "postgresqlDatabase": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'psqldb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'psqldb')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psqldb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psqldb')), 63))]",
+          "slug": "psqldb"
+        },
+        "postgresqlFirewallRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'psqlfw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'psqlfw')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psqlfw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psqlfw')), 128))]",
+          "slug": "psqlfw"
+        },
+        "postgresqlServer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'psql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'psql')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psql')), 63))]",
+          "slug": "psql"
+        },
+        "postgresqlVirtualNetworkRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'psqlvn'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'psqlvn')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psqlvn'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'psqlvn')), 128))]",
+          "slug": "psqlvn"
+        },
+        "powerbiEmbedded": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'pbi'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'pbi')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pbi'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pbi')), 63))]",
+          "slug": "pbi"
+        },
+        "privateDnsZone": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'pdns'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'pdns')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pdns'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pdns')), 63))]",
+          "slug": "pdns"
+        },
+        "publicIp": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'pip'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'pip')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pip'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pip')), 80))]",
+          "slug": "pip"
+        },
+        "publicIpPrefix": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'pippf'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'pippf')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pippf'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'pippf')), 80))]",
+          "slug": "pippf"
+        },
+        "redisCache": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'redis'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'redis')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'redis'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'redis')), 63))]",
+          "slug": "redis"
+        },
+        "redisFirewallRule": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'redisfw'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'redisfw')), 256))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'redisfw'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'redisfw')), 256))]",
+          "slug": "redisfw"
+        },
+        "relayHybridConnection": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'rlhc'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'rlhc')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rlhc'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rlhc')), 260))]",
+          "slug": "rlhc"
+        },
+        "relayNamespace": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'rln'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'rln')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rln'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rln')), 50))]",
+          "slug": "rln"
+        },
+        "resourceGroup": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'rg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'rg')), 90))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rg')), 90))]",
+          "slug": "rg"
+        },
+        "roleAssignment": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ra'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ra')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ra'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ra')), 64))]",
+          "slug": "ra"
+        },
+        "roleDefinition": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'rd'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'rd')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rd'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rd')), 64))]",
+          "slug": "rd"
+        },
+        "route": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'rt'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'rt')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rt'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'rt')), 80))]",
+          "slug": "rt"
+        },
+        "routeTable": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'route'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'route')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'route'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'route')), 80))]",
+          "slug": "route"
+        },
+        "serviceFabricCluster": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sf'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sf')), 23))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sf'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sf')), 23))]",
+          "slug": "sf"
+        },
+        "serviceBusNamespace": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sb'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sb')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sb'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sb')), 50))]",
+          "slug": "sb"
+        },
+        "serviceBusNamespaceAuthorizationRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sbar'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sbar')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbar'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbar')), 50))]",
+          "slug": "sbar"
+        },
+        "serviceBusQueue": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sbq'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sbq')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbq'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbq')), 260))]",
+          "slug": "sbq"
+        },
+        "serviceBusQueueAuthorizationRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sbqar'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sbqar')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbqar'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbqar')), 50))]",
+          "slug": "sbqar"
+        },
+        "serviceBusSubscription": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sbs'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sbs')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbs'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbs')), 50))]",
+          "slug": "sbs"
+        },
+        "serviceBusSubscriptionRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sbsr'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sbsr')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbsr'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbsr')), 50))]",
+          "slug": "sbsr"
+        },
+        "serviceBusTopic": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sbt'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sbt')), 260))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbt'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sbt')), 260))]",
+          "slug": "sbt"
+        },
+        "serviceBusTopicAuthorizationRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'dnsrec'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'dnsrec')), 50))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dnsrec'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'dnsrec')), 50))]",
+          "slug": "dnsrec"
+        },
+        "sharedImage": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'si'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'si')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'si'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'si')), 80))]",
+          "slug": "si"
+        },
+        "sharedImageGallery": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'sig'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'sig')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'sig'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'sig')), 80))]",
+          "slug": "sig"
+        },
+        "signalrService": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sgnlr'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sgnlr')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sgnlr'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sgnlr')), 63))]",
+          "slug": "sgnlr"
+        },
+        "snapshots": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'snap'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'snap')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snap'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snap')), 80))]",
+          "slug": "snap"
+        },
+        "sqlElasticpool": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sqlep'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sqlep')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlep'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlep')), 128))]",
+          "slug": "sqlep"
+        },
+        "sqlFailoverGroup": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sqlfg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sqlfg')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlfg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlfg')), 63))]",
+          "slug": "sqlfg"
+        },
+        "sqlFirewallRule": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sqlfw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sqlfw')), 128))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlfw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sqlfw')), 128))]",
+          "slug": "sqlfw"
+        },
+        "sqlServer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sql')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sql')), 63))]",
+          "slug": "sql"
+        },
+        "storageAccount": {
+          "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'st'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'st')), 24))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'st'), 0, min(length(replace(variables('nameUniqueSafeTemplate'), variables('placeholder'), 'st')), 24))]",
+          "slug": "st"
+        },
+        "storageBlob": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'blob'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'blob')), 1024))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'blob'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'blob')), 1024))]",
+          "slug": "blob"
+        },
+        "storageContainer": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'stct'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'stct')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stct'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stct')), 63))]",
+          "slug": "stct"
+        },
+        "storageDataLakeGen2Filesystem": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'stdl'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'stdl')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stdl'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stdl')), 63))]",
+          "slug": "stdl"
+        },
+        "storageQueue": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'stq'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'stq')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stq'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stq')), 63))]",
+          "slug": "stq"
+        },
+        "storageShare": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sts'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sts')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sts'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sts')), 63))]",
+          "slug": "sts"
+        },
+        "storageShareDirectory": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'sts'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'sts')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sts'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'sts')), 63))]",
+          "slug": "sts"
+        },
+        "storageTable": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'stt'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'stt')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stt'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'stt')), 63))]",
+          "slug": "stt"
+        },
+        "streamAnalyticsFunctionJavascriptUdf": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asafunc'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asafunc')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asafunc'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asafunc')), 63))]",
+          "slug": "asafunc"
+        },
+        "streamAnalyticsJob": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asa'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asa')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asa'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asa')), 63))]",
+          "slug": "asa"
+        },
+        "streamAnalyticsOutputBlob": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaoblob'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaoblob')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaoblob'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaoblob')), 63))]",
+          "slug": "asaoblob"
+        },
+        "streamAnalyticsOutputEventHub": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaoeh'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaoeh')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaoeh'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaoeh')), 63))]",
+          "slug": "asaoeh"
+        },
+        "streamAnalyticsOutputMssql": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaomssql'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaomssql')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaomssql'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaomssql')), 63))]",
+          "slug": "asaomssql"
+        },
+        "streamAnalyticsOutputServiceBusQueue": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaosbq'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaosbq')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaosbq'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaosbq')), 63))]",
+          "slug": "asaosbq"
+        },
+        "streamAnalyticsOutputServiceBusTopic": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaosbt'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaosbt')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaosbt'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaosbt')), 63))]",
+          "slug": "asaosbt"
+        },
+        "streamAnalyticsReferenceInputBlob": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asarblob'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asarblob')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asarblob'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asarblob')), 63))]",
+          "slug": "asarblob"
+        },
+        "streamAnalyticsStreamInputBlob": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaiblob'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaiblob')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaiblob'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaiblob')), 63))]",
+          "slug": "asaiblob"
+        },
+        "streamAnalyticsStreamInputEventHub": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaieh'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaieh')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaieh'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaieh')), 63))]",
+          "slug": "asaieh"
+        },
+        "streamAnalyticsStreamInputIotHub": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'asaiiot'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'asaiiot')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaiiot'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'asaiiot')), 63))]",
+          "slug": "asaiiot"
+        },
+        "subnet": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'snet'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'snet')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snet'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snet')), 80))]",
+          "slug": "snet"
+        },
+        "templateDeployment": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'deploy'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'deploy')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'deploy'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'deploy')), 64))]",
+          "slug": "deploy"
+        },
+        "trafficManagerProfile": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'traf'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'traf')), 63))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'traf'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'traf')), 63))]",
+          "slug": "traf"
+        },
+        "virtualMachine": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vm'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vm')), 15))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vm'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vm')), 15))]",
+          "slug": "vm"
+        },
+        "virtualMachineScaleSet": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vmss'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vmss')), 15))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss')), 15))]",
+          "slug": "vmss"
+        },
+        "virtualNetwork": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vnet'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vnet')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vnet'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vnet')), 64))]",
+          "slug": "vnet"
+        },
+        "virtualNetworkGateway": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vgw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vgw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vgw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vgw')), 80))]",
+          "slug": "vgw"
+        },
+        "virtualNetworkPeering": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vpeer'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vpeer')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vpeer'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vpeer')), 80))]",
+          "slug": "vpeer"
+        },
+        "virtualWan": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vwan'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vwan')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vwan'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vwan')), 80))]",
+          "slug": "vwan"
+        },
+        "windowsVirtualMachine": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vm'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vm')), 15))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vm'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vm')), 15))]",
+          "slug": "vm"
+        },
+        "windowsVirtualMachineScaleSet": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'vmss'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'vmss')), 15))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss')), 15))]",
+          "slug": "vmss"
+        }
+      }
+    }
+  }
+}

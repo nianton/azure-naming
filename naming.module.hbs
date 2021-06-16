@@ -1,0 +1,42 @@
+@description('It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
+param prefix array = []
+
+@description('It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible.')
+param suffix array = []
+
+@description('Custom seed value for the unique string to be created -defaults to resourceGroup Id.')
+param uniqueSeed string = resourceGroup().id
+
+@description('Max length of the uniqueness suffix to be added')
+param uniqueLength int = 4
+
+@description('Use dashes as separator where applicable')
+param useDashes bool = true
+
+@description('Create names using lowercase letters')
+param useLowerCase bool = true
+
+var uniquePart = substring(uniqueString(uniqueSeed), 0, uniqueLength)
+var delimiter = useDashes ? '-' : ''
+
+var strPrefixJoined = empty(prefix) ? '' : '${replace(replace(replace(string(prefix), '["', ''), '"]', ''), '","', delimiter)}${delimiter}'
+var strPrefix = useLowerCase ? toLower(strPrefixJoined) : strPrefixJoined
+
+var strSuffixJoined =  empty(suffix) ? '' : '${delimiter}${replace(replace(replace(string(suffix), '["', ''), '"]', ''), '","', delimiter)}'
+var strSuffix = useLowerCase ? toLower(strSuffixJoined) : strSuffixJoined
+
+var placeholder = '[****]'
+var nameTemplate = '${strPrefix}${placeholder}${strSuffix}'
+var nameUniqueTemplate = '${strPrefix}${placeholder}${strSuffix}${delimiter}${uniquePart}'
+var nameSafeTemplate = toLower(replace(nameTemplate, delimiter, ''))
+var nameUniqueSafeTemplate = toLower(replace(nameUniqueTemplate, delimiter, ''))
+
+output names object = {
+{{#each definitions}}
+  {{name}}: {
+    name: substring(replace(name{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}'), 0, min(length(replace(name{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}')), {{length.max}}))
+    nameUnique: substring(replace(nameUnique{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}'), 0, min(length(replace(nameUnique{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}')), {{length.max}}))
+    slug: '{{slug}}'
+  }
+{{/each}}
+}
