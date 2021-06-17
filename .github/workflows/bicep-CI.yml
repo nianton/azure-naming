@@ -31,6 +31,14 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+
+      - name: Generate bicep file
+        run: | 
+          npm ci
+          node ./main.js
+      
       - name: Setup Bicep
         # You may pin to the exact commit or the version.
         # uses: anthony-c-martin/setup-bicep@1a987cdbcf1ea4ec1f17234b7081872256e78454
