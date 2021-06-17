@@ -25,5 +25,6 @@ try {
     fs.writeFileSync('naming.module.bicep', output)
 }
 catch (ex) {
-    console.error(`Template generation failed: ${ex.message}`)    
+    console.error(`Template generation failed: ${ex.message}`)
+    process.exit(1)
 }
