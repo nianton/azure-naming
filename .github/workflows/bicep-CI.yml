@@ -37,11 +37,14 @@ jobs:
         uses: anthony-c-martin/setup-bicep@v0.1
 
       # Build and validate bicep files
-      - name: Bicep build
-        run: |
+      - name: Bicep build naming module
+        run:
           bicep build ./naming.module.bicep
+
+      - name: Bicep build examples
+        run:
           bicep build ./examples/example.sub.bicep
-          
+
       - name: Bicep Build & Lint
         # You may pin to the exact commit or the version.
         # uses: aliencube/bicep-build-actions@9f46db3c20a0bcb92b48bd300207284d164ca3db
