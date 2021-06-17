@@ -34,10 +34,11 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
 
-      - name: Generate bicep file
-        run: | 
-          npm ci
-          node ./main.js
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Run node app - generate bicep file
+        run: npm run start
       
       - name: Setup Bicep
         # You may pin to the exact commit or the version.
