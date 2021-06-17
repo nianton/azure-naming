@@ -5,6 +5,9 @@ param applicationName string
 param environment string
 param tags object = {}
 
+// To test failed build
+var mytest = ''
+
 var defaultTags = union({
   applicationName: applicationName
   environment: environment
