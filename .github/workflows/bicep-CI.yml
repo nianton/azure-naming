@@ -31,6 +31,17 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+      - name: Setup Bicep
+        # You may pin to the exact commit or the version.
+        # uses: anthony-c-martin/setup-bicep@1a987cdbcf1ea4ec1f17234b7081872256e78454
+        uses: anthony-c-martin/setup-bicep@v0.1
+
+      # Build and validate bicep files
+      - name: Bicep build
+        run: |
+          bicep build ./naming.module.bicep
+          bicep build ./examples/example.sub.bicep
+          
       - name: Bicep Build & Lint
         # You may pin to the exact commit or the version.
         # uses: aliencube/bicep-build-actions@9f46db3c20a0bcb92b48bd300207284d164ca3db
