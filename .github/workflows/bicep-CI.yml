@@ -48,7 +48,7 @@ jobs:
       # Build and validate bicep files
       - name: Bicep build naming module
         run:
-          bicep build ./naming.module.bicep
+          bicep build ./dist/naming.module.bicep
 
       - name: Bicep build examples
         run:
@@ -60,6 +60,6 @@ jobs:
         uses: aliencube/bicep-build-actions@v0.3
         with:
           # List of .bicep files to build, delimited by a space. eg) file1 file2 file3 ...
-          files: naming.module.bicep examples/example.sub.bicep
+          files: dist/naming.module.bicep examples/example.sub.bicep
           # Version of the bicep CLI. It can be the exact version (eg. `v0.3.255`), wildcard (eg. `v0.3.x`) or `latest`. If omitted, `latest` is set as default.
           version: latest
