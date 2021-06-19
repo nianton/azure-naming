@@ -1,0 +1,39 @@
+# Bicep Azure Naming module
+
+[![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
+
+Bicep and ARM template module for keeping a consistent Azure resources naming convention. Inspired and based on the nice Terraform implementation: https://github.com/Azure/terraform-azurerm-naming
+
+## <a name="reference"></a>Reference
+
+### Input Parameters
+
+| Parameter name | Description | Type | Default value |
+| -------- | ---------- | ----------- | ----------- |
+| suffix | Array of suffix parts to be included in the naming | string array | [] |
+| prefix | Array of prefix parts to be included in the naming  | string array | [] |
+| uniqueSeed | The string be used as the seed for | string | resourceGroup().id |
+| uniqueLength | The number of characters in the unique part | int | 6 |
+| useDashes | Whether to use dash (-) as delimiter | bool | true |
+| useLowerCase | Whether to use lower case letters | bool | true |
+
+
+## Module `names` object output properties
+
+Below is a reference of the output `names` object values with the following sample input:
+
+```bicep
+suffix = [
+  'myapp'
+  'dev'
+]
+
+uniqueLength = 6
+```
+
+| Resource reference | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
+{{#each sampleOutputs}}
+| `{{name}}` | `{{result.slug}}` | `{{result.name}}` | `{{result.nameUnique}}` | 
+{{/each}}
+[Go to Reference top](#reference)

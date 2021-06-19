@@ -5,9 +5,6 @@ param applicationName string
 param environment string
 param tags object = {}
 
-// To test failed build
-var mytest = ''
-
 var defaultTags = union({
   applicationName: applicationName
   environment: environment
@@ -19,7 +16,7 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   tags: defaultTags
 }
 
-module naming '../naming.module.bicep' = {
+module naming '../dist/naming.module.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'NamingDeployment'  
   params: {
@@ -31,7 +28,6 @@ module naming '../naming.module.bicep' = {
     uniqueSeed: rg.id
   }
 }
-
 module main 'example.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'MainDeployment'
@@ -41,5 +37,8 @@ module main 'example.bicep' = {
   }
 }
 
+
+output naming object = naming.outputs.names
 output appServiceName string = main.outputs.appServiceName
+output appServicePlanName string = main.outputs.appServicePlanName
 output storageAccountName string = main.outputs.storageAccountName

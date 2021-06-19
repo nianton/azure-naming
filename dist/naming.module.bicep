@@ -1,10 +1,10 @@
 @description('It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
 param prefix array = []
 
-@description('It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible')
+@description('It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible.')
 param suffix array = []
 
-@description('Custom value for the random characters to be used -defaults to resourceGroup Id')
+@description('Custom seed value for the unique string to be created -defaults to resourceGroup Id.')
 param uniqueSeed string = resourceGroup().id
 
 @description('Max length of the uniqueness suffix to be added')

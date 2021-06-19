@@ -6,7 +6,7 @@
             "value": "westeurope"
         },
         "applicationName": {
-            "value": "mynewapp"
+            "value": "myapp"
         },
         "environment": {
             "value": "dev"
