@@ -3,6 +3,10 @@ const Handlebars = require('handlebars')
 const fs = require('fs')
 const { template } = require('lodash')
 
+Handlebars.registerHelper('upper', function (aString) {
+    return aString.toUpperCase()
+})
+
 const resoureDefinitionFile = 'resourceDefinition.json'
 const bicepTemplateFile = 'templates/naming.module.bicep.hbs'
 const readmeTemplateFile = 'templates/README.md.hbs'
@@ -32,7 +36,12 @@ try {
         return { name: key, result: sampleOutput[key] }
     });
 
-    const templateInput = { definitions, sampleOutputs }
+    const grouppedOutputs = _.groupBy(sampleOutputs, v => v.name[0])
+    const outputGroups = Object.keys(grouppedOutputs).map(key => {
+        return { key, values: grouppedOutputs[key] }
+    })
+
+    const templateInput = { definitions, outputGroups }
 
     // Compile the templates
     const bicepTemplate = Handlebars.compile(fs.readFileSync(bicepTemplateFile, { encoding: 'utf-8' }))

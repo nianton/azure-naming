@@ -1,3 +1,9 @@
+<style>
+table {
+    width:100%;
+}
+</style>
+
 # Bicep Azure Naming module
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
@@ -31,7 +37,10 @@ suffix = [
 uniqueLength = 6
 ```
 
-| Resource reference | slug | name | nameUnique |
+### Index: [A](#ref-a) - [B](#ref-b) - [C](#ref-c) - [D](#ref-d) - [E](#ref-e) - [F](#ref-f) - [H](#ref-h) - [I](#ref-i) - [K](#ref-k) - [L](#ref-l) - [M](#ref-m) - [N](#ref-n) - [P](#ref-p) - [R](#ref-r) - [S](#ref-s) - [T](#ref-t) - [V](#ref-v) - [W](#ref-w)
+
+## <a name="ref-a"></a>A
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `analysisServicesServer` | `as` | `asmyappdev` | `asmyappdeve7hgy3` | 
 | `apiManagement` | `apim` | `apimmyappdev` | `apimmyappdeve7hgy3` | 
@@ -48,6 +57,11 @@ uniqueLength = 6
 | `automationSchedule` | `aasched` | `aasched-myapp-dev` | `aasched-myapp-dev-e7hgy3` | 
 | `automationVariable` | `aavar` | `aavar-myapp-dev` | `aavar-myapp-dev-e7hgy3` | 
 | `availabilitySet` | `avail` | `avail-myapp-dev` | `avail-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-b"></a>B
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `bastionHost` | `snap` | `snap-myapp-dev` | `snap-myapp-dev-e7hgy3` | 
 | `batchAccount` | `ba` | `bamyappdev` | `bamyappdeve7hgy3` | 
 | `batchApplication` | `baapp` | `baapp-myapp-dev` | `baapp-myapp-dev-e7hgy3` | 
@@ -60,6 +74,11 @@ uniqueLength = 6
 | `botChannelsRegistration` | `botchan` | `botchan-myapp-dev` | `botchan-myapp-dev-e7hgy3` | 
 | `botConnection` | `botcon` | `botcon-myapp-dev` | `botcon-myapp-dev-e7hgy3` | 
 | `botWebApp` | `bot` | `bot-myapp-dev` | `bot-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-c"></a>C
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `cdnEndpoint` | `cdn` | `cdn-myapp-dev` | `cdn-myapp-dev-e7hgy3` | 
 | `cdnProfile` | `cdnprof` | `cdnprof-myapp-dev` | `cdnprof-myapp-dev-e7hgy3` | 
 | `cognitiveAccount` | `cog` | `cog-myapp-dev` | `cog-myapp-dev-e7hgy3` | 
@@ -68,6 +87,11 @@ uniqueLength = 6
 | `containerRegistryWebhook` | `crwh` | `crwhmyappdev` | `crwhmyappdeve7hgy3` | 
 | `cosmosdbAccount` | `cosmos` | `cosmos-myapp-dev` | `cosmos-myapp-dev-e7hgy3` | 
 | `customProvider` | `prov` | `prov-myapp-dev` | `prov-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-d"></a>D
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `dashboard` | `dsb` | `dsb-myapp-dev` | `dsb-myapp-dev-e7hgy3` | 
 | `dataFactory` | `adf` | `adf-myapp-dev` | `adf-myapp-dev-e7hgy3` | 
 | `dataFactoryDatasetMysql` | `adfmysql` | `adfmysql-myapp-dev` | `adfmysql-myapp-dev-e7hgy3` | 
@@ -93,6 +117,11 @@ uniqueLength = 6
 | `devTestWindowsVirtualMachine` | `labvm` | `labvm-myapp-dev` | `labvm-myapp-dev` | 
 | `diskEncryptionSet` | `des` | `des-myapp-dev` | `des-myapp-dev-e7hgy3` | 
 | `dnsZone` | `dns` | `dns-myapp-dev` | `dns-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-e"></a>E
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `eventGridDomain` | `egd` | `egd-myapp-dev` | `egd-myapp-dev-e7hgy3` | 
 | `eventGridDomainTopic` | `egdt` | `egdt-myapp-dev` | `egdt-myapp-dev-e7hgy3` | 
 | `eventGridEventSubscription` | `egs` | `egs-myapp-dev` | `egs-myapp-dev-e7hgy3` | 
@@ -105,10 +134,20 @@ uniqueLength = 6
 | `eventHubNamespaceDisasterRecoveryConfig` | `ehdr` | `ehdr-myapp-dev` | `ehdr-myapp-dev-e7hgy3` | 
 | `expressRouteCircuit` | `erc` | `erc-myapp-dev` | `erc-myapp-dev-e7hgy3` | 
 | `expressRouteGateway` | `ergw` | `ergw-myapp-dev` | `ergw-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-f"></a>F
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `firewall` | `fw` | `fw-myapp-dev` | `fw-myapp-dev-e7hgy3` | 
 | `frontDoor` | `fd` | `fd-myapp-dev` | `fd-myapp-dev-e7hgy3` | 
 | `frontDoorFirewallPolicy` | `fdfw` | `fdfw-myapp-dev` | `fdfw-myapp-dev-e7hgy3` | 
 | `functionApp` | `func` | `func-myapp-dev` | `func-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-h"></a>H
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `hdInsightHadoopCluster` | `hadoop` | `hadoop-myapp-dev` | `hadoop-myapp-dev-e7hgy3` | 
 | `hdInsightHbaseCluster` | `hbase` | `hbase-myapp-dev` | `hbase-myapp-dev-e7hgy3` | 
 | `hdInsightInteractiveQueryCluster` | `iqr` | `iqr-myapp-dev` | `iqr-myapp-dev-e7hgy3` | 
@@ -117,12 +156,22 @@ uniqueLength = 6
 | `hdInsightRserverCluster` | `rsv` | `rsv-myapp-dev` | `rsv-myapp-dev-e7hgy3` | 
 | `hdInsightSparkCluster` | `spark` | `spark-myapp-dev` | `spark-myapp-dev-e7hgy3` | 
 | `hdInsightStormCluster` | `storm` | `storm-myapp-dev` | `storm-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-i"></a>I
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `image` | `img` | `img-myapp-dev` | `img-myapp-dev-e7hgy3` | 
 | `iotCentralApplication` | `iotapp` | `iotapp-myapp-dev` | `iotapp-myapp-dev-e7hgy3` | 
 | `iotHub` | `iot` | `iot-myapp-dev` | `iot-myapp-dev-e7hgy3` | 
 | `iotHubConsumerGroup` | `iotcg` | `iotcg-myapp-dev` | `iotcg-myapp-dev-e7hgy3` | 
 | `iotHubDps` | `dps` | `dps-myapp-dev` | `dps-myapp-dev-e7hgy3` | 
 | `iotHubDpsCertificate` | `dpscert` | `dpscert-myapp-dev` | `dpscert-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-k"></a>K
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `keyVault` | `kv` | `kv-myapp-dev` | `kv-myapp-dev-e7hgy3` | 
 | `keyVaultCertificate` | `kvc` | `kvc-myapp-dev` | `kvc-myapp-dev-e7hgy3` | 
 | `keyVaultKey` | `kvk` | `kvk-myapp-dev` | `kvk-myapp-dev-e7hgy3` | 
@@ -131,12 +180,22 @@ uniqueLength = 6
 | `kustoCluster` | `kc` | `kcmyappdev` | `kcmyappdeve7hgy3` | 
 | `kustoDatabase` | `kdb` | `kdb-myapp-dev` | `kdb-myapp-dev-e7hgy3` | 
 | `kustoEventHubDataConnection` | `kehc` | `kehc-myapp-dev` | `kehc-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-l"></a>L
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `linuxVirtualMachine` | `vm` | `vm-myapp-dev` | `vm-myapp-dev-e7hgy3` | 
 | `linuxVirtualMachineScaleSet` | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-e7hgy3` | 
 | `loadBalancer` | `lb` | `lb-myapp-dev` | `lb-myapp-dev-e7hgy3` | 
 | `loadBalancerNatRule` | `lbnatrl` | `lbnatrl-myapp-dev` | `lbnatrl-myapp-dev-e7hgy3` | 
 | `localNetworkGateway` | `lgw` | `lgw-myapp-dev` | `lgw-myapp-dev-e7hgy3` | 
 | `logAnalyticsWorkspace` | `log` | `log-myapp-dev` | `log-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-m"></a>M
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `machineLearningWorkspace` | `mlw` | `mlw-myapp-dev` | `mlw-myapp-dev-e7hgy3` | 
 | `managedDisk` | `dsk` | `dsk-myapp-dev` | `dsk-myapp-dev-e7hgy3` | 
 | `mapsAccount` | `map` | `map-myapp-dev` | `map-myapp-dev-e7hgy3` | 
@@ -151,6 +210,11 @@ uniqueLength = 6
 | `mysqlFirewallRule` | `mysqlfw` | `mysqlfw-myapp-dev` | `mysqlfw-myapp-dev-e7hgy3` | 
 | `mysqlServer` | `mysql` | `mysql-myapp-dev` | `mysql-myapp-dev-e7hgy3` | 
 | `mysqlVirtualNetworkRule` | `mysqlvn` | `mysqlvn-myapp-dev` | `mysqlvn-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-n"></a>N
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `networkInterface` | `nic` | `nic-myapp-dev` | `nic-myapp-dev-e7hgy3` | 
 | `networkSecurityGroup` | `nsg` | `nsg-myapp-dev` | `nsg-myapp-dev-e7hgy3` | 
 | `networkSecurityGroupRule` | `nsgr` | `nsgr-myapp-dev` | `nsgr-myapp-dev-e7hgy3` | 
@@ -159,6 +223,11 @@ uniqueLength = 6
 | `notificationHub` | `nh` | `nh-myapp-dev` | `nh-myapp-dev-e7hgy3` | 
 | `notificationHubAuthorizationRule` | `dnsrec` | `dnsrec-myapp-dev` | `dnsrec-myapp-dev-e7hgy3` | 
 | `notificationHubNamespace` | `dnsrec` | `dnsrec-myapp-dev` | `dnsrec-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-p"></a>P
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `pointToSiteVpnGateway` | `vpngw` | `vpngw-myapp-dev` | `vpngw-myapp-dev-e7hgy3` | 
 | `postgresqlDatabase` | `psqldb` | `psqldb-myapp-dev` | `psqldb-myapp-dev-e7hgy3` | 
 | `postgresqlFirewallRule` | `psqlfw` | `psqlfw-myapp-dev` | `psqlfw-myapp-dev-e7hgy3` | 
@@ -168,6 +237,11 @@ uniqueLength = 6
 | `privateDnsZone` | `pdns` | `pdns-myapp-dev` | `pdns-myapp-dev-e7hgy3` | 
 | `publicIp` | `pip` | `pip-myapp-dev` | `pip-myapp-dev-e7hgy3` | 
 | `publicIpPrefix` | `pippf` | `pippf-myapp-dev` | `pippf-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-r"></a>R
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `redisCache` | `redis` | `redis-myapp-dev` | `redis-myapp-dev-e7hgy3` | 
 | `redisFirewallRule` | `redisfw` | `redisfwmyappdev` | `redisfwmyappdeve7hgy3` | 
 | `relayHybridConnection` | `rlhc` | `rlhc-myapp-dev` | `rlhc-myapp-dev-e7hgy3` | 
@@ -177,6 +251,11 @@ uniqueLength = 6
 | `roleDefinition` | `rd` | `rd-myapp-dev` | `rd-myapp-dev-e7hgy3` | 
 | `route` | `rt` | `rt-myapp-dev` | `rt-myapp-dev-e7hgy3` | 
 | `routeTable` | `route` | `route-myapp-dev` | `route-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-s"></a>S
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `serviceBusNamespace` | `sb` | `sb-myapp-dev` | `sb-myapp-dev-e7hgy3` | 
 | `serviceBusNamespaceAuthorizationRule` | `sbar` | `sbar-myapp-dev` | `sbar-myapp-dev-e7hgy3` | 
 | `serviceBusQueue` | `sbq` | `sbq-myapp-dev` | `sbq-myapp-dev-e7hgy3` | 
@@ -214,14 +293,30 @@ uniqueLength = 6
 | `streamAnalyticsStreamInputEventHub` | `asaieh` | `asaieh-myapp-dev` | `asaieh-myapp-dev-e7hgy3` | 
 | `streamAnalyticsStreamInputIotHub` | `asaiiot` | `asaiiot-myapp-dev` | `asaiiot-myapp-dev-e7hgy3` | 
 | `subnet` | `snet` | `snet-myapp-dev` | `snet-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-t"></a>T
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `templateDeployment` | `deploy` | `deploy-myapp-dev` | `deploy-myapp-dev-e7hgy3` | 
 | `trafficManagerProfile` | `traf` | `traf-myapp-dev` | `traf-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-v"></a>V
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `virtualMachine` | `vm` | `vm-myapp-dev` | `vm-myapp-dev-e7` | 
 | `virtualMachineScaleSet` | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-` | 
 | `virtualNetwork` | `vnet` | `vnet-myapp-dev` | `vnet-myapp-dev-e7hgy3` | 
 | `virtualNetworkGateway` | `vgw` | `vgw-myapp-dev` | `vgw-myapp-dev-e7hgy3` | 
 | `virtualNetworkPeering` | `vpeer` | `vpeer-myapp-dev` | `vpeer-myapp-dev-e7hgy3` | 
 | `virtualWan` | `vwan` | `vwan-myapp-dev` | `vwan-myapp-dev-e7hgy3` | 
+[Go to top](#reference)
+
+## <a name="ref-w"></a>W
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| -------- | ---------- | ----------- | ----------- |
 | `windowsVirtualMachine` | `vm` | `vm-myapp-dev` | `vm-myapp-dev-e7` | 
 | `windowsVirtualMachineScaleSet` | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-` | 
-[Go to Reference top](#reference)
+[Go to top](#reference)
+
