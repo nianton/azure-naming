@@ -10,12 +10,12 @@ Bicep and ARM template module for keeping a consistent Azure resources naming co
 
 | Parameter name | Description | Type | Default value |
 | -------- | ---------- | ----------- | ----------- |
-| suffix | Array of suffix parts to be included in the naming | string array | [] |
-| prefix | Array of prefix parts to be included in the naming  | string array | [] |
-| uniqueSeed | The string be used as the seed for | string | resourceGroup().id |
-| uniqueLength | The number of characters in the unique part | int | 6 |
-| useDashes | Whether to use dash (-) as delimiter | bool | true |
-| useLowerCase | Whether to use lower case letters | bool | true |
+| **suffix** | Array of suffix parts to be included in the naming | array(string) | [] |
+| **prefix** | Array of prefix parts to be included in the naming  | array(string) | [] |
+| **uniqueSeed** | The string be used as the seed for | string | resourceGroup().id |
+| **uniqueLength** | The number of characters in the unique part | int | 6 |
+| **useDashes** | Whether to use dash (-) as delimiter | bool | true |
+| **useLowerCase** | Whether to use lower case letters | bool | true |
 
 
 ## Module `names` object output properties
@@ -35,10 +35,10 @@ uniqueLength = 6
 
 {{#each outputGroups}}
 ## <a name="ref-{{key}}"></a>{{upper key}}
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 {{#each values}}
-| `{{name}}` | `{{result.slug}}` | `{{result.name}}` | `{{result.nameUnique}}` | 
+| **`{{name}}`** | `{{result.slug}}` | `{{result.name}}` | `{{result.nameUnique}}` | 
 {{/each}}
 [Go to top](#reference)
 
