@@ -4,6 +4,10 @@
 
 Bicep and ARM template module for keeping a consistent Azure resources naming convention. Inspired and based on the nice Terraform implementation: https://github.com/Azure/terraform-azurerm-naming
 
+## How to use / Getting started
+
+A template sample repository was created to showcase how to use this module (**https://github.com/nianton/bicep-starter**), and you will also find an example in the **`/examples`** folder, with the **`example.sub.bicep`** demonstrating how to use this module to facilitate naming resources on Azure.
+
 ## <a name="reference"></a>Reference
 
 ### Input Parameters
