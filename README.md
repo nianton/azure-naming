@@ -1,9 +1,3 @@
-<style>
-table {
-    width:100%;
-}
-</style>
-
 # Bicep Azure Naming module
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
@@ -40,7 +34,7 @@ uniqueLength = 6
 ### Index: [A](#ref-a) - [B](#ref-b) - [C](#ref-c) - [D](#ref-d) - [E](#ref-e) - [F](#ref-f) - [H](#ref-h) - [I](#ref-i) - [K](#ref-k) - [L](#ref-l) - [M](#ref-m) - [N](#ref-n) - [P](#ref-p) - [R](#ref-r) - [S](#ref-s) - [T](#ref-t) - [V](#ref-v) - [W](#ref-w)
 
 ## <a name="ref-a"></a>A
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `analysisServicesServer` | `as` | `asmyappdev` | `asmyappdeve7hgy3` | 
 | `apiManagement` | `apim` | `apimmyappdev` | `apimmyappdeve7hgy3` | 
@@ -60,7 +54,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-b"></a>B
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `bastionHost` | `snap` | `snap-myapp-dev` | `snap-myapp-dev-e7hgy3` | 
 | `batchAccount` | `ba` | `bamyappdev` | `bamyappdeve7hgy3` | 
@@ -77,7 +71,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-c"></a>C
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `cdnEndpoint` | `cdn` | `cdn-myapp-dev` | `cdn-myapp-dev-e7hgy3` | 
 | `cdnProfile` | `cdnprof` | `cdnprof-myapp-dev` | `cdnprof-myapp-dev-e7hgy3` | 
@@ -90,7 +84,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-d"></a>D
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `dashboard` | `dsb` | `dsb-myapp-dev` | `dsb-myapp-dev-e7hgy3` | 
 | `dataFactory` | `adf` | `adf-myapp-dev` | `adf-myapp-dev-e7hgy3` | 
@@ -120,7 +114,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-e"></a>E
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `eventGridDomain` | `egd` | `egd-myapp-dev` | `egd-myapp-dev-e7hgy3` | 
 | `eventGridDomainTopic` | `egdt` | `egdt-myapp-dev` | `egdt-myapp-dev-e7hgy3` | 
@@ -137,7 +131,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-f"></a>F
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `firewall` | `fw` | `fw-myapp-dev` | `fw-myapp-dev-e7hgy3` | 
 | `frontDoor` | `fd` | `fd-myapp-dev` | `fd-myapp-dev-e7hgy3` | 
@@ -146,7 +140,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-h"></a>H
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `hdInsightHadoopCluster` | `hadoop` | `hadoop-myapp-dev` | `hadoop-myapp-dev-e7hgy3` | 
 | `hdInsightHbaseCluster` | `hbase` | `hbase-myapp-dev` | `hbase-myapp-dev-e7hgy3` | 
@@ -159,7 +153,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-i"></a>I
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `image` | `img` | `img-myapp-dev` | `img-myapp-dev-e7hgy3` | 
 | `iotCentralApplication` | `iotapp` | `iotapp-myapp-dev` | `iotapp-myapp-dev-e7hgy3` | 
@@ -170,7 +164,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-k"></a>K
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `keyVault` | `kv` | `kv-myapp-dev` | `kv-myapp-dev-e7hgy3` | 
 | `keyVaultCertificate` | `kvc` | `kvc-myapp-dev` | `kvc-myapp-dev-e7hgy3` | 
@@ -183,7 +177,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-l"></a>L
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `linuxVirtualMachine` | `vm` | `vm-myapp-dev` | `vm-myapp-dev-e7hgy3` | 
 | `linuxVirtualMachineScaleSet` | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-e7hgy3` | 
@@ -194,7 +188,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-m"></a>M
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `machineLearningWorkspace` | `mlw` | `mlw-myapp-dev` | `mlw-myapp-dev-e7hgy3` | 
 | `managedDisk` | `dsk` | `dsk-myapp-dev` | `dsk-myapp-dev-e7hgy3` | 
@@ -213,7 +207,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-n"></a>N
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `networkInterface` | `nic` | `nic-myapp-dev` | `nic-myapp-dev-e7hgy3` | 
 | `networkSecurityGroup` | `nsg` | `nsg-myapp-dev` | `nsg-myapp-dev-e7hgy3` | 
@@ -226,7 +220,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-p"></a>P
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `pointToSiteVpnGateway` | `vpngw` | `vpngw-myapp-dev` | `vpngw-myapp-dev-e7hgy3` | 
 | `postgresqlDatabase` | `psqldb` | `psqldb-myapp-dev` | `psqldb-myapp-dev-e7hgy3` | 
@@ -240,7 +234,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-r"></a>R
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `redisCache` | `redis` | `redis-myapp-dev` | `redis-myapp-dev-e7hgy3` | 
 | `redisFirewallRule` | `redisfw` | `redisfwmyappdev` | `redisfwmyappdeve7hgy3` | 
@@ -254,7 +248,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-s"></a>S
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `serviceBusNamespace` | `sb` | `sb-myapp-dev` | `sb-myapp-dev-e7hgy3` | 
 | `serviceBusNamespaceAuthorizationRule` | `sbar` | `sbar-myapp-dev` | `sbar-myapp-dev-e7hgy3` | 
@@ -296,14 +290,14 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-t"></a>T
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `templateDeployment` | `deploy` | `deploy-myapp-dev` | `deploy-myapp-dev-e7hgy3` | 
 | `trafficManagerProfile` | `traf` | `traf-myapp-dev` | `traf-myapp-dev-e7hgy3` | 
 [Go to top](#reference)
 
 ## <a name="ref-v"></a>V
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `virtualMachine` | `vm` | `vm-myapp-dev` | `vm-myapp-dev-e7` | 
 | `virtualMachineScaleSet` | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-` | 
@@ -314,7 +308,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 ## <a name="ref-w"></a>W
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | `windowsVirtualMachine` | `vm` | `vm-myapp-dev` | `vm-myapp-dev-e7` | 
 | `windowsVirtualMachineScaleSet` | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-` | 

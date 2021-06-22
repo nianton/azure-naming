@@ -1,9 +1,3 @@
-<style>
-table {
-    width:100%;
-}
-</style>
-
 # Bicep Azure Naming module
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
@@ -41,7 +35,7 @@ uniqueLength = 6
 
 {{#each outputGroups}}
 ## <a name="ref-{{key}}"></a>{{upper key}}
-| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
+| Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 {{#each values}}
 | `{{name}}` | `{{result.slug}}` | `{{result.name}}` | `{{result.nameUnique}}` | 
