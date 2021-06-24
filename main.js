@@ -1,17 +1,14 @@
 const _ = require('lodash')
 const Handlebars = require('handlebars')
 const fs = require('fs')
-const { template } = require('lodash')
-
-Handlebars.registerHelper('upper', function (aString) {
-    return aString.toUpperCase()
-})
 
 const resoureDefinitionFile = 'resourceDefinition.json'
 const bicepTemplateFile = 'templates/naming.module.bicep.hbs'
 const readmeTemplateFile = 'templates/README.md.hbs'
 const bicepFile = 'dist/naming.module.bicep'
 const readmeFile = 'README.md'
+
+Handlebars.registerHelper('upper', str => str.toUpperCase())
 
 try {
 
@@ -26,44 +23,47 @@ try {
 
     const definitions = JSON.parse(fs.readFileSync('resourceDefinition.json', { encoding: 'utf-8' }))
     const sampleOutput = JSON.parse(fs.readFileSync('templates/sample.output.json', { encoding: 'utf-8' }))
-    
 
     // Prepare for camel cased property names in bicep
     _.forEach(definitions, v => v.name = _.camelCase(v.name));
     
     // Convert to array to facilitate generation
-    const sampleOutputs = Object.keys(sampleOutput).map(key => {
-        return { name: key, result: sampleOutput[key] }
-    });
-
+    const sampleOutputs = Object.keys(sampleOutput).map(key => ({ name: key, result: sampleOutput[key] }))
+    
+    // Group by first letter
     const grouppedOutputs = _.groupBy(sampleOutputs, v => v.name[0])
-    const outputGroups = Object.keys(grouppedOutputs).map(key => {
-        return { key, values: grouppedOutputs[key] }
-    })
+    
+    // Convert to array to facilitate generation
+    const outputGroups = Object.keys(grouppedOutputs).map(key => ({ key, values: grouppedOutputs[key] }))
 
     const templateInput = { definitions, outputGroups }
 
-    // Compile the templates
-    const bicepTemplate = Handlebars.compile(fs.readFileSync(bicepTemplateFile, { encoding: 'utf-8' }))
-    const readmeTemplate = Handlebars.compile(fs.readFileSync(readmeTemplateFile, { encoding: 'utf-8' }))
-
-    // Apply the templates
-    const bicepOutput = bicepTemplate(templateInput)
-    const readmeOutput = readmeTemplate(templateInput)
-
-    // Save output to a file
-    fs.writeFileSync(bicepFile, bicepOutput)
-    const bicepFileStats = fs.statSync(bicepFile)
-    console.log(`File '${bicepFile}' successfully generated (${bicepFileStats.size} bytes).`)
-    console.log('')
-    
-    fs.writeFileSync(readmeFile, readmeOutput)
-    const readmeFileStats = fs.statSync(readmeFile)
-    console.log(`File '${readmeFile}' successfully generated (${readmeFileStats.size} bytes).`)
-    console.log('')
+    // Generate the templated files
+    generateFile(bicepTemplateFile, templateInput, bicepFile)
+    generateFile(readmeTemplateFile, templateInput, readmeFile)
 }
 catch (ex) {
     console.error(`Template generation failed: ${ex.message}`)
     console.log('')
     process.exit(1)
+}
+
+/**
+ * Generates a file through applying a handlebars templates on the given data.
+ * 
+ * @param {string} templateFilepath The handlebars template file path
+ * @param {string} templateData The template data
+ * @param {string} outputFilepath The output filepath
+ */
+function generateFile(templateFilepath, templateData, outputFilepath) {
+    // Compile the template
+    const template = Handlebars.compile(fs.readFileSync(templateFilepath, { encoding: 'utf-8' }))
+    const output = template(templateData)
+    
+    // Write destination file
+    fs.writeFileSync(outputFilepath, output)
+    const fileStats = fs.statSync(outputFilepath)
+    
+    console.log(`File '${outputFilepath}' successfully generated (${fileStats.size} bytes).`)
+    console.log('')
 }
