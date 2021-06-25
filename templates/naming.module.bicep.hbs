@@ -1,3 +1,14 @@
+/**
+ * Azure naming module - helps maintaining a consistent naming convention
+ * Licensed to use under the MIT license.
+ * ----------------------------------------------------------------------------
+ * Module repository & documentation: https://github.com/nianton/azure-naming
+ * Starter repository template:       https://github.com/nianton/bicep-starter
+ * ----------------------------------------------------------------------------
+ * Microsoft naming convention best practices
+ * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
+ */
+
 @description('It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
 param prefix array = []
 

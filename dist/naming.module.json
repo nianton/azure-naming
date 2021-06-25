@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.4.63.48766",
-      "templateHash": "17700411675052524298"
+      "templateHash": "15238054611066078261"
     }
   },
   "parameters": {
@@ -20,14 +20,14 @@
       "type": "array",
       "defaultValue": [],
       "metadata": {
-        "description": "It is recommended that you specify a suffix for consistency. please use only lowercase characters when possible"
+        "description": "It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible."
       }
     },
     "uniqueSeed": {
       "type": "string",
       "defaultValue": "[resourceGroup().id]",
       "metadata": {
-        "description": "Custom value for the random characters to be used -defaults to resourceGroup Id"
+        "description": "Custom seed value for the unique string to be created -defaults to resourceGroup Id."
       }
     },
     "uniqueLength": {

@@ -2,7 +2,7 @@
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
 
-Bicep and ARM template module for keeping a consistent Azure resources naming convention. Inspired and based on the nice Terraform implementation: https://github.com/Azure/terraform-azurerm-naming
+Bicep and ARM template module for keeping a consistent Azure resources naming convention. Inspired and based on the nice [Terraform module/implementation](https://github.com/Azure/terraform-azurerm-naming). 
 
 ## How to use / Getting started
 
@@ -17,7 +17,7 @@ A template sample repository was created to showcase how to use this module (**h
 | **suffix** | Array of suffix parts to be included in the naming | array(string) | [] |
 | **prefix** | Array of prefix parts to be included in the naming  | array(string) | [] |
 | **uniqueSeed** | The string be used as the seed for | string | resourceGroup().id |
-| **uniqueLength** | The number of characters in the unique part | int | 6 |
+| **uniqueLength** | The number of characters in the unique part | int | 4 |
 | **useDashes** | Whether to use dash (-) as delimiter | bool | true |
 | **useLowerCase** | Whether to use lower case letters | bool | true |
 
@@ -32,7 +32,7 @@ suffix = [
   'dev'
 ]
 
-uniqueLength = 6
+uniqueLength = 4
 ```
 
 ### Index: {{#each outputGroups}}[{{upper key}}](#ref-{{key}}){{#unless @last}} - {{/unless}}{{/each}}
@@ -47,3 +47,7 @@ uniqueLength = 6
 [Go to top](#reference)
 
 {{/each}}
+
+## License
+
+Azure naming for Bicep/ARM is licensed under the [MIT](LICENSE) license.
