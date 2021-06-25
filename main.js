@@ -5,13 +5,13 @@ const fs = require('fs')
 const resoureDefinitionFile = 'resourceDefinition.json'
 const bicepTemplateFile = 'templates/naming.module.bicep.hbs'
 const readmeTemplateFile = 'templates/README.md.hbs'
+const sampleOutputFile = 'templates/sample.output.json'
 const bicepFile = 'dist/naming.module.bicep'
 const readmeFile = 'README.md'
 
 Handlebars.registerHelper('upper', str => str.toUpperCase())
 
 try {
-
     if (!fs.existsSync(resoureDefinitionFile))
         throw new Error(`Resource definition file (${resoureDefinitionFile}) was not found.`)
 
@@ -21,8 +21,11 @@ try {
     if (!fs.existsSync(readmeTemplateFile))
         throw new Error(`Template README generation file (${readmeTemplateFile}) was not found.`)
 
-    const definitions = JSON.parse(fs.readFileSync('resourceDefinition.json', { encoding: 'utf-8' }))
-    const sampleOutput = JSON.parse(fs.readFileSync('templates/sample.output.json', { encoding: 'utf-8' }))
+    if (!fs.existsSync(sampleOutputFile))
+        throw new Error(`Sample output file (${sampleOutputFile}) was not found.`)
+
+    const definitions = JSON.parse(fs.readFileSync(resoureDefinitionFile, { encoding: 'utf-8' }))
+    const sampleOutput = JSON.parse(fs.readFileSync(sampleOutputFile, { encoding: 'utf-8' }))
 
     // Prepare for camel cased property names in bicep
     _.forEach(definitions, v => v.name = _.camelCase(v.name));
