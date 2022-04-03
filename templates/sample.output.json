@@ -74,6 +74,11 @@
     "nameUnique": "avail-myapp-dev-e7hg",
     "slug": "avail"
   },
+  "azureFirewall": {
+    "name": "afw-myapp-dev",
+    "nameUnique": "afw-myapp-dev-e7hg",
+    "slug": "afw"
+  },
   "bastionHost": {
     "name": "snap-myapp-dev",
     "nameUnique": "snap-myapp-dev-e7hg",
@@ -363,6 +368,11 @@
     "name": "fw-myapp-dev",
     "nameUnique": "fw-myapp-dev-e7hg",
     "slug": "fw"
+  },
+  "firewallPolicy": {
+    "name": "afwp-myapp-dev",
+    "nameUnique": "afwp-myapp-dev-e7hg",
+    "slug": "afwp"
   },
   "frontDoor": {
     "name": "fd-myapp-dev",
