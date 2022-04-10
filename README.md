@@ -2,7 +2,7 @@
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
 
-Bicep and ARM template module for keeping a consistent Azure resources naming convention, as well as respecting the rules for each resource name (max length, whether dashes are allowed etc). Inspired and based on the nice [Terraform module/implementation](https://github.com/Azure/terraform-azurerm-naming). 
+Bicep and ARM template module for keeping a consistent Azure resources naming convention. Inspired and based on the nice [Terraform module/implementation](https://github.com/Azure/terraform-azurerm-naming). 
 
 ## How to use / Getting started
 
@@ -55,6 +55,7 @@ uniqueLength = 4
 | **`automationSchedule`** | `aasched` | `aasched-myapp-dev` | `aasched-myapp-dev-e7hg` | 
 | **`automationVariable`** | `aavar` | `aavar-myapp-dev` | `aavar-myapp-dev-e7hg` | 
 | **`availabilitySet`** | `avail` | `avail-myapp-dev` | `avail-myapp-dev-e7hg` | 
+| **`azureFirewall`** | `afw` | `afw-myapp-dev` | `afw-myapp-dev-e7hg` | 
 [Go to top](#reference)
 
 ## <a name="ref-b"></a>B
@@ -138,6 +139,7 @@ uniqueLength = 4
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 | **`firewall`** | `fw` | `fw-myapp-dev` | `fw-myapp-dev-e7hg` | 
+| **`firewallPolicy`** | `afwp` | `afwp-myapp-dev` | `afwp-myapp-dev-e7hg` | 
 | **`frontDoor`** | `fd` | `fd-myapp-dev` | `fd-myapp-dev-e7hg` | 
 | **`frontDoorFirewallPolicy`** | `fdfw` | `fdfw-myapp-dev` | `fdfw-myapp-dev-e7hg` | 
 | **`functionApp`** | `func` | `func-myapp-dev` | `func-myapp-dev-e7hg` | 

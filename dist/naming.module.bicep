@@ -118,6 +118,11 @@ output names object = {
     nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'avail'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'avail')), 80))
     slug: 'avail'
   }
+  azureFirewall: {
+    name: substring(replace(nameTemplate, placeholder, 'afw'), 0, min(length(replace(nameTemplate, placeholder, 'afw')), 80))
+    nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'afw'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'afw')), 80))
+    slug: 'afw'
+  }
   bastionHost: {
     name: substring(replace(nameTemplate, placeholder, 'snap'), 0, min(length(replace(nameTemplate, placeholder, 'snap')), 80))
     nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'snap'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'snap')), 80))
@@ -407,6 +412,11 @@ output names object = {
     name: substring(replace(nameTemplate, placeholder, 'fw'), 0, min(length(replace(nameTemplate, placeholder, 'fw')), 80))
     nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'fw'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'fw')), 80))
     slug: 'fw'
+  }
+  firewallPolicy: {
+    name: substring(replace(nameTemplate, placeholder, 'afwp'), 0, min(length(replace(nameTemplate, placeholder, 'afwp')), 80))
+    nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'afwp'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'afwp')), 80))
+    slug: 'afwp'
   }
   frontDoor: {
     name: substring(replace(nameTemplate, placeholder, 'fd'), 0, min(length(replace(nameTemplate, placeholder, 'fd')), 64))
