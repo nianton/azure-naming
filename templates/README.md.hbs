@@ -1,8 +1,9 @@
+<!-- NOTE: This is a generated file, do not update directly. -->
 # Bicep Azure Naming module
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
 
-Bicep and ARM template module for keeping a consistent Azure resources naming convention. Inspired and based on the nice [Terraform module/implementation](https://github.com/Azure/terraform-azurerm-naming). 
+Bicep and ARM template module for keeping a consistent Azure resources naming convention, as well as respecting the rules for each resource name (max length, whether dashes are allowed etc). Inspired and based on the nice [Terraform module/implementation](https://github.com/Azure/terraform-azurerm-naming). 
 
 ## How to use / Getting started
 
