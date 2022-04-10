@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.63.48766",
-      "templateHash": "15238054611066078261"
+      "version": "0.4.412.5873",
+      "templateHash": "10138928001475793999"
     }
   },
   "parameters": {
@@ -432,9 +432,14 @@
           "slug": "ergw"
         },
         "firewall": {
-          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'fw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'fw')), 80))]",
-          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'fw')), 80))]",
-          "slug": "fw"
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'afw'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'afw')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'afw'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'afw')), 80))]",
+          "slug": "afw"
+        },
+        "firewallPolicy": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'afwp'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'afwp')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'afwp'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'afwp')), 80))]",
+          "slug": "afwp"
         },
         "frontDoor": {
           "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'fd'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'fd')), 64))]",

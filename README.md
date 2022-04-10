@@ -55,7 +55,6 @@ uniqueLength = 4
 | **`automationSchedule`** | `aasched` | `aasched-myapp-dev` | `aasched-myapp-dev-e7hg` | 
 | **`automationVariable`** | `aavar` | `aavar-myapp-dev` | `aavar-myapp-dev-e7hg` | 
 | **`availabilitySet`** | `avail` | `avail-myapp-dev` | `avail-myapp-dev-e7hg` | 
-| **`azureFirewall`** | `afw` | `afw-myapp-dev` | `afw-myapp-dev-e7hg` | 
 [Go to top](#reference)
 
 ## <a name="ref-b"></a>B
@@ -138,7 +137,7 @@ uniqueLength = 4
 ## <a name="ref-f"></a>F
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`firewall`** | `fw` | `fw-myapp-dev` | `fw-myapp-dev-e7hg` | 
+| **`firewall`** | `afw` | `afw-myapp-dev` | `afw-myapp-dev-e7hg` | 
 | **`firewallPolicy`** | `afwp` | `afwp-myapp-dev` | `afwp-myapp-dev-e7hg` | 
 | **`frontDoor`** | `fd` | `fd-myapp-dev` | `fd-myapp-dev-e7hg` | 
 | **`frontDoorFirewallPolicy`** | `fdfw` | `fdfw-myapp-dev` | `fdfw-myapp-dev-e7hg` | 

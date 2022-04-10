@@ -7,13 +7,12 @@ resource storage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
   kind: 'StorageV2'
   sku: {
     name: 'Standard_LRS'
-    tier: 'Standard'
   }
 }
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
   name: naming.appServicePlan.name
-  location: resourceGroup().location
+  location: location
   sku: {
     name: 'F1'
     capacity: 1
