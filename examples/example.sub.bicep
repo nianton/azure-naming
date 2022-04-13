@@ -28,6 +28,7 @@ module naming '../dist/naming.module.bicep' = {
     uniqueSeed: rg.id
   }
 }
+
 module main 'example.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'MainDeployment'
@@ -36,7 +37,6 @@ module main 'example.bicep' = {
     naming: naming.outputs.names
   }
 }
-
 
 output naming object = naming.outputs.names
 output appServiceName string = main.outputs.appServiceName

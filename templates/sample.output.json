@@ -148,6 +148,11 @@
     "name": "cog-myapp-dev",
     "nameUnique": "cog-myapp-dev-e7hg",
     "slug": "cog"
+  },  
+  "containerApp": {
+    "name": "capp-myapp-dev",
+    "nameUnique": "capp-myapp-dev-e7hg",
+    "slug": "capp"
   },
   "containerGroup": {
     "name": "cg-myapp-dev",

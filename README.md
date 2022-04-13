@@ -81,6 +81,7 @@ uniqueLength = 4
 | **`cdnEndpoint`** | `cdn` | `cdn-myapp-dev` | `cdn-myapp-dev-e7hg` | 
 | **`cdnProfile`** | `cdnprof` | `cdnprof-myapp-dev` | `cdnprof-myapp-dev-e7hg` | 
 | **`cognitiveAccount`** | `cog` | `cog-myapp-dev` | `cog-myapp-dev-e7hg` | 
+| **`containerApp`** | `capp` | `capp-myapp-dev` | `capp-myapp-dev-e7hg` | 
 | **`containerGroup`** | `cg` | `cg-myapp-dev` | `cg-myapp-dev-e7hg` | 
 | **`containerRegistry`** | `acr` | `acrmyappdev` | `acrmyappdeve7hg` | 
 | **`containerRegistryWebhook`** | `crwh` | `crwhmyappdev` | `crwhmyappdeve7hg` | 

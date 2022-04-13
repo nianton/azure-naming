@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.4.412.5873",
-      "templateHash": "10138928001475793999"
+      "version": "0.5.6.12127",
+      "templateHash": "472664170303374045"
     }
   },
   "parameters": {
@@ -52,7 +52,6 @@
       }
     }
   },
-  "functions": [],
   "variables": {
     "uniquePart": "[substring(uniqueString(parameters('uniqueSeed')), 0, parameters('uniqueLength'))]",
     "delimiter": "[if(parameters('useDashes'), '-', '')]",
@@ -220,6 +219,11 @@
           "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'cog'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'cog')), 64))]",
           "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cog'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'cog')), 64))]",
           "slug": "cog"
+        },
+        "containerApp": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'capp'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'capp')), 64))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'capp'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'capp')), 64))]",
+          "slug": "capp"
         },
         "containerGroup": {
           "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'cg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'cg')), 63))]",

@@ -330,6 +330,17 @@
       "dashes": true
     },
     {
+      "name": "container_app",
+      "length": {
+        "min": 1,
+        "max": 64
+      },
+      "regex": "^(?=.{1,64}$)(?!.*--)[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$",
+      "scope": "resourceGroup",
+      "slug": "capp",
+      "dashes": true
+    },
+    {
       "name": "container_group",
       "length": {
         "min": 1,

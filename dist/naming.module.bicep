@@ -193,6 +193,11 @@ output names object = {
     nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'cog'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'cog')), 64))
     slug: 'cog'
   }
+  containerApp: {
+    name: substring(replace(nameTemplate, placeholder, 'capp'), 0, min(length(replace(nameTemplate, placeholder, 'capp')), 64))
+    nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'capp'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'capp')), 64))
+    slug: 'capp'
+  }
   containerGroup: {
     name: substring(replace(nameTemplate, placeholder, 'cg'), 0, min(length(replace(nameTemplate, placeholder, 'cg')), 63))
     nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'cg'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'cg')), 63))
