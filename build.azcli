@@ -1,0 +1,22 @@
+# Ensure dependencies
+npm install
+
+# Run the bicep generation
+npm start bicep
+
+# Ensure latest bicep version
+az bicep upgrade
+
+# Build ARM template
+az bicep build --file ./dist/naming.module.bicep --outfile ./dist/naming.module.json
+
+# Build Regions dump file, including only Physical ones
+az account list-locations --query "[?metadata.regionType=='Physical']" > ./datafiles/regionsDump.json
+
+# Get the module's real output 
+RESOURCE_GROUP="rg-dummy"
+az group create -n $RESOURCE_GROUP -l westeurope
+az deployment group create --resource-group $RESOURCE_GROUP --template-file ./dist/naming.module.bicep --parameters suffix='("myapp", "dev")' uniqueLength=4 | jq '.properties.outputs.names.value' > ./datafiles/sample.output.json
+
+# Run the README.md generation
+npm start readme

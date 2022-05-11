@@ -9,22 +9,22 @@
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  */
 
-@description('It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
+@description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
 param prefix array = []
 
-@description('It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible.')
+@description('Optional. It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible.')
 param suffix array = []
 
-@description('Custom seed value for the unique string to be created -defaults to resourceGroup Id.')
+@description('Optional. Custom seed value for the unique string to be created -defaults to resourceGroup Id.')
 param uniqueSeed string = resourceGroup().id
 
-@description('Max length of the uniqueness suffix to be added')
+@description('Optional. Max length of the uniqueness suffix to be added -defaults to 4')
 param uniqueLength int = 4
 
-@description('Use dashes as separator where applicable')
+@description('Optional. Use dashes as separator where applicable -defaults to true')
 param useDashes bool = true
 
-@description('Create names using lowercase letters')
+@description('Optional. Create names using lowercase letters -defaults to true')
 param useLowerCase bool = true
 
 var uniquePart = substring(uniqueString(uniqueSeed), 0, uniqueLength)
@@ -57,6 +57,11 @@ output names object = {
     name: substring(replace(nameTemplate, placeholder, 'appcg'), 0, min(length(replace(nameTemplate, placeholder, 'appcg')), 50))
     nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'appcg'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'appcg')), 50))
     slug: 'appcg'
+  }
+  appServiceEnvironment: {
+    name: substring(replace(nameTemplate, placeholder, 'ase'), 0, min(length(replace(nameTemplate, placeholder, 'ase')), 36))
+    nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'ase'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'ase')), 36))
+    slug: 'ase'
   }
   appServicePlan: {
     name: substring(replace(nameTemplate, placeholder, 'plan'), 0, min(length(replace(nameTemplate, placeholder, 'plan')), 40))
@@ -1008,4 +1013,54 @@ output names object = {
     nameUnique: substring(replace(nameUniqueTemplate, placeholder, 'vmss'), 0, min(length(replace(nameUniqueTemplate, placeholder, 'vmss')), 15))
     slug: 'vmss'
   }
+}
+
+output regionAbbreviations object = {
+    australiacentral: 'auc'
+    australiacentral2: 'auc2'
+    australiaeast: 'aue'
+    australiasoutheast: 'ause'
+    brazilsouth: 'brs'
+    brazilsoutheast: 'brse'
+    canadacentral: 'canc'
+    canadaeast: 'cane'
+    centralindia: 'cin'
+    centralus: 'cus'
+    centraluseuap: 'cuseuap'
+    eastasia: 'ea'
+    eastus: 'eus'
+    eastus2: 'eus2'
+    eastus2euap: 'eus2euap'
+    francecentral: 'frc'
+    francesouth: 'frs'
+    germanynorth: 'gern'
+    germanywestcentral: 'gerwc'
+    japaneast: 'jae'
+    japanwest: 'jaw'
+    jioindiacentral: 'jioinc'
+    jioindiawest: 'jioinw'
+    koreacentral: 'koc'
+    koreasouth: 'kors'
+    northcentralus: 'ncus'
+    northeurope: 'neu'
+    norwayeast: 'nore'
+    norwaywest: 'norw'
+    southafricanorth: 'san'
+    southafricawest: 'saw'
+    southcentralus: 'scus'
+    southeastasia: 'sea'
+    southindia: 'sin'
+    swedencentral: 'swc'
+    switzerlandnorth: 'swn'
+    switzerlandwest: 'sww'
+    uaecentral: 'uaec'
+    uaenorth: 'uaen'
+    uksouth: 'uks'
+    ukwest: 'ukw'
+    westcentralus: 'wcus'
+    westeurope: 'weu'
+    westindia: 'win'
+    westus: 'wus'
+    westus2: 'wus2'
+    westus3: 'wus3'
 }

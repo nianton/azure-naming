@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.5.6.12127",
-      "templateHash": "472664170303374045"
+      "version": "0.6.1.6515",
+      "templateHash": "9561600753151054074"
     }
   },
   "parameters": {
@@ -13,42 +13,42 @@
       "type": "array",
       "defaultValue": [],
       "metadata": {
-        "description": "It is not recommended that you use prefix by azure you should be using a suffix for your resources."
+        "description": "Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources."
       }
     },
     "suffix": {
       "type": "array",
       "defaultValue": [],
       "metadata": {
-        "description": "It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible."
+        "description": "Optional. It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible."
       }
     },
     "uniqueSeed": {
       "type": "string",
       "defaultValue": "[resourceGroup().id]",
       "metadata": {
-        "description": "Custom seed value for the unique string to be created -defaults to resourceGroup Id."
+        "description": "Optional. Custom seed value for the unique string to be created -defaults to resourceGroup Id."
       }
     },
     "uniqueLength": {
       "type": "int",
       "defaultValue": 4,
       "metadata": {
-        "description": "Max length of the uniqueness suffix to be added"
+        "description": "Optional. Max length of the uniqueness suffix to be added -defaults to 4"
       }
     },
     "useDashes": {
       "type": "bool",
       "defaultValue": true,
       "metadata": {
-        "description": "Use dashes as separator where applicable"
+        "description": "Optional. Use dashes as separator where applicable -defaults to true"
       }
     },
     "useLowerCase": {
       "type": "bool",
       "defaultValue": true,
       "metadata": {
-        "description": "Create names using lowercase letters"
+        "description": "Optional. Create names using lowercase letters -defaults to true"
       }
     }
   },
@@ -84,6 +84,11 @@
           "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'appcg'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'appcg')), 50))]",
           "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'appcg'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'appcg')), 50))]",
           "slug": "appcg"
+        },
+        "appServiceEnvironment": {
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'ase'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'ase')), 36))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ase'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'ase')), 36))]",
+          "slug": "ase"
         },
         "appServicePlan": {
           "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'plan'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'plan')), 40))]",
@@ -1035,6 +1040,58 @@
           "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'vmss')), 15))]",
           "slug": "vmss"
         }
+      }
+    },
+    "regionAbbreviations": {
+      "type": "object",
+      "value": {
+        "australiacentral": "auc",
+        "australiacentral2": "auc2",
+        "australiaeast": "aue",
+        "australiasoutheast": "ause",
+        "brazilsouth": "brs",
+        "brazilsoutheast": "brse",
+        "canadacentral": "canc",
+        "canadaeast": "cane",
+        "centralindia": "cin",
+        "centralus": "cus",
+        "centraluseuap": "cuseuap",
+        "eastasia": "ea",
+        "eastus": "eus",
+        "eastus2": "eus2",
+        "eastus2euap": "eus2euap",
+        "francecentral": "frc",
+        "francesouth": "frs",
+        "germanynorth": "gern",
+        "germanywestcentral": "gerwc",
+        "japaneast": "jae",
+        "japanwest": "jaw",
+        "jioindiacentral": "jioinc",
+        "jioindiawest": "jioinw",
+        "koreacentral": "koc",
+        "koreasouth": "kors",
+        "northcentralus": "ncus",
+        "northeurope": "neu",
+        "norwayeast": "nore",
+        "norwaywest": "norw",
+        "southafricanorth": "san",
+        "southafricawest": "saw",
+        "southcentralus": "scus",
+        "southeastasia": "sea",
+        "southindia": "sin",
+        "swedencentral": "swc",
+        "switzerlandnorth": "swn",
+        "switzerlandwest": "sww",
+        "uaecentral": "uaec",
+        "uaenorth": "uaen",
+        "uksouth": "uks",
+        "ukwest": "ukw",
+        "westcentralus": "wcus",
+        "westeurope": "weu",
+        "westindia": "win",
+        "westus": "wus",
+        "westus2": "wus2",
+        "westus3": "wus3"
       }
     }
   }

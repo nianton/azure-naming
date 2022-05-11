@@ -1,54 +1,82 @@
+const fileToGenerate = process.argv.splice(2)[0]
 const _ = require('lodash')
 const Handlebars = require('handlebars')
 const fs = require('fs')
 
-const resoureDefinitionFile = 'resourceDefinition.json'
+// Data files
+const resourceDefinitionsFile = 'datafiles/resourceDefinitions.json'
+const regionAbbreviationsFile = 'datafiles/regionAbbreviations.json'
+const sampleOutputFile = 'datafiles/sample.output.json'
+
+// Template files
 const bicepTemplateFile = 'templates/naming.module.bicep.hbs'
 const readmeTemplateFile = 'templates/README.md.hbs'
-const sampleOutputFile = 'templates/sample.output.json'
+
+// Generated files
 const bicepFile = 'dist/naming.module.bicep'
 const readmeFile = 'README.md'
 
 Handlebars.registerHelper('upper', str => str.toUpperCase())
 
 try {
-    if (!fs.existsSync(resoureDefinitionFile))
-        throw new Error(`Resource definition file (${resoureDefinitionFile}) was not found.`)
+    if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'bicep') {
+        // Generate the templated files
+        generateBicepModule()
+    }
 
-    if (!fs.existsSync(bicepTemplateFile))
-        throw new Error(`Template bicep generation file (${bicepTemplateFile}) was not found.`)
-
-    if (!fs.existsSync(readmeTemplateFile))
-        throw new Error(`Template README generation file (${readmeTemplateFile}) was not found.`)
-
-    if (!fs.existsSync(sampleOutputFile))
-        throw new Error(`Sample output file (${sampleOutputFile}) was not found.`)
-
-    const definitions = JSON.parse(fs.readFileSync(resoureDefinitionFile, { encoding: 'utf-8' }))
-    const sampleOutput = JSON.parse(fs.readFileSync(sampleOutputFile, { encoding: 'utf-8' }))
-
-    // Prepare for camel cased property names in bicep
-    _.forEach(definitions, v => v.name = _.camelCase(v.name));
-    
-    // Convert to array to facilitate generation
-    const sampleOutputs = Object.keys(sampleOutput).map(key => ({ name: key, result: sampleOutput[key] }))
-    
-    // Group by first letter
-    const grouppedOutputs = _.groupBy(sampleOutputs, v => v.name[0])
-    
-    // Convert to array to facilitate generation
-    const outputGroups = Object.keys(grouppedOutputs).map(key => ({ key, values: grouppedOutputs[key] }))
-
-    const templateInput = { definitions, outputGroups }
-
-    // Generate the templated files
-    generateFile(bicepTemplateFile, templateInput, bicepFile)
-    generateFile(readmeTemplateFile, templateInput, readmeFile)
+    if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'readme') {
+        // Generate README.md documentation file
+        generateReadme()
+    }
 }
 catch (ex) {
     console.error(`Template generation failed: ${ex.message}`)
     console.log('')
     process.exit(1)
+}
+
+/**
+ * Generates the bicep module file based on the template.
+ */
+function generateBicepModule() {
+    if (!fs.existsSync(resourceDefinitionsFile))
+        throw new Error(`Resource definition file (${resourceDefinitionsFile}) was not found.`)
+
+    if (!fs.existsSync(bicepTemplateFile))
+        throw new Error(`Template bicep generation file (${bicepTemplateFile}) was not found.`)    
+
+    // Prepare for camel cased property names in bicep
+    const definitions = readFileAsJson(resourceDefinitionsFile)
+    _.forEach(definitions, v => v.name = _.camelCase(v.name));
+
+    const regionAbbreviations = readFileAsJson(regionAbbreviationsFile)
+    const templateInput = { definitions, regionAbbreviations }
+    
+    generateFile(bicepTemplateFile, templateInput, bicepFile)
+}
+
+/**
+ * Generates the README.md file.
+ */
+function generateReadme() {
+    if (!fs.existsSync(readmeTemplateFile))
+        throw new Error(`Template README generation file (${readmeTemplateFile}) was not found.`)
+
+    if (!fs.existsSync(sampleOutputFile))
+        throw new Error(`Sample output file (${sampleOutputFile}) was not found.`)
+    
+    // Group by first letter
+    const sampleOutput = readFileAsJson(sampleOutputFile)
+
+    // Convert to array to facilitate generation
+    const sampleOutputs = Object.keys(sampleOutput).map(key => ({ name: key, result: sampleOutput[key] }))
+    const grouppedOutputs = _.groupBy(sampleOutputs, v => v.name[0])
+    
+    // Convert to array to facilitate generation
+    const outputGroups = Object.keys(grouppedOutputs).map(key => ({ key, values: grouppedOutputs[key] }))
+    const templateInput = { outputGroups }
+
+    generateFile(readmeTemplateFile, templateInput, readmeFile)
 }
 
 /**
@@ -69,4 +97,14 @@ function generateFile(templateFilepath, templateData, outputFilepath) {
     
     console.log(`File '${outputFilepath}' successfully generated (${fileStats.size} bytes).`)
     console.log('')
+}
+
+
+/**
+ * Returns the JSON object parsing a given file
+ * 
+ * @param {string} filepath The file's path to read and parse as JSON
+ */
+function readFileAsJson(filepath) {
+    return JSON.parse(fs.readFileSync(filepath), { encoding: 'utf-8' });
 }

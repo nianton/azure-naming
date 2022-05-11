@@ -13,6 +13,8 @@
   },
   "scripts": {
     "start": "node main",
+    "bicep": "node main bicep",
+    "readme": "node main readme",
     "test": "echo \"Error: no test spenpmcified\" && exit 1"
   },
   "keywords": [

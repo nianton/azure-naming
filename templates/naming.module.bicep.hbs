@@ -9,22 +9,22 @@
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  */
 
-@description('It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
+@description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
 param prefix array = []
 
-@description('It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible.')
+@description('Optional. It is recommended that you specify a suffix for consistency. Please use only lowercase characters when possible.')
 param suffix array = []
 
-@description('Custom seed value for the unique string to be created -defaults to resourceGroup Id.')
+@description('Optional. Custom seed value for the unique string to be created -defaults to resourceGroup Id.')
 param uniqueSeed string = resourceGroup().id
 
-@description('Max length of the uniqueness suffix to be added')
+@description('Optional. Max length of the uniqueness suffix to be added -defaults to 4')
 param uniqueLength int = 4
 
-@description('Use dashes as separator where applicable')
+@description('Optional. Use dashes as separator where applicable -defaults to true')
 param useDashes bool = true
 
-@description('Create names using lowercase letters')
+@description('Optional. Create names using lowercase letters -defaults to true')
 param useLowerCase bool = true
 
 var uniquePart = substring(uniqueString(uniqueSeed), 0, uniqueLength)
@@ -50,4 +50,10 @@ output names object = {
     slug: '{{slug}}'
   }
 {{/each}}
+}
+
+output regionAbbreviations object = {
+  {{#each regionAbbreviations}}
+    {{@key}}: '{{this}}'
+  {{/each}}
 }

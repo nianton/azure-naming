@@ -33,6 +33,17 @@
       "dashes": true
     },
     {
+      "name": "app_service_environment",
+      "length": {
+        "min": 2,
+        "max": 36
+      },
+      "regex": "^(?=.{2,36}$)[a-zA-Z0-9-]+$",
+      "scope": "global",
+      "slug": "ase",
+      "dashes": true
+    },
+    {
       "name": "app_service_plan",
       "length": {
         "min": 1,
@@ -53,7 +64,7 @@
       "scope": "global",
       "slug": "app",
       "dashes": true
-    },
+    },    
     {
       "name": "application_gateway",
       "length": {
