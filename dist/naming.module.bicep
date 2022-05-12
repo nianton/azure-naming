@@ -7,6 +7,8 @@
  * ----------------------------------------------------------------------------
  * Microsoft naming convention best practices
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
+ * ----------------------------------------------------------------------------
+ * Generated on: 2022-05-12T13:13:46.896Z
  */
 
 @description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')

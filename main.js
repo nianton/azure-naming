@@ -1,7 +1,7 @@
-const fileToGenerate = process.argv.splice(2)[0]
 const _ = require('lodash')
 const Handlebars = require('handlebars')
 const fs = require('fs')
+const fileToGenerate = process.argv.splice(2)[0]
 
 // Data files
 const resourceDefinitionsFile = 'datafiles/resourceDefinitions.json'
@@ -89,8 +89,12 @@ function generateReadme() {
 function generateFile(templateFilepath, templateData, outputFilepath) {
     // Compile the template
     const template = Handlebars.compile(fs.readFileSync(templateFilepath, { encoding: 'utf-8' }))
-    const output = template(templateData)
-    
+    const templateGenerationMetadata =  {
+        timestamp: new Date().toISOString()
+    }
+    const templateInput = Object.assign({ _metadata: templateGenerationMetadata }, templateData)
+    const output = template(templateInput)
+
     // Write destination file
     fs.writeFileSync(outputFilepath, output)
     const fileStats = fs.statSync(outputFilepath)
