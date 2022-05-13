@@ -16,7 +16,7 @@ az account list-locations --query "[?metadata.regionType=='Physical']" > ./dataf
 # Get the module's real output 
 RESOURCE_GROUP="rg-dummy"
 az group create -n $RESOURCE_GROUP -l westeurope
-az deployment group create --resource-group $RESOURCE_GROUP --template-file ./dist/naming.module.bicep --parameters suffix='("myapp", "dev")' uniqueLength=4 | jq '.properties.outputs.names.value' > ./datafiles/sample.output.json
+az deployment group create --resource-group $RESOURCE_GROUP --template-file ./dist/naming.module.bicep --parameters suffix='("myapp", "dev", "**location**")' uniqueLength=4 | jq '.properties.outputs.names.value' > ./datafiles/sample.output.json
 
 # Run the README.md generation
 npm start readme

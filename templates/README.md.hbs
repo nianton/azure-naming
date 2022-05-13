@@ -26,12 +26,13 @@ A template sample repository was created to showcase how to use this module (**h
 
 ## Module `names` object output properties
 
-Below is a reference of the output `names` object values with the following sample input:
+Below is a reference of the output `names` object values with the following sample input -deployed to 'West Europe' region:
 
 ```bicep
 suffix = [
   'myapp'
   'dev'
+  '**location**' // location/region placeholder, replaced with its abbreviation 
 ]
 
 uniqueLength = 4
@@ -44,7 +45,7 @@ uniqueLength = 4
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
 {{#each values}}
-| **`{{name}}`** | `{{result.slug}}` | `{{result.name}}` | `{{result.nameUnique}}` | 
+| <sub>**`{{name}}`**</sub> | <sub>`{{result.slug}}`</sub> | <sub>`{{result.name}}`</sub> | <sub>`{{result.nameUnique}}`</sub> | 
 {{/each}}
 [Go to top](#reference)
 

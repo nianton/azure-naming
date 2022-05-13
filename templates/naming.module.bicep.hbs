@@ -29,14 +29,26 @@ param useDashes bool = true
 @description('Optional. Create names using lowercase letters -defaults to true')
 param useLowerCase bool = true
 
+@description('Optional. Used when region abbreviation is needed (placeholder value is "**location**)')
+param location string = resourceGroup().location
+
 var uniquePart = substring(uniqueString(uniqueSeed), 0, uniqueLength)
 var delimiter = useDashes ? '-' : ''
+var locationPlaceholder = '**location**'
+var regionAbbreviations = {
+  {{#each regionAbbreviations}}
+    {{@key}}: '{{this}}'
+  {{/each}}
+}
+
 
 var strPrefixJoined = empty(prefix) ? '' : '${replace(replace(replace(string(prefix), '["', ''), '"]', ''), '","', delimiter)}${delimiter}'
-var strPrefix = useLowerCase ? toLower(strPrefixJoined) : strPrefixJoined
+var strPrefixInterim = useLowerCase ? toLower(strPrefixJoined) : strPrefixJoined
+var strPrefix = replace(strPrefixInterim, locationPlaceholder, regionAbbreviations[location])
 
 var strSuffixJoined =  empty(suffix) ? '' : '${delimiter}${replace(replace(replace(string(suffix), '["', ''), '"]', ''), '","', delimiter)}'
-var strSuffix = useLowerCase ? toLower(strSuffixJoined) : strSuffixJoined
+var strSuffixInterim = useLowerCase ? toLower(strSuffixJoined) : strSuffixJoined
+var strSuffix = replace(strSuffixInterim, locationPlaceholder, regionAbbreviations[location])
 
 var placeholder = '[****]'
 var nameTemplate = '${strPrefix}${placeholder}${strSuffix}'
@@ -54,8 +66,4 @@ output names object = {
 {{/each}}
 }
 
-output regionAbbreviations object = {
-  {{#each regionAbbreviations}}
-    {{@key}}: '{{this}}'
-  {{/each}}
-}
+output regionAbbreviations object = regionAbbreviations

@@ -1,5 +1,5 @@
 <!-- NOTE: This is a generated file, do not update directly. -->
-<!-- Generated on: 2022-05-12T13:15:14.776Z. -->
+<!-- Generated on: 2022-05-13T18:59:47.765Z. -->
 # Bicep Azure Naming module
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
@@ -26,12 +26,13 @@ A template sample repository was created to showcase how to use this module (**h
 
 ## Module `names` object output properties
 
-Below is a reference of the output `names` object values with the following sample input:
+Below is a reference of the output `names` object values with the following sample input -deployed to 'West Europe' region:
 
 ```bicep
 suffix = [
   'myapp'
   'dev'
+  '**location**' // location/region placeholder, replaced with its abbreviation 
 ]
 
 uniqueLength = 4
@@ -42,285 +43,285 @@ uniqueLength = 4
 ## <a name="ref-a"></a>A
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`analysisServicesServer`** | `as` | `asmyappdev` | `asmyappdevcv7z` | 
-| **`apiManagement`** | `apim` | `apimmyappdev` | `apimmyappdevcv7z` | 
-| **`appConfiguration`** | `appcg` | `appcg-myapp-dev` | `appcg-myapp-dev-cv7z` | 
-| **`appService`** | `app` | `app-myapp-dev` | `app-myapp-dev-cv7z` | 
-| **`appServiceEnvironment`** | `ase` | `ase-myapp-dev` | `ase-myapp-dev-cv7z` | 
-| **`appServicePlan`** | `plan` | `plan-myapp-dev` | `plan-myapp-dev-cv7z` | 
-| **`applicationGateway`** | `agw` | `agw-myapp-dev` | `agw-myapp-dev-cv7z` | 
-| **`applicationInsights`** | `appi` | `appi-myapp-dev` | `appi-myapp-dev-cv7z` | 
-| **`applicationSecurityGroup`** | `asg` | `asg-myapp-dev` | `asg-myapp-dev-cv7z` | 
-| **`automationAccount`** | `aa` | `aa-myapp-dev` | `aa-myapp-dev-cv7z` | 
-| **`automationCertificate`** | `aacert` | `aacert-myapp-dev` | `aacert-myapp-dev-cv7z` | 
-| **`automationCredential`** | `aacred` | `aacred-myapp-dev` | `aacred-myapp-dev-cv7z` | 
-| **`automationRunbook`** | `aacred` | `aacred-myapp-dev` | `aacred-myapp-dev-cv7z` | 
-| **`automationSchedule`** | `aasched` | `aasched-myapp-dev` | `aasched-myapp-dev-cv7z` | 
-| **`automationVariable`** | `aavar` | `aavar-myapp-dev` | `aavar-myapp-dev-cv7z` | 
-| **`availabilitySet`** | `avail` | `avail-myapp-dev` | `avail-myapp-dev-cv7z` | 
+| <sub>**`analysisServicesServer`**</sub> | <sub>`as`</sub> | <sub>`asmyappdevweu`</sub> | <sub>`asmyappdevweucv7z`</sub> | 
+| <sub>**`apiManagement`**</sub> | <sub>`apim`</sub> | <sub>`apimmyappdevweu`</sub> | <sub>`apimmyappdevweucv7z`</sub> | 
+| <sub>**`appConfiguration`**</sub> | <sub>`appcg`</sub> | <sub>`appcg-myapp-dev-weu`</sub> | <sub>`appcg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`appService`**</sub> | <sub>`app`</sub> | <sub>`app-myapp-dev-weu`</sub> | <sub>`app-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`appServiceEnvironment`**</sub> | <sub>`ase`</sub> | <sub>`ase-myapp-dev-weu`</sub> | <sub>`ase-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`appServicePlan`**</sub> | <sub>`plan`</sub> | <sub>`plan-myapp-dev-weu`</sub> | <sub>`plan-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`applicationGateway`**</sub> | <sub>`agw`</sub> | <sub>`agw-myapp-dev-weu`</sub> | <sub>`agw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`applicationInsights`**</sub> | <sub>`appi`</sub> | <sub>`appi-myapp-dev-weu`</sub> | <sub>`appi-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`applicationSecurityGroup`**</sub> | <sub>`asg`</sub> | <sub>`asg-myapp-dev-weu`</sub> | <sub>`asg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`automationAccount`**</sub> | <sub>`aa`</sub> | <sub>`aa-myapp-dev-weu`</sub> | <sub>`aa-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`automationCertificate`**</sub> | <sub>`aacert`</sub> | <sub>`aacert-myapp-dev-weu`</sub> | <sub>`aacert-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`automationCredential`**</sub> | <sub>`aacred`</sub> | <sub>`aacred-myapp-dev-weu`</sub> | <sub>`aacred-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`automationRunbook`**</sub> | <sub>`aacred`</sub> | <sub>`aacred-myapp-dev-weu`</sub> | <sub>`aacred-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`automationSchedule`**</sub> | <sub>`aasched`</sub> | <sub>`aasched-myapp-dev-weu`</sub> | <sub>`aasched-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`automationVariable`**</sub> | <sub>`aavar`</sub> | <sub>`aavar-myapp-dev-weu`</sub> | <sub>`aavar-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`availabilitySet`**</sub> | <sub>`avail`</sub> | <sub>`avail-myapp-dev-weu`</sub> | <sub>`avail-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-b"></a>B
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`bastionHost`** | `snap` | `snap-myapp-dev` | `snap-myapp-dev-cv7z` | 
-| **`batchAccount`** | `ba` | `bamyappdev` | `bamyappdevcv7z` | 
-| **`batchApplication`** | `baapp` | `baapp-myapp-dev` | `baapp-myapp-dev-cv7z` | 
-| **`batchCertificate`** | `bacert` | `bacert-myapp-dev` | `bacert-myapp-dev-cv7z` | 
-| **`batchPool`** | `bapool` | `bapool-myapp-dev` | `bapool-myapp-dev-cv7z` | 
-| **`botChannelDirectline`** | `botline` | `botline-myapp-dev` | `botline-myapp-dev-cv7z` | 
-| **`botChannelEmail`** | `botmail` | `botmail-myapp-dev` | `botmail-myapp-dev-cv7z` | 
-| **`botChannelMsTeams`** | `botteams` | `botteams-myapp-dev` | `botteams-myapp-dev-cv7z` | 
-| **`botChannelSlack`** | `botslack` | `botslack-myapp-dev` | `botslack-myapp-dev-cv7z` | 
-| **`botChannelsRegistration`** | `botchan` | `botchan-myapp-dev` | `botchan-myapp-dev-cv7z` | 
-| **`botConnection`** | `botcon` | `botcon-myapp-dev` | `botcon-myapp-dev-cv7z` | 
-| **`botWebApp`** | `bot` | `bot-myapp-dev` | `bot-myapp-dev-cv7z` | 
+| <sub>**`bastionHost`**</sub> | <sub>`snap`</sub> | <sub>`snap-myapp-dev-weu`</sub> | <sub>`snap-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`batchAccount`**</sub> | <sub>`ba`</sub> | <sub>`bamyappdevweu`</sub> | <sub>`bamyappdevweucv7z`</sub> | 
+| <sub>**`batchApplication`**</sub> | <sub>`baapp`</sub> | <sub>`baapp-myapp-dev-weu`</sub> | <sub>`baapp-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`batchCertificate`**</sub> | <sub>`bacert`</sub> | <sub>`bacert-myapp-dev-weu`</sub> | <sub>`bacert-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`batchPool`**</sub> | <sub>`bapool`</sub> | <sub>`bapool-myapp-dev-weu`</sub> | <sub>`bapool-myapp-dev-weu-cv7`</sub> | 
+| <sub>**`botChannelDirectline`**</sub> | <sub>`botline`</sub> | <sub>`botline-myapp-dev-weu`</sub> | <sub>`botline-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`botChannelEmail`**</sub> | <sub>`botmail`</sub> | <sub>`botmail-myapp-dev-weu`</sub> | <sub>`botmail-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`botChannelMsTeams`**</sub> | <sub>`botteams`</sub> | <sub>`botteams-myapp-dev-weu`</sub> | <sub>`botteams-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`botChannelSlack`**</sub> | <sub>`botslack`</sub> | <sub>`botslack-myapp-dev-weu`</sub> | <sub>`botslack-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`botChannelsRegistration`**</sub> | <sub>`botchan`</sub> | <sub>`botchan-myapp-dev-weu`</sub> | <sub>`botchan-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`botConnection`**</sub> | <sub>`botcon`</sub> | <sub>`botcon-myapp-dev-weu`</sub> | <sub>`botcon-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`botWebApp`**</sub> | <sub>`bot`</sub> | <sub>`bot-myapp-dev-weu`</sub> | <sub>`bot-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-c"></a>C
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`cdnEndpoint`** | `cdn` | `cdn-myapp-dev` | `cdn-myapp-dev-cv7z` | 
-| **`cdnProfile`** | `cdnprof` | `cdnprof-myapp-dev` | `cdnprof-myapp-dev-cv7z` | 
-| **`cognitiveAccount`** | `cog` | `cog-myapp-dev` | `cog-myapp-dev-cv7z` | 
-| **`containerApp`** | `capp` | `capp-myapp-dev` | `capp-myapp-dev-cv7z` | 
-| **`containerGroup`** | `cg` | `cg-myapp-dev` | `cg-myapp-dev-cv7z` | 
-| **`containerRegistry`** | `acr` | `acrmyappdev` | `acrmyappdevcv7z` | 
-| **`containerRegistryWebhook`** | `crwh` | `crwhmyappdev` | `crwhmyappdevcv7z` | 
-| **`cosmosdbAccount`** | `cosmos` | `cosmos-myapp-dev` | `cosmos-myapp-dev-cv7z` | 
-| **`customProvider`** | `prov` | `prov-myapp-dev` | `prov-myapp-dev-cv7z` | 
+| <sub>**`cdnEndpoint`**</sub> | <sub>`cdn`</sub> | <sub>`cdn-myapp-dev-weu`</sub> | <sub>`cdn-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`cdnProfile`**</sub> | <sub>`cdnprof`</sub> | <sub>`cdnprof-myapp-dev-weu`</sub> | <sub>`cdnprof-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`cognitiveAccount`**</sub> | <sub>`cog`</sub> | <sub>`cog-myapp-dev-weu`</sub> | <sub>`cog-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`containerApp`**</sub> | <sub>`capp`</sub> | <sub>`capp-myapp-dev-weu`</sub> | <sub>`capp-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`containerGroup`**</sub> | <sub>`cg`</sub> | <sub>`cg-myapp-dev-weu`</sub> | <sub>`cg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`containerRegistry`**</sub> | <sub>`acr`</sub> | <sub>`acrmyappdevweu`</sub> | <sub>`acrmyappdevweucv7z`</sub> | 
+| <sub>**`containerRegistryWebhook`**</sub> | <sub>`crwh`</sub> | <sub>`crwhmyappdevweu`</sub> | <sub>`crwhmyappdevweucv7z`</sub> | 
+| <sub>**`cosmosdbAccount`**</sub> | <sub>`cosmos`</sub> | <sub>`cosmos-myapp-dev-weu`</sub> | <sub>`cosmos-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`customProvider`**</sub> | <sub>`prov`</sub> | <sub>`prov-myapp-dev-weu`</sub> | <sub>`prov-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-d"></a>D
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`dashboard`** | `dsb` | `dsb-myapp-dev` | `dsb-myapp-dev-cv7z` | 
-| **`dataFactory`** | `adf` | `adf-myapp-dev` | `adf-myapp-dev-cv7z` | 
-| **`dataFactoryDatasetMysql`** | `adfmysql` | `adfmysql-myapp-dev` | `adfmysql-myapp-dev-cv7z` | 
-| **`dataFactoryDatasetPostgresql`** | `adfpsql` | `adfpsql-myapp-dev` | `adfpsql-myapp-dev-cv7z` | 
-| **`dataFactoryDatasetSqlServerTable`** | `adfmssql` | `adfmssql-myapp-dev` | `adfmssql-myapp-dev-cv7z` | 
-| **`dataFactoryIntegrationRuntimeManaged`** | `adfir` | `adfir-myapp-dev` | `adfir-myapp-dev-cv7z` | 
-| **`dataFactoryLinkedServiceDataLakeStorageGen2`** | `adfsvst` | `adfsvst-myapp-dev` | `adfsvst-myapp-dev-cv7z` | 
-| **`dataFactoryLinkedServiceKeyVault`** | `adfsvkv` | `adfsvkv-myapp-dev` | `adfsvkv-myapp-dev-cv7z` | 
-| **`dataFactoryLinkedServiceMysql`** | `adfsvmysql` | `adfsvmysql-myapp-dev` | `adfsvmysql-myapp-dev-cv7z` | 
-| **`dataFactoryLinkedServicePostgresql`** | `adfsvpsql` | `adfsvpsql-myapp-dev` | `adfsvpsql-myapp-dev-cv7z` | 
-| **`dataFactoryLinkedServiceSqlServer`** | `adfsvmssql` | `adfsvmssql-myapp-dev` | `adfsvmssql-myapp-dev-cv7z` | 
-| **`dataFactoryPipeline`** | `adfpl` | `adfpl-myapp-dev` | `adfpl-myapp-dev-cv7z` | 
-| **`dataFactoryTriggerSchedule`** | `adftg` | `adftg-myapp-dev` | `adftg-myapp-dev-cv7z` | 
-| **`dataLakeAnalyticsAccount`** | `dla` | `dlamyappdev` | `dlamyappdevcv7z` | 
-| **`dataLakeAnalyticsFirewallRule`** | `dlfw` | `dlfw-myapp-dev` | `dlfw-myapp-dev-cv7z` | 
-| **`dataLakeStore`** | `dls` | `dlsmyappdev` | `dlsmyappdevcv7z` | 
-| **`dataLakeStoreFirewallRule`** | `dlsfw` | `dlsfw-myapp-dev` | `dlsfw-myapp-dev-cv7z` | 
-| **`databaseMigrationProject`** | `migr` | `migr-myapp-dev` | `migr-myapp-dev-cv7z` | 
-| **`databaseMigrationService`** | `dms` | `dms-myapp-dev` | `dms-myapp-dev-cv7z` | 
-| **`databricksWorkspace`** | `dbw` | `dbw-myapp-dev` | `dbw-myapp-dev-cv7z` | 
-| **`devTestLab`** | `lab` | `lab-myapp-dev` | `lab-myapp-dev-cv7z` | 
-| **`devTestLinuxVirtualMachine`** | `labvm` | `labvm-myapp-dev` | `labvm-myapp-dev-cv7z` | 
-| **`devTestWindowsVirtualMachine`** | `labvm` | `labvm-myapp-dev` | `labvm-myapp-dev` | 
-| **`diskEncryptionSet`** | `des` | `des-myapp-dev` | `des-myapp-dev-cv7z` | 
-| **`dnsZone`** | `dns` | `dns-myapp-dev` | `dns-myapp-dev-cv7z` | 
+| <sub>**`dashboard`**</sub> | <sub>`dsb`</sub> | <sub>`dsb-myapp-dev-weu`</sub> | <sub>`dsb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactory`**</sub> | <sub>`adf`</sub> | <sub>`adf-myapp-dev-weu`</sub> | <sub>`adf-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryDatasetMysql`**</sub> | <sub>`adfmysql`</sub> | <sub>`adfmysql-myapp-dev-weu`</sub> | <sub>`adfmysql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryDatasetPostgresql`**</sub> | <sub>`adfpsql`</sub> | <sub>`adfpsql-myapp-dev-weu`</sub> | <sub>`adfpsql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryDatasetSqlServerTable`**</sub> | <sub>`adfmssql`</sub> | <sub>`adfmssql-myapp-dev-weu`</sub> | <sub>`adfmssql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryIntegrationRuntimeManaged`**</sub> | <sub>`adfir`</sub> | <sub>`adfir-myapp-dev-weu`</sub> | <sub>`adfir-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryLinkedServiceDataLakeStorageGen2`**</sub> | <sub>`adfsvst`</sub> | <sub>`adfsvst-myapp-dev-weu`</sub> | <sub>`adfsvst-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryLinkedServiceKeyVault`**</sub> | <sub>`adfsvkv`</sub> | <sub>`adfsvkv-myapp-dev-weu`</sub> | <sub>`adfsvkv-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryLinkedServiceMysql`**</sub> | <sub>`adfsvmysql`</sub> | <sub>`adfsvmysql-myapp-dev-weu`</sub> | <sub>`adfsvmysql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryLinkedServicePostgresql`**</sub> | <sub>`adfsvpsql`</sub> | <sub>`adfsvpsql-myapp-dev-weu`</sub> | <sub>`adfsvpsql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryLinkedServiceSqlServer`**</sub> | <sub>`adfsvmssql`</sub> | <sub>`adfsvmssql-myapp-dev-weu`</sub> | <sub>`adfsvmssql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryPipeline`**</sub> | <sub>`adfpl`</sub> | <sub>`adfpl-myapp-dev-weu`</sub> | <sub>`adfpl-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataFactoryTriggerSchedule`**</sub> | <sub>`adftg`</sub> | <sub>`adftg-myapp-dev-weu`</sub> | <sub>`adftg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataLakeAnalyticsAccount`**</sub> | <sub>`dla`</sub> | <sub>`dlamyappdevweu`</sub> | <sub>`dlamyappdevweucv7z`</sub> | 
+| <sub>**`dataLakeAnalyticsFirewallRule`**</sub> | <sub>`dlfw`</sub> | <sub>`dlfw-myapp-dev-weu`</sub> | <sub>`dlfw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dataLakeStore`**</sub> | <sub>`dls`</sub> | <sub>`dlsmyappdevweu`</sub> | <sub>`dlsmyappdevweucv7z`</sub> | 
+| <sub>**`dataLakeStoreFirewallRule`**</sub> | <sub>`dlsfw`</sub> | <sub>`dlsfw-myapp-dev-weu`</sub> | <sub>`dlsfw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`databaseMigrationProject`**</sub> | <sub>`migr`</sub> | <sub>`migr-myapp-dev-weu`</sub> | <sub>`migr-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`databaseMigrationService`**</sub> | <sub>`dms`</sub> | <sub>`dms-myapp-dev-weu`</sub> | <sub>`dms-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`databricksWorkspace`**</sub> | <sub>`dbw`</sub> | <sub>`dbw-myapp-dev-weu`</sub> | <sub>`dbw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`devTestLab`**</sub> | <sub>`lab`</sub> | <sub>`lab-myapp-dev-weu`</sub> | <sub>`lab-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`devTestLinuxVirtualMachine`**</sub> | <sub>`labvm`</sub> | <sub>`labvm-myapp-dev-weu`</sub> | <sub>`labvm-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`devTestWindowsVirtualMachine`**</sub> | <sub>`labvm`</sub> | <sub>`labvm-myapp-dev`</sub> | <sub>`labvm-myapp-dev`</sub> | 
+| <sub>**`diskEncryptionSet`**</sub> | <sub>`des`</sub> | <sub>`des-myapp-dev-weu`</sub> | <sub>`des-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`dnsZone`**</sub> | <sub>`dns`</sub> | <sub>`dns-myapp-dev-weu`</sub> | <sub>`dns-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-e"></a>E
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`eventGridDomain`** | `egd` | `egd-myapp-dev` | `egd-myapp-dev-cv7z` | 
-| **`eventGridDomainTopic`** | `egdt` | `egdt-myapp-dev` | `egdt-myapp-dev-cv7z` | 
-| **`eventGridEventSubscription`** | `egs` | `egs-myapp-dev` | `egs-myapp-dev-cv7z` | 
-| **`eventGridTopic`** | `egt` | `egt-myapp-dev` | `egt-myapp-dev-cv7z` | 
-| **`eventHub`** | `evh` | `evh-myapp-dev` | `evh-myapp-dev-cv7z` | 
-| **`eventHubAuthorizationRule`** | `ehar` | `ehar-myapp-dev` | `ehar-myapp-dev-cv7z` | 
-| **`eventHubConsumerGroup`** | `ehcg` | `ehcg-myapp-dev` | `ehcg-myapp-dev-cv7z` | 
-| **`eventHubNamespace`** | `ehn` | `ehn-myapp-dev` | `ehn-myapp-dev-cv7z` | 
-| **`eventHubNamespaceAuthorizationRule`** | `ehnar` | `ehnar-myapp-dev` | `ehnar-myapp-dev-cv7z` | 
-| **`eventHubNamespaceDisasterRecoveryConfig`** | `ehdr` | `ehdr-myapp-dev` | `ehdr-myapp-dev-cv7z` | 
-| **`expressRouteCircuit`** | `erc` | `erc-myapp-dev` | `erc-myapp-dev-cv7z` | 
-| **`expressRouteGateway`** | `ergw` | `ergw-myapp-dev` | `ergw-myapp-dev-cv7z` | 
+| <sub>**`eventGridDomain`**</sub> | <sub>`egd`</sub> | <sub>`egd-myapp-dev-weu`</sub> | <sub>`egd-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventGridDomainTopic`**</sub> | <sub>`egdt`</sub> | <sub>`egdt-myapp-dev-weu`</sub> | <sub>`egdt-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventGridEventSubscription`**</sub> | <sub>`egs`</sub> | <sub>`egs-myapp-dev-weu`</sub> | <sub>`egs-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventGridTopic`**</sub> | <sub>`egt`</sub> | <sub>`egt-myapp-dev-weu`</sub> | <sub>`egt-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventHub`**</sub> | <sub>`evh`</sub> | <sub>`evh-myapp-dev-weu`</sub> | <sub>`evh-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventHubAuthorizationRule`**</sub> | <sub>`ehar`</sub> | <sub>`ehar-myapp-dev-weu`</sub> | <sub>`ehar-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventHubConsumerGroup`**</sub> | <sub>`ehcg`</sub> | <sub>`ehcg-myapp-dev-weu`</sub> | <sub>`ehcg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventHubNamespace`**</sub> | <sub>`ehn`</sub> | <sub>`ehn-myapp-dev-weu`</sub> | <sub>`ehn-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventHubNamespaceAuthorizationRule`**</sub> | <sub>`ehnar`</sub> | <sub>`ehnar-myapp-dev-weu`</sub> | <sub>`ehnar-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`eventHubNamespaceDisasterRecoveryConfig`**</sub> | <sub>`ehdr`</sub> | <sub>`ehdr-myapp-dev-weu`</sub> | <sub>`ehdr-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`expressRouteCircuit`**</sub> | <sub>`erc`</sub> | <sub>`erc-myapp-dev-weu`</sub> | <sub>`erc-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`expressRouteGateway`**</sub> | <sub>`ergw`</sub> | <sub>`ergw-myapp-dev-weu`</sub> | <sub>`ergw-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-f"></a>F
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`firewall`** | `afw` | `afw-myapp-dev` | `afw-myapp-dev-cv7z` | 
-| **`firewallPolicy`** | `afwp` | `afwp-myapp-dev` | `afwp-myapp-dev-cv7z` | 
-| **`frontDoor`** | `fd` | `fd-myapp-dev` | `fd-myapp-dev-cv7z` | 
-| **`frontDoorFirewallPolicy`** | `fdfw` | `fdfw-myapp-dev` | `fdfw-myapp-dev-cv7z` | 
-| **`functionApp`** | `func` | `func-myapp-dev` | `func-myapp-dev-cv7z` | 
+| <sub>**`firewall`**</sub> | <sub>`afw`</sub> | <sub>`afw-myapp-dev-weu`</sub> | <sub>`afw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`firewallPolicy`**</sub> | <sub>`afwp`</sub> | <sub>`afwp-myapp-dev-weu`</sub> | <sub>`afwp-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`frontDoor`**</sub> | <sub>`fd`</sub> | <sub>`fd-myapp-dev-weu`</sub> | <sub>`fd-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`frontDoorFirewallPolicy`**</sub> | <sub>`fdfw`</sub> | <sub>`fdfw-myapp-dev-weu`</sub> | <sub>`fdfw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`functionApp`**</sub> | <sub>`func`</sub> | <sub>`func-myapp-dev-weu`</sub> | <sub>`func-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-h"></a>H
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`hdInsightHadoopCluster`** | `hadoop` | `hadoop-myapp-dev` | `hadoop-myapp-dev-cv7z` | 
-| **`hdInsightHbaseCluster`** | `hbase` | `hbase-myapp-dev` | `hbase-myapp-dev-cv7z` | 
-| **`hdInsightInteractiveQueryCluster`** | `iqr` | `iqr-myapp-dev` | `iqr-myapp-dev-cv7z` | 
-| **`hdInsightKafkaCluster`** | `kafka` | `kafka-myapp-dev` | `kafka-myapp-dev-cv7z` | 
-| **`hdInsightMlServicesCluster`** | `mls` | `mls-myapp-dev` | `mls-myapp-dev-cv7z` | 
-| **`hdInsightRserverCluster`** | `rsv` | `rsv-myapp-dev` | `rsv-myapp-dev-cv7z` | 
-| **`hdInsightSparkCluster`** | `spark` | `spark-myapp-dev` | `spark-myapp-dev-cv7z` | 
-| **`hdInsightStormCluster`** | `storm` | `storm-myapp-dev` | `storm-myapp-dev-cv7z` | 
+| <sub>**`hdInsightHadoopCluster`**</sub> | <sub>`hadoop`</sub> | <sub>`hadoop-myapp-dev-weu`</sub> | <sub>`hadoop-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`hdInsightHbaseCluster`**</sub> | <sub>`hbase`</sub> | <sub>`hbase-myapp-dev-weu`</sub> | <sub>`hbase-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`hdInsightInteractiveQueryCluster`**</sub> | <sub>`iqr`</sub> | <sub>`iqr-myapp-dev-weu`</sub> | <sub>`iqr-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`hdInsightKafkaCluster`**</sub> | <sub>`kafka`</sub> | <sub>`kafka-myapp-dev-weu`</sub> | <sub>`kafka-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`hdInsightMlServicesCluster`**</sub> | <sub>`mls`</sub> | <sub>`mls-myapp-dev-weu`</sub> | <sub>`mls-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`hdInsightRserverCluster`**</sub> | <sub>`rsv`</sub> | <sub>`rsv-myapp-dev-weu`</sub> | <sub>`rsv-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`hdInsightSparkCluster`**</sub> | <sub>`spark`</sub> | <sub>`spark-myapp-dev-weu`</sub> | <sub>`spark-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`hdInsightStormCluster`**</sub> | <sub>`storm`</sub> | <sub>`storm-myapp-dev-weu`</sub> | <sub>`storm-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-i"></a>I
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`image`** | `img` | `img-myapp-dev` | `img-myapp-dev-cv7z` | 
-| **`iotCentralApplication`** | `iotapp` | `iotapp-myapp-dev` | `iotapp-myapp-dev-cv7z` | 
-| **`iotHub`** | `iot` | `iot-myapp-dev` | `iot-myapp-dev-cv7z` | 
-| **`iotHubConsumerGroup`** | `iotcg` | `iotcg-myapp-dev` | `iotcg-myapp-dev-cv7z` | 
-| **`iotHubDps`** | `dps` | `dps-myapp-dev` | `dps-myapp-dev-cv7z` | 
-| **`iotHubDpsCertificate`** | `dpscert` | `dpscert-myapp-dev` | `dpscert-myapp-dev-cv7z` | 
+| <sub>**`image`**</sub> | <sub>`img`</sub> | <sub>`img-myapp-dev-weu`</sub> | <sub>`img-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`iotCentralApplication`**</sub> | <sub>`iotapp`</sub> | <sub>`iotapp-myapp-dev-weu`</sub> | <sub>`iotapp-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`iotHub`**</sub> | <sub>`iot`</sub> | <sub>`iot-myapp-dev-weu`</sub> | <sub>`iot-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`iotHubConsumerGroup`**</sub> | <sub>`iotcg`</sub> | <sub>`iotcg-myapp-dev-weu`</sub> | <sub>`iotcg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`iotHubDps`**</sub> | <sub>`dps`</sub> | <sub>`dps-myapp-dev-weu`</sub> | <sub>`dps-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`iotHubDpsCertificate`**</sub> | <sub>`dpscert`</sub> | <sub>`dpscert-myapp-dev-weu`</sub> | <sub>`dpscert-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-k"></a>K
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`keyVault`** | `kv` | `kv-myapp-dev` | `kv-myapp-dev-cv7z` | 
-| **`keyVaultCertificate`** | `kvc` | `kvc-myapp-dev` | `kvc-myapp-dev-cv7z` | 
-| **`keyVaultKey`** | `kvk` | `kvk-myapp-dev` | `kvk-myapp-dev-cv7z` | 
-| **`keyVaultSecret`** | `kvs` | `kvs-myapp-dev` | `kvs-myapp-dev-cv7z` | 
-| **`kubernetesCluster`** | `aks` | `aks-myapp-dev` | `aks-myapp-dev-cv7z` | 
-| **`kustoCluster`** | `kc` | `kcmyappdev` | `kcmyappdevcv7z` | 
-| **`kustoDatabase`** | `kdb` | `kdb-myapp-dev` | `kdb-myapp-dev-cv7z` | 
-| **`kustoEventHubDataConnection`** | `kehc` | `kehc-myapp-dev` | `kehc-myapp-dev-cv7z` | 
+| <sub>**`keyVault`**</sub> | <sub>`kv`</sub> | <sub>`kv-myapp-dev-weu`</sub> | <sub>`kv-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`keyVaultCertificate`**</sub> | <sub>`kvc`</sub> | <sub>`kvc-myapp-dev-weu`</sub> | <sub>`kvc-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`keyVaultKey`**</sub> | <sub>`kvk`</sub> | <sub>`kvk-myapp-dev-weu`</sub> | <sub>`kvk-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`keyVaultSecret`**</sub> | <sub>`kvs`</sub> | <sub>`kvs-myapp-dev-weu`</sub> | <sub>`kvs-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`kubernetesCluster`**</sub> | <sub>`aks`</sub> | <sub>`aks-myapp-dev-weu`</sub> | <sub>`aks-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`kustoCluster`**</sub> | <sub>`kc`</sub> | <sub>`kcmyappdevweu`</sub> | <sub>`kcmyappdevweucv7z`</sub> | 
+| <sub>**`kustoDatabase`**</sub> | <sub>`kdb`</sub> | <sub>`kdb-myapp-dev-weu`</sub> | <sub>`kdb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`kustoEventHubDataConnection`**</sub> | <sub>`kehc`</sub> | <sub>`kehc-myapp-dev-weu`</sub> | <sub>`kehc-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-l"></a>L
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`linuxVirtualMachine`** | `vm` | `vm-myapp-dev` | `vm-myapp-dev-cv7z` | 
-| **`linuxVirtualMachineScaleSet`** | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-cv7z` | 
-| **`loadBalancer`** | `lb` | `lb-myapp-dev` | `lb-myapp-dev-cv7z` | 
-| **`loadBalancerNatRule`** | `lbnatrl` | `lbnatrl-myapp-dev` | `lbnatrl-myapp-dev-cv7z` | 
-| **`localNetworkGateway`** | `lgw` | `lgw-myapp-dev` | `lgw-myapp-dev-cv7z` | 
-| **`logAnalyticsWorkspace`** | `log` | `log-myapp-dev` | `log-myapp-dev-cv7z` | 
+| <sub>**`linuxVirtualMachine`**</sub> | <sub>`vm`</sub> | <sub>`vm-myapp-dev-weu`</sub> | <sub>`vm-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`linuxVirtualMachineScaleSet`**</sub> | <sub>`vmss`</sub> | <sub>`vmss-myapp-dev-weu`</sub> | <sub>`vmss-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`loadBalancer`**</sub> | <sub>`lb`</sub> | <sub>`lb-myapp-dev-weu`</sub> | <sub>`lb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`loadBalancerNatRule`**</sub> | <sub>`lbnatrl`</sub> | <sub>`lbnatrl-myapp-dev-weu`</sub> | <sub>`lbnatrl-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`localNetworkGateway`**</sub> | <sub>`lgw`</sub> | <sub>`lgw-myapp-dev-weu`</sub> | <sub>`lgw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`logAnalyticsWorkspace`**</sub> | <sub>`log`</sub> | <sub>`log-myapp-dev-weu`</sub> | <sub>`log-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-m"></a>M
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`machineLearningWorkspace`** | `mlw` | `mlw-myapp-dev` | `mlw-myapp-dev-cv7z` | 
-| **`managedDisk`** | `dsk` | `dsk-myapp-dev` | `dsk-myapp-dev-cv7z` | 
-| **`mapsAccount`** | `map` | `map-myapp-dev` | `map-myapp-dev-cv7z` | 
-| **`mariadbDatabase`** | `mariadb` | `mariadb-myapp-dev` | `mariadb-myapp-dev-cv7z` | 
-| **`mariadbFirewallRule`** | `mariafw` | `mariafw-myapp-dev` | `mariafw-myapp-dev-cv7z` | 
-| **`mariadbServer`** | `maria` | `maria-myapp-dev` | `maria-myapp-dev-cv7z` | 
-| **`mariadbVirtualNetworkRule`** | `mariavn` | `mariavn-myapp-dev` | `mariavn-myapp-dev-cv7z` | 
-| **`mssqlDatabase`** | `sqldb` | `sqldb-myapp-dev` | `sqldb-myapp-dev-cv7z` | 
-| **`mssqlElasticpool`** | `sqlep` | `sqlep-myapp-dev` | `sqlep-myapp-dev-cv7z` | 
-| **`mssqlServer`** | `sql` | `sql-myapp-dev` | `sql-myapp-dev-cv7z` | 
-| **`mysqlDatabase`** | `mysqldb` | `mysqldb-myapp-dev` | `mysqldb-myapp-dev-cv7z` | 
-| **`mysqlFirewallRule`** | `mysqlfw` | `mysqlfw-myapp-dev` | `mysqlfw-myapp-dev-cv7z` | 
-| **`mysqlServer`** | `mysql` | `mysql-myapp-dev` | `mysql-myapp-dev-cv7z` | 
-| **`mysqlVirtualNetworkRule`** | `mysqlvn` | `mysqlvn-myapp-dev` | `mysqlvn-myapp-dev-cv7z` | 
+| <sub>**`machineLearningWorkspace`**</sub> | <sub>`mlw`</sub> | <sub>`mlw-myapp-dev-weu`</sub> | <sub>`mlw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`managedDisk`**</sub> | <sub>`dsk`</sub> | <sub>`dsk-myapp-dev-weu`</sub> | <sub>`dsk-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mapsAccount`**</sub> | <sub>`map`</sub> | <sub>`map-myapp-dev-weu`</sub> | <sub>`map-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mariadbDatabase`**</sub> | <sub>`mariadb`</sub> | <sub>`mariadb-myapp-dev-weu`</sub> | <sub>`mariadb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mariadbFirewallRule`**</sub> | <sub>`mariafw`</sub> | <sub>`mariafw-myapp-dev-weu`</sub> | <sub>`mariafw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mariadbServer`**</sub> | <sub>`maria`</sub> | <sub>`maria-myapp-dev-weu`</sub> | <sub>`maria-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mariadbVirtualNetworkRule`**</sub> | <sub>`mariavn`</sub> | <sub>`mariavn-myapp-dev-weu`</sub> | <sub>`mariavn-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mssqlDatabase`**</sub> | <sub>`sqldb`</sub> | <sub>`sqldb-myapp-dev-weu`</sub> | <sub>`sqldb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mssqlElasticpool`**</sub> | <sub>`sqlep`</sub> | <sub>`sqlep-myapp-dev-weu`</sub> | <sub>`sqlep-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mssqlServer`**</sub> | <sub>`sql`</sub> | <sub>`sql-myapp-dev-weu`</sub> | <sub>`sql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mysqlDatabase`**</sub> | <sub>`mysqldb`</sub> | <sub>`mysqldb-myapp-dev-weu`</sub> | <sub>`mysqldb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mysqlFirewallRule`**</sub> | <sub>`mysqlfw`</sub> | <sub>`mysqlfw-myapp-dev-weu`</sub> | <sub>`mysqlfw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mysqlServer`**</sub> | <sub>`mysql`</sub> | <sub>`mysql-myapp-dev-weu`</sub> | <sub>`mysql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`mysqlVirtualNetworkRule`**</sub> | <sub>`mysqlvn`</sub> | <sub>`mysqlvn-myapp-dev-weu`</sub> | <sub>`mysqlvn-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-n"></a>N
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`networkInterface`** | `nic` | `nic-myapp-dev` | `nic-myapp-dev-cv7z` | 
-| **`networkSecurityGroup`** | `nsg` | `nsg-myapp-dev` | `nsg-myapp-dev-cv7z` | 
-| **`networkSecurityGroupRule`** | `nsgr` | `nsgr-myapp-dev` | `nsgr-myapp-dev-cv7z` | 
-| **`networkSecurityRule`** | `nsgr` | `nsgr-myapp-dev` | `nsgr-myapp-dev-cv7z` | 
-| **`networkWatcher`** | `nw` | `nw-myapp-dev` | `nw-myapp-dev-cv7z` | 
-| **`notificationHub`** | `nh` | `nh-myapp-dev` | `nh-myapp-dev-cv7z` | 
-| **`notificationHubAuthorizationRule`** | `dnsrec` | `dnsrec-myapp-dev` | `dnsrec-myapp-dev-cv7z` | 
-| **`notificationHubNamespace`** | `dnsrec` | `dnsrec-myapp-dev` | `dnsrec-myapp-dev-cv7z` | 
+| <sub>**`networkInterface`**</sub> | <sub>`nic`</sub> | <sub>`nic-myapp-dev-weu`</sub> | <sub>`nic-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`networkSecurityGroup`**</sub> | <sub>`nsg`</sub> | <sub>`nsg-myapp-dev-weu`</sub> | <sub>`nsg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`networkSecurityGroupRule`**</sub> | <sub>`nsgr`</sub> | <sub>`nsgr-myapp-dev-weu`</sub> | <sub>`nsgr-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`networkSecurityRule`**</sub> | <sub>`nsgr`</sub> | <sub>`nsgr-myapp-dev-weu`</sub> | <sub>`nsgr-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`networkWatcher`**</sub> | <sub>`nw`</sub> | <sub>`nw-myapp-dev-weu`</sub> | <sub>`nw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`notificationHub`**</sub> | <sub>`nh`</sub> | <sub>`nh-myapp-dev-weu`</sub> | <sub>`nh-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`notificationHubAuthorizationRule`**</sub> | <sub>`dnsrec`</sub> | <sub>`dnsrec-myapp-dev-weu`</sub> | <sub>`dnsrec-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`notificationHubNamespace`**</sub> | <sub>`dnsrec`</sub> | <sub>`dnsrec-myapp-dev-weu`</sub> | <sub>`dnsrec-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-p"></a>P
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`pointToSiteVpnGateway`** | `vpngw` | `vpngw-myapp-dev` | `vpngw-myapp-dev-cv7z` | 
-| **`postgresqlDatabase`** | `psqldb` | `psqldb-myapp-dev` | `psqldb-myapp-dev-cv7z` | 
-| **`postgresqlFirewallRule`** | `psqlfw` | `psqlfw-myapp-dev` | `psqlfw-myapp-dev-cv7z` | 
-| **`postgresqlServer`** | `psql` | `psql-myapp-dev` | `psql-myapp-dev-cv7z` | 
-| **`postgresqlVirtualNetworkRule`** | `psqlvn` | `psqlvn-myapp-dev` | `psqlvn-myapp-dev-cv7z` | 
-| **`powerbiEmbedded`** | `pbi` | `pbi-myapp-dev` | `pbi-myapp-dev-cv7z` | 
-| **`privateDnsZone`** | `pdns` | `pdns-myapp-dev` | `pdns-myapp-dev-cv7z` | 
-| **`publicIp`** | `pip` | `pip-myapp-dev` | `pip-myapp-dev-cv7z` | 
-| **`publicIpPrefix`** | `pippf` | `pippf-myapp-dev` | `pippf-myapp-dev-cv7z` | 
+| <sub>**`pointToSiteVpnGateway`**</sub> | <sub>`vpngw`</sub> | <sub>`vpngw-myapp-dev-weu`</sub> | <sub>`vpngw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`postgresqlDatabase`**</sub> | <sub>`psqldb`</sub> | <sub>`psqldb-myapp-dev-weu`</sub> | <sub>`psqldb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`postgresqlFirewallRule`**</sub> | <sub>`psqlfw`</sub> | <sub>`psqlfw-myapp-dev-weu`</sub> | <sub>`psqlfw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`postgresqlServer`**</sub> | <sub>`psql`</sub> | <sub>`psql-myapp-dev-weu`</sub> | <sub>`psql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`postgresqlVirtualNetworkRule`**</sub> | <sub>`psqlvn`</sub> | <sub>`psqlvn-myapp-dev-weu`</sub> | <sub>`psqlvn-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`powerbiEmbedded`**</sub> | <sub>`pbi`</sub> | <sub>`pbi-myapp-dev-weu`</sub> | <sub>`pbi-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`privateDnsZone`**</sub> | <sub>`pdns`</sub> | <sub>`pdns-myapp-dev-weu`</sub> | <sub>`pdns-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`publicIp`**</sub> | <sub>`pip`</sub> | <sub>`pip-myapp-dev-weu`</sub> | <sub>`pip-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`publicIpPrefix`**</sub> | <sub>`pippf`</sub> | <sub>`pippf-myapp-dev-weu`</sub> | <sub>`pippf-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-r"></a>R
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`redisCache`** | `redis` | `redis-myapp-dev` | `redis-myapp-dev-cv7z` | 
-| **`redisFirewallRule`** | `redisfw` | `redisfwmyappdev` | `redisfwmyappdevcv7z` | 
-| **`relayHybridConnection`** | `rlhc` | `rlhc-myapp-dev` | `rlhc-myapp-dev-cv7z` | 
-| **`relayNamespace`** | `rln` | `rln-myapp-dev` | `rln-myapp-dev-cv7z` | 
-| **`resourceGroup`** | `rg` | `rg-myapp-dev` | `rg-myapp-dev-cv7z` | 
-| **`roleAssignment`** | `ra` | `ra-myapp-dev` | `ra-myapp-dev-cv7z` | 
-| **`roleDefinition`** | `rd` | `rd-myapp-dev` | `rd-myapp-dev-cv7z` | 
-| **`route`** | `rt` | `rt-myapp-dev` | `rt-myapp-dev-cv7z` | 
-| **`routeTable`** | `route` | `route-myapp-dev` | `route-myapp-dev-cv7z` | 
+| <sub>**`redisCache`**</sub> | <sub>`redis`</sub> | <sub>`redis-myapp-dev-weu`</sub> | <sub>`redis-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`redisFirewallRule`**</sub> | <sub>`redisfw`</sub> | <sub>`redisfwmyappdevweu`</sub> | <sub>`redisfwmyappdevweucv7z`</sub> | 
+| <sub>**`relayHybridConnection`**</sub> | <sub>`rlhc`</sub> | <sub>`rlhc-myapp-dev-weu`</sub> | <sub>`rlhc-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`relayNamespace`**</sub> | <sub>`rln`</sub> | <sub>`rln-myapp-dev-weu`</sub> | <sub>`rln-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`resourceGroup`**</sub> | <sub>`rg`</sub> | <sub>`rg-myapp-dev-weu`</sub> | <sub>`rg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`roleAssignment`**</sub> | <sub>`ra`</sub> | <sub>`ra-myapp-dev-weu`</sub> | <sub>`ra-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`roleDefinition`**</sub> | <sub>`rd`</sub> | <sub>`rd-myapp-dev-weu`</sub> | <sub>`rd-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`route`**</sub> | <sub>`rt`</sub> | <sub>`rt-myapp-dev-weu`</sub> | <sub>`rt-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`routeTable`**</sub> | <sub>`route`</sub> | <sub>`route-myapp-dev-weu`</sub> | <sub>`route-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-s"></a>S
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`serviceBusNamespace`** | `sb` | `sb-myapp-dev` | `sb-myapp-dev-cv7z` | 
-| **`serviceBusNamespaceAuthorizationRule`** | `sbar` | `sbar-myapp-dev` | `sbar-myapp-dev-cv7z` | 
-| **`serviceBusQueue`** | `sbq` | `sbq-myapp-dev` | `sbq-myapp-dev-cv7z` | 
-| **`serviceBusQueueAuthorizationRule`** | `sbqar` | `sbqar-myapp-dev` | `sbqar-myapp-dev-cv7z` | 
-| **`serviceBusSubscription`** | `sbs` | `sbs-myapp-dev` | `sbs-myapp-dev-cv7z` | 
-| **`serviceBusSubscriptionRule`** | `sbsr` | `sbsr-myapp-dev` | `sbsr-myapp-dev-cv7z` | 
-| **`serviceBusTopic`** | `sbt` | `sbt-myapp-dev` | `sbt-myapp-dev-cv7z` | 
-| **`serviceBusTopicAuthorizationRule`** | `dnsrec` | `dnsrec-myapp-dev` | `dnsrec-myapp-dev-cv7z` | 
-| **`serviceFabricCluster`** | `sf` | `sf-myapp-dev` | `sf-myapp-dev-cv7z` | 
-| **`sharedImage`** | `si` | `si-myapp-dev` | `si-myapp-dev-cv7z` | 
-| **`sharedImageGallery`** | `sig` | `sigmyappdev` | `sigmyappdevcv7z` | 
-| **`signalrService`** | `sgnlr` | `sgnlr-myapp-dev` | `sgnlr-myapp-dev-cv7z` | 
-| **`snapshots`** | `snap` | `snap-myapp-dev` | `snap-myapp-dev-cv7z` | 
-| **`sqlElasticpool`** | `sqlep` | `sqlep-myapp-dev` | `sqlep-myapp-dev-cv7z` | 
-| **`sqlFailoverGroup`** | `sqlfg` | `sqlfg-myapp-dev` | `sqlfg-myapp-dev-cv7z` | 
-| **`sqlFirewallRule`** | `sqlfw` | `sqlfw-myapp-dev` | `sqlfw-myapp-dev-cv7z` | 
-| **`sqlServer`** | `sql` | `sql-myapp-dev` | `sql-myapp-dev-cv7z` | 
-| **`storageAccount`** | `st` | `stmyappdev` | `stmyappdevcv7z` | 
-| **`storageBlob`** | `blob` | `blob-myapp-dev` | `blob-myapp-dev-cv7z` | 
-| **`storageContainer`** | `stct` | `stct-myapp-dev` | `stct-myapp-dev-cv7z` | 
-| **`storageDataLakeGen2Filesystem`** | `stdl` | `stdl-myapp-dev` | `stdl-myapp-dev-cv7z` | 
-| **`storageQueue`** | `stq` | `stq-myapp-dev` | `stq-myapp-dev-cv7z` | 
-| **`storageShare`** | `sts` | `sts-myapp-dev` | `sts-myapp-dev-cv7z` | 
-| **`storageShareDirectory`** | `sts` | `sts-myapp-dev` | `sts-myapp-dev-cv7z` | 
-| **`storageTable`** | `stt` | `stt-myapp-dev` | `stt-myapp-dev-cv7z` | 
-| **`streamAnalyticsFunctionJavascriptUdf`** | `asafunc` | `asafunc-myapp-dev` | `asafunc-myapp-dev-cv7z` | 
-| **`streamAnalyticsJob`** | `asa` | `asa-myapp-dev` | `asa-myapp-dev-cv7z` | 
-| **`streamAnalyticsOutputBlob`** | `asaoblob` | `asaoblob-myapp-dev` | `asaoblob-myapp-dev-cv7z` | 
-| **`streamAnalyticsOutputEventHub`** | `asaoeh` | `asaoeh-myapp-dev` | `asaoeh-myapp-dev-cv7z` | 
-| **`streamAnalyticsOutputMssql`** | `asaomssql` | `asaomssql-myapp-dev` | `asaomssql-myapp-dev-cv7z` | 
-| **`streamAnalyticsOutputServiceBusQueue`** | `asaosbq` | `asaosbq-myapp-dev` | `asaosbq-myapp-dev-cv7z` | 
-| **`streamAnalyticsOutputServiceBusTopic`** | `asaosbt` | `asaosbt-myapp-dev` | `asaosbt-myapp-dev-cv7z` | 
-| **`streamAnalyticsReferenceInputBlob`** | `asarblob` | `asarblob-myapp-dev` | `asarblob-myapp-dev-cv7z` | 
-| **`streamAnalyticsStreamInputBlob`** | `asaiblob` | `asaiblob-myapp-dev` | `asaiblob-myapp-dev-cv7z` | 
-| **`streamAnalyticsStreamInputEventHub`** | `asaieh` | `asaieh-myapp-dev` | `asaieh-myapp-dev-cv7z` | 
-| **`streamAnalyticsStreamInputIotHub`** | `asaiiot` | `asaiiot-myapp-dev` | `asaiiot-myapp-dev-cv7z` | 
-| **`subnet`** | `snet` | `snet-myapp-dev` | `snet-myapp-dev-cv7z` | 
+| <sub>**`serviceBusNamespace`**</sub> | <sub>`sb`</sub> | <sub>`sb-myapp-dev-weu`</sub> | <sub>`sb-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceBusNamespaceAuthorizationRule`**</sub> | <sub>`sbar`</sub> | <sub>`sbar-myapp-dev-weu`</sub> | <sub>`sbar-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceBusQueue`**</sub> | <sub>`sbq`</sub> | <sub>`sbq-myapp-dev-weu`</sub> | <sub>`sbq-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceBusQueueAuthorizationRule`**</sub> | <sub>`sbqar`</sub> | <sub>`sbqar-myapp-dev-weu`</sub> | <sub>`sbqar-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceBusSubscription`**</sub> | <sub>`sbs`</sub> | <sub>`sbs-myapp-dev-weu`</sub> | <sub>`sbs-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceBusSubscriptionRule`**</sub> | <sub>`sbsr`</sub> | <sub>`sbsr-myapp-dev-weu`</sub> | <sub>`sbsr-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceBusTopic`**</sub> | <sub>`sbt`</sub> | <sub>`sbt-myapp-dev-weu`</sub> | <sub>`sbt-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceBusTopicAuthorizationRule`**</sub> | <sub>`dnsrec`</sub> | <sub>`dnsrec-myapp-dev-weu`</sub> | <sub>`dnsrec-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`serviceFabricCluster`**</sub> | <sub>`sf`</sub> | <sub>`sf-myapp-dev-weu`</sub> | <sub>`sf-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`sharedImage`**</sub> | <sub>`si`</sub> | <sub>`si-myapp-dev-weu`</sub> | <sub>`si-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`sharedImageGallery`**</sub> | <sub>`sig`</sub> | <sub>`sigmyappdevweu`</sub> | <sub>`sigmyappdevweucv7z`</sub> | 
+| <sub>**`signalrService`**</sub> | <sub>`sgnlr`</sub> | <sub>`sgnlr-myapp-dev-weu`</sub> | <sub>`sgnlr-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`snapshots`**</sub> | <sub>`snap`</sub> | <sub>`snap-myapp-dev-weu`</sub> | <sub>`snap-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`sqlElasticpool`**</sub> | <sub>`sqlep`</sub> | <sub>`sqlep-myapp-dev-weu`</sub> | <sub>`sqlep-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`sqlFailoverGroup`**</sub> | <sub>`sqlfg`</sub> | <sub>`sqlfg-myapp-dev-weu`</sub> | <sub>`sqlfg-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`sqlFirewallRule`**</sub> | <sub>`sqlfw`</sub> | <sub>`sqlfw-myapp-dev-weu`</sub> | <sub>`sqlfw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`sqlServer`**</sub> | <sub>`sql`</sub> | <sub>`sql-myapp-dev-weu`</sub> | <sub>`sql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`storageAccount`**</sub> | <sub>`st`</sub> | <sub>`stmyappdevweu`</sub> | <sub>`stmyappdevweucv7z`</sub> | 
+| <sub>**`storageBlob`**</sub> | <sub>`blob`</sub> | <sub>`blob-myapp-dev-weu`</sub> | <sub>`blob-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`storageContainer`**</sub> | <sub>`stct`</sub> | <sub>`stct-myapp-dev-weu`</sub> | <sub>`stct-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`storageDataLakeGen2Filesystem`**</sub> | <sub>`stdl`</sub> | <sub>`stdl-myapp-dev-weu`</sub> | <sub>`stdl-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`storageQueue`**</sub> | <sub>`stq`</sub> | <sub>`stq-myapp-dev-weu`</sub> | <sub>`stq-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`storageShare`**</sub> | <sub>`sts`</sub> | <sub>`sts-myapp-dev-weu`</sub> | <sub>`sts-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`storageShareDirectory`**</sub> | <sub>`sts`</sub> | <sub>`sts-myapp-dev-weu`</sub> | <sub>`sts-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`storageTable`**</sub> | <sub>`stt`</sub> | <sub>`stt-myapp-dev-weu`</sub> | <sub>`stt-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsFunctionJavascriptUdf`**</sub> | <sub>`asafunc`</sub> | <sub>`asafunc-myapp-dev-weu`</sub> | <sub>`asafunc-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsJob`**</sub> | <sub>`asa`</sub> | <sub>`asa-myapp-dev-weu`</sub> | <sub>`asa-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsOutputBlob`**</sub> | <sub>`asaoblob`</sub> | <sub>`asaoblob-myapp-dev-weu`</sub> | <sub>`asaoblob-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsOutputEventHub`**</sub> | <sub>`asaoeh`</sub> | <sub>`asaoeh-myapp-dev-weu`</sub> | <sub>`asaoeh-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsOutputMssql`**</sub> | <sub>`asaomssql`</sub> | <sub>`asaomssql-myapp-dev-weu`</sub> | <sub>`asaomssql-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsOutputServiceBusQueue`**</sub> | <sub>`asaosbq`</sub> | <sub>`asaosbq-myapp-dev-weu`</sub> | <sub>`asaosbq-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsOutputServiceBusTopic`**</sub> | <sub>`asaosbt`</sub> | <sub>`asaosbt-myapp-dev-weu`</sub> | <sub>`asaosbt-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsReferenceInputBlob`**</sub> | <sub>`asarblob`</sub> | <sub>`asarblob-myapp-dev-weu`</sub> | <sub>`asarblob-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsStreamInputBlob`**</sub> | <sub>`asaiblob`</sub> | <sub>`asaiblob-myapp-dev-weu`</sub> | <sub>`asaiblob-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsStreamInputEventHub`**</sub> | <sub>`asaieh`</sub> | <sub>`asaieh-myapp-dev-weu`</sub> | <sub>`asaieh-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`streamAnalyticsStreamInputIotHub`**</sub> | <sub>`asaiiot`</sub> | <sub>`asaiiot-myapp-dev-weu`</sub> | <sub>`asaiiot-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`subnet`**</sub> | <sub>`snet`</sub> | <sub>`snet-myapp-dev-weu`</sub> | <sub>`snet-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-t"></a>T
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`templateDeployment`** | `deploy` | `deploy-myapp-dev` | `deploy-myapp-dev-cv7z` | 
-| **`trafficManagerProfile`** | `traf` | `traf-myapp-dev` | `traf-myapp-dev-cv7z` | 
+| <sub>**`templateDeployment`**</sub> | <sub>`deploy`</sub> | <sub>`deploy-myapp-dev-weu`</sub> | <sub>`deploy-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`trafficManagerProfile`**</sub> | <sub>`traf`</sub> | <sub>`traf-myapp-dev-weu`</sub> | <sub>`traf-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-v"></a>V
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`virtualMachine`** | `vm` | `vm-myapp-dev` | `vm-myapp-dev-cv` | 
-| **`virtualMachineScaleSet`** | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-` | 
-| **`virtualNetwork`** | `vnet` | `vnet-myapp-dev` | `vnet-myapp-dev-cv7z` | 
-| **`virtualNetworkGateway`** | `vgw` | `vgw-myapp-dev` | `vgw-myapp-dev-cv7z` | 
-| **`virtualNetworkPeering`** | `vpeer` | `vpeer-myapp-dev` | `vpeer-myapp-dev-cv7z` | 
-| **`virtualWan`** | `vwan` | `vwan-myapp-dev` | `vwan-myapp-dev-cv7z` | 
+| <sub>**`virtualMachine`**</sub> | <sub>`vm`</sub> | <sub>`vm-myapp-dev-we`</sub> | <sub>`vm-myapp-dev-we`</sub> | 
+| <sub>**`virtualMachineScaleSet`**</sub> | <sub>`vmss`</sub> | <sub>`vmss-myapp-dev-`</sub> | <sub>`vmss-myapp-dev-`</sub> | 
+| <sub>**`virtualNetwork`**</sub> | <sub>`vnet`</sub> | <sub>`vnet-myapp-dev-weu`</sub> | <sub>`vnet-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`virtualNetworkGateway`**</sub> | <sub>`vgw`</sub> | <sub>`vgw-myapp-dev-weu`</sub> | <sub>`vgw-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`virtualNetworkPeering`**</sub> | <sub>`vpeer`</sub> | <sub>`vpeer-myapp-dev-weu`</sub> | <sub>`vpeer-myapp-dev-weu-cv7z`</sub> | 
+| <sub>**`virtualWan`**</sub> | <sub>`vwan`</sub> | <sub>`vwan-myapp-dev-weu`</sub> | <sub>`vwan-myapp-dev-weu-cv7z`</sub> | 
 [Go to top](#reference)
 
 ## <a name="ref-w"></a>W
 | Resource reference&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | slug | name | nameUnique |
 | -------- | ---------- | ----------- | ----------- |
-| **`windowsVirtualMachine`** | `vm` | `vm-myapp-dev` | `vm-myapp-dev-cv` | 
-| **`windowsVirtualMachineScaleSet`** | `vmss` | `vmss-myapp-dev` | `vmss-myapp-dev-` | 
+| <sub>**`windowsVirtualMachine`**</sub> | <sub>`vm`</sub> | <sub>`vm-myapp-dev-we`</sub> | <sub>`vm-myapp-dev-we`</sub> | 
+| <sub>**`windowsVirtualMachineScaleSet`**</sub> | <sub>`vmss`</sub> | <sub>`vmss-myapp-dev-`</sub> | <sub>`vmss-myapp-dev-`</sub> | 
 [Go to top](#reference)
 
 

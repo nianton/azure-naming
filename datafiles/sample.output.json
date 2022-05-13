@@ -1,297 +1,297 @@
 {
   "analysisServicesServer": {
-    "name": "asmyappdev",
-    "nameUnique": "asmyappdevcv7z",
+    "name": "asmyappdevweu",
+    "nameUnique": "asmyappdevweucv7z",
     "slug": "as"
   },
   "apiManagement": {
-    "name": "apimmyappdev",
-    "nameUnique": "apimmyappdevcv7z",
+    "name": "apimmyappdevweu",
+    "nameUnique": "apimmyappdevweucv7z",
     "slug": "apim"
   },
   "appConfiguration": {
-    "name": "appcg-myapp-dev",
-    "nameUnique": "appcg-myapp-dev-cv7z",
+    "name": "appcg-myapp-dev-weu",
+    "nameUnique": "appcg-myapp-dev-weu-cv7z",
     "slug": "appcg"
   },
   "appService": {
-    "name": "app-myapp-dev",
-    "nameUnique": "app-myapp-dev-cv7z",
+    "name": "app-myapp-dev-weu",
+    "nameUnique": "app-myapp-dev-weu-cv7z",
     "slug": "app"
   },
   "appServiceEnvironment": {
-    "name": "ase-myapp-dev",
-    "nameUnique": "ase-myapp-dev-cv7z",
+    "name": "ase-myapp-dev-weu",
+    "nameUnique": "ase-myapp-dev-weu-cv7z",
     "slug": "ase"
   },
   "appServicePlan": {
-    "name": "plan-myapp-dev",
-    "nameUnique": "plan-myapp-dev-cv7z",
+    "name": "plan-myapp-dev-weu",
+    "nameUnique": "plan-myapp-dev-weu-cv7z",
     "slug": "plan"
   },
   "applicationGateway": {
-    "name": "agw-myapp-dev",
-    "nameUnique": "agw-myapp-dev-cv7z",
+    "name": "agw-myapp-dev-weu",
+    "nameUnique": "agw-myapp-dev-weu-cv7z",
     "slug": "agw"
   },
   "applicationInsights": {
-    "name": "appi-myapp-dev",
-    "nameUnique": "appi-myapp-dev-cv7z",
+    "name": "appi-myapp-dev-weu",
+    "nameUnique": "appi-myapp-dev-weu-cv7z",
     "slug": "appi"
   },
   "applicationSecurityGroup": {
-    "name": "asg-myapp-dev",
-    "nameUnique": "asg-myapp-dev-cv7z",
+    "name": "asg-myapp-dev-weu",
+    "nameUnique": "asg-myapp-dev-weu-cv7z",
     "slug": "asg"
   },
   "automationAccount": {
-    "name": "aa-myapp-dev",
-    "nameUnique": "aa-myapp-dev-cv7z",
+    "name": "aa-myapp-dev-weu",
+    "nameUnique": "aa-myapp-dev-weu-cv7z",
     "slug": "aa"
   },
   "automationCertificate": {
-    "name": "aacert-myapp-dev",
-    "nameUnique": "aacert-myapp-dev-cv7z",
+    "name": "aacert-myapp-dev-weu",
+    "nameUnique": "aacert-myapp-dev-weu-cv7z",
     "slug": "aacert"
   },
   "automationCredential": {
-    "name": "aacred-myapp-dev",
-    "nameUnique": "aacred-myapp-dev-cv7z",
+    "name": "aacred-myapp-dev-weu",
+    "nameUnique": "aacred-myapp-dev-weu-cv7z",
     "slug": "aacred"
   },
   "automationRunbook": {
-    "name": "aacred-myapp-dev",
-    "nameUnique": "aacred-myapp-dev-cv7z",
+    "name": "aacred-myapp-dev-weu",
+    "nameUnique": "aacred-myapp-dev-weu-cv7z",
     "slug": "aacred"
   },
   "automationSchedule": {
-    "name": "aasched-myapp-dev",
-    "nameUnique": "aasched-myapp-dev-cv7z",
+    "name": "aasched-myapp-dev-weu",
+    "nameUnique": "aasched-myapp-dev-weu-cv7z",
     "slug": "aasched"
   },
   "automationVariable": {
-    "name": "aavar-myapp-dev",
-    "nameUnique": "aavar-myapp-dev-cv7z",
+    "name": "aavar-myapp-dev-weu",
+    "nameUnique": "aavar-myapp-dev-weu-cv7z",
     "slug": "aavar"
   },
   "availabilitySet": {
-    "name": "avail-myapp-dev",
-    "nameUnique": "avail-myapp-dev-cv7z",
+    "name": "avail-myapp-dev-weu",
+    "nameUnique": "avail-myapp-dev-weu-cv7z",
     "slug": "avail"
   },
   "bastionHost": {
-    "name": "snap-myapp-dev",
-    "nameUnique": "snap-myapp-dev-cv7z",
+    "name": "snap-myapp-dev-weu",
+    "nameUnique": "snap-myapp-dev-weu-cv7z",
     "slug": "snap"
   },
   "batchAccount": {
-    "name": "bamyappdev",
-    "nameUnique": "bamyappdevcv7z",
+    "name": "bamyappdevweu",
+    "nameUnique": "bamyappdevweucv7z",
     "slug": "ba"
   },
   "batchApplication": {
-    "name": "baapp-myapp-dev",
-    "nameUnique": "baapp-myapp-dev-cv7z",
+    "name": "baapp-myapp-dev-weu",
+    "nameUnique": "baapp-myapp-dev-weu-cv7z",
     "slug": "baapp"
   },
   "batchCertificate": {
-    "name": "bacert-myapp-dev",
-    "nameUnique": "bacert-myapp-dev-cv7z",
+    "name": "bacert-myapp-dev-weu",
+    "nameUnique": "bacert-myapp-dev-weu-cv7z",
     "slug": "bacert"
   },
   "batchPool": {
-    "name": "bapool-myapp-dev",
-    "nameUnique": "bapool-myapp-dev-cv7z",
+    "name": "bapool-myapp-dev-weu",
+    "nameUnique": "bapool-myapp-dev-weu-cv7",
     "slug": "bapool"
   },
   "botChannelDirectline": {
-    "name": "botline-myapp-dev",
-    "nameUnique": "botline-myapp-dev-cv7z",
+    "name": "botline-myapp-dev-weu",
+    "nameUnique": "botline-myapp-dev-weu-cv7z",
     "slug": "botline"
   },
   "botChannelEmail": {
-    "name": "botmail-myapp-dev",
-    "nameUnique": "botmail-myapp-dev-cv7z",
+    "name": "botmail-myapp-dev-weu",
+    "nameUnique": "botmail-myapp-dev-weu-cv7z",
     "slug": "botmail"
   },
   "botChannelMsTeams": {
-    "name": "botteams-myapp-dev",
-    "nameUnique": "botteams-myapp-dev-cv7z",
+    "name": "botteams-myapp-dev-weu",
+    "nameUnique": "botteams-myapp-dev-weu-cv7z",
     "slug": "botteams"
   },
   "botChannelSlack": {
-    "name": "botslack-myapp-dev",
-    "nameUnique": "botslack-myapp-dev-cv7z",
+    "name": "botslack-myapp-dev-weu",
+    "nameUnique": "botslack-myapp-dev-weu-cv7z",
     "slug": "botslack"
   },
   "botChannelsRegistration": {
-    "name": "botchan-myapp-dev",
-    "nameUnique": "botchan-myapp-dev-cv7z",
+    "name": "botchan-myapp-dev-weu",
+    "nameUnique": "botchan-myapp-dev-weu-cv7z",
     "slug": "botchan"
   },
   "botConnection": {
-    "name": "botcon-myapp-dev",
-    "nameUnique": "botcon-myapp-dev-cv7z",
+    "name": "botcon-myapp-dev-weu",
+    "nameUnique": "botcon-myapp-dev-weu-cv7z",
     "slug": "botcon"
   },
   "botWebApp": {
-    "name": "bot-myapp-dev",
-    "nameUnique": "bot-myapp-dev-cv7z",
+    "name": "bot-myapp-dev-weu",
+    "nameUnique": "bot-myapp-dev-weu-cv7z",
     "slug": "bot"
   },
   "cdnEndpoint": {
-    "name": "cdn-myapp-dev",
-    "nameUnique": "cdn-myapp-dev-cv7z",
+    "name": "cdn-myapp-dev-weu",
+    "nameUnique": "cdn-myapp-dev-weu-cv7z",
     "slug": "cdn"
   },
   "cdnProfile": {
-    "name": "cdnprof-myapp-dev",
-    "nameUnique": "cdnprof-myapp-dev-cv7z",
+    "name": "cdnprof-myapp-dev-weu",
+    "nameUnique": "cdnprof-myapp-dev-weu-cv7z",
     "slug": "cdnprof"
   },
   "cognitiveAccount": {
-    "name": "cog-myapp-dev",
-    "nameUnique": "cog-myapp-dev-cv7z",
+    "name": "cog-myapp-dev-weu",
+    "nameUnique": "cog-myapp-dev-weu-cv7z",
     "slug": "cog"
   },
   "containerApp": {
-    "name": "capp-myapp-dev",
-    "nameUnique": "capp-myapp-dev-cv7z",
+    "name": "capp-myapp-dev-weu",
+    "nameUnique": "capp-myapp-dev-weu-cv7z",
     "slug": "capp"
   },
   "containerGroup": {
-    "name": "cg-myapp-dev",
-    "nameUnique": "cg-myapp-dev-cv7z",
+    "name": "cg-myapp-dev-weu",
+    "nameUnique": "cg-myapp-dev-weu-cv7z",
     "slug": "cg"
   },
   "containerRegistry": {
-    "name": "acrmyappdev",
-    "nameUnique": "acrmyappdevcv7z",
+    "name": "acrmyappdevweu",
+    "nameUnique": "acrmyappdevweucv7z",
     "slug": "acr"
   },
   "containerRegistryWebhook": {
-    "name": "crwhmyappdev",
-    "nameUnique": "crwhmyappdevcv7z",
+    "name": "crwhmyappdevweu",
+    "nameUnique": "crwhmyappdevweucv7z",
     "slug": "crwh"
   },
   "cosmosdbAccount": {
-    "name": "cosmos-myapp-dev",
-    "nameUnique": "cosmos-myapp-dev-cv7z",
+    "name": "cosmos-myapp-dev-weu",
+    "nameUnique": "cosmos-myapp-dev-weu-cv7z",
     "slug": "cosmos"
   },
   "customProvider": {
-    "name": "prov-myapp-dev",
-    "nameUnique": "prov-myapp-dev-cv7z",
+    "name": "prov-myapp-dev-weu",
+    "nameUnique": "prov-myapp-dev-weu-cv7z",
     "slug": "prov"
   },
   "dashboard": {
-    "name": "dsb-myapp-dev",
-    "nameUnique": "dsb-myapp-dev-cv7z",
+    "name": "dsb-myapp-dev-weu",
+    "nameUnique": "dsb-myapp-dev-weu-cv7z",
     "slug": "dsb"
   },
   "dataFactory": {
-    "name": "adf-myapp-dev",
-    "nameUnique": "adf-myapp-dev-cv7z",
+    "name": "adf-myapp-dev-weu",
+    "nameUnique": "adf-myapp-dev-weu-cv7z",
     "slug": "adf"
   },
   "dataFactoryDatasetMysql": {
-    "name": "adfmysql-myapp-dev",
-    "nameUnique": "adfmysql-myapp-dev-cv7z",
+    "name": "adfmysql-myapp-dev-weu",
+    "nameUnique": "adfmysql-myapp-dev-weu-cv7z",
     "slug": "adfmysql"
   },
   "dataFactoryDatasetPostgresql": {
-    "name": "adfpsql-myapp-dev",
-    "nameUnique": "adfpsql-myapp-dev-cv7z",
+    "name": "adfpsql-myapp-dev-weu",
+    "nameUnique": "adfpsql-myapp-dev-weu-cv7z",
     "slug": "adfpsql"
   },
   "dataFactoryDatasetSqlServerTable": {
-    "name": "adfmssql-myapp-dev",
-    "nameUnique": "adfmssql-myapp-dev-cv7z",
+    "name": "adfmssql-myapp-dev-weu",
+    "nameUnique": "adfmssql-myapp-dev-weu-cv7z",
     "slug": "adfmssql"
   },
   "dataFactoryIntegrationRuntimeManaged": {
-    "name": "adfir-myapp-dev",
-    "nameUnique": "adfir-myapp-dev-cv7z",
+    "name": "adfir-myapp-dev-weu",
+    "nameUnique": "adfir-myapp-dev-weu-cv7z",
     "slug": "adfir"
   },
   "dataFactoryLinkedServiceDataLakeStorageGen2": {
-    "name": "adfsvst-myapp-dev",
-    "nameUnique": "adfsvst-myapp-dev-cv7z",
+    "name": "adfsvst-myapp-dev-weu",
+    "nameUnique": "adfsvst-myapp-dev-weu-cv7z",
     "slug": "adfsvst"
   },
   "dataFactoryLinkedServiceKeyVault": {
-    "name": "adfsvkv-myapp-dev",
-    "nameUnique": "adfsvkv-myapp-dev-cv7z",
+    "name": "adfsvkv-myapp-dev-weu",
+    "nameUnique": "adfsvkv-myapp-dev-weu-cv7z",
     "slug": "adfsvkv"
   },
   "dataFactoryLinkedServiceMysql": {
-    "name": "adfsvmysql-myapp-dev",
-    "nameUnique": "adfsvmysql-myapp-dev-cv7z",
+    "name": "adfsvmysql-myapp-dev-weu",
+    "nameUnique": "adfsvmysql-myapp-dev-weu-cv7z",
     "slug": "adfsvmysql"
   },
   "dataFactoryLinkedServicePostgresql": {
-    "name": "adfsvpsql-myapp-dev",
-    "nameUnique": "adfsvpsql-myapp-dev-cv7z",
+    "name": "adfsvpsql-myapp-dev-weu",
+    "nameUnique": "adfsvpsql-myapp-dev-weu-cv7z",
     "slug": "adfsvpsql"
   },
   "dataFactoryLinkedServiceSqlServer": {
-    "name": "adfsvmssql-myapp-dev",
-    "nameUnique": "adfsvmssql-myapp-dev-cv7z",
+    "name": "adfsvmssql-myapp-dev-weu",
+    "nameUnique": "adfsvmssql-myapp-dev-weu-cv7z",
     "slug": "adfsvmssql"
   },
   "dataFactoryPipeline": {
-    "name": "adfpl-myapp-dev",
-    "nameUnique": "adfpl-myapp-dev-cv7z",
+    "name": "adfpl-myapp-dev-weu",
+    "nameUnique": "adfpl-myapp-dev-weu-cv7z",
     "slug": "adfpl"
   },
   "dataFactoryTriggerSchedule": {
-    "name": "adftg-myapp-dev",
-    "nameUnique": "adftg-myapp-dev-cv7z",
+    "name": "adftg-myapp-dev-weu",
+    "nameUnique": "adftg-myapp-dev-weu-cv7z",
     "slug": "adftg"
   },
   "dataLakeAnalyticsAccount": {
-    "name": "dlamyappdev",
-    "nameUnique": "dlamyappdevcv7z",
+    "name": "dlamyappdevweu",
+    "nameUnique": "dlamyappdevweucv7z",
     "slug": "dla"
   },
   "dataLakeAnalyticsFirewallRule": {
-    "name": "dlfw-myapp-dev",
-    "nameUnique": "dlfw-myapp-dev-cv7z",
+    "name": "dlfw-myapp-dev-weu",
+    "nameUnique": "dlfw-myapp-dev-weu-cv7z",
     "slug": "dlfw"
   },
   "dataLakeStore": {
-    "name": "dlsmyappdev",
-    "nameUnique": "dlsmyappdevcv7z",
+    "name": "dlsmyappdevweu",
+    "nameUnique": "dlsmyappdevweucv7z",
     "slug": "dls"
   },
   "dataLakeStoreFirewallRule": {
-    "name": "dlsfw-myapp-dev",
-    "nameUnique": "dlsfw-myapp-dev-cv7z",
+    "name": "dlsfw-myapp-dev-weu",
+    "nameUnique": "dlsfw-myapp-dev-weu-cv7z",
     "slug": "dlsfw"
   },
   "databaseMigrationProject": {
-    "name": "migr-myapp-dev",
-    "nameUnique": "migr-myapp-dev-cv7z",
+    "name": "migr-myapp-dev-weu",
+    "nameUnique": "migr-myapp-dev-weu-cv7z",
     "slug": "migr"
   },
   "databaseMigrationService": {
-    "name": "dms-myapp-dev",
-    "nameUnique": "dms-myapp-dev-cv7z",
+    "name": "dms-myapp-dev-weu",
+    "nameUnique": "dms-myapp-dev-weu-cv7z",
     "slug": "dms"
   },
   "databricksWorkspace": {
-    "name": "dbw-myapp-dev",
-    "nameUnique": "dbw-myapp-dev-cv7z",
+    "name": "dbw-myapp-dev-weu",
+    "nameUnique": "dbw-myapp-dev-weu-cv7z",
     "slug": "dbw"
   },
   "devTestLab": {
-    "name": "lab-myapp-dev",
-    "nameUnique": "lab-myapp-dev-cv7z",
+    "name": "lab-myapp-dev-weu",
+    "nameUnique": "lab-myapp-dev-weu-cv7z",
     "slug": "lab"
   },
   "devTestLinuxVirtualMachine": {
-    "name": "labvm-myapp-dev",
-    "nameUnique": "labvm-myapp-dev-cv7z",
+    "name": "labvm-myapp-dev-weu",
+    "nameUnique": "labvm-myapp-dev-weu-cv7z",
     "slug": "labvm"
   },
   "devTestWindowsVirtualMachine": {
@@ -300,672 +300,672 @@
     "slug": "labvm"
   },
   "diskEncryptionSet": {
-    "name": "des-myapp-dev",
-    "nameUnique": "des-myapp-dev-cv7z",
+    "name": "des-myapp-dev-weu",
+    "nameUnique": "des-myapp-dev-weu-cv7z",
     "slug": "des"
   },
   "dnsZone": {
-    "name": "dns-myapp-dev",
-    "nameUnique": "dns-myapp-dev-cv7z",
+    "name": "dns-myapp-dev-weu",
+    "nameUnique": "dns-myapp-dev-weu-cv7z",
     "slug": "dns"
   },
   "eventGridDomain": {
-    "name": "egd-myapp-dev",
-    "nameUnique": "egd-myapp-dev-cv7z",
+    "name": "egd-myapp-dev-weu",
+    "nameUnique": "egd-myapp-dev-weu-cv7z",
     "slug": "egd"
   },
   "eventGridDomainTopic": {
-    "name": "egdt-myapp-dev",
-    "nameUnique": "egdt-myapp-dev-cv7z",
+    "name": "egdt-myapp-dev-weu",
+    "nameUnique": "egdt-myapp-dev-weu-cv7z",
     "slug": "egdt"
   },
   "eventGridEventSubscription": {
-    "name": "egs-myapp-dev",
-    "nameUnique": "egs-myapp-dev-cv7z",
+    "name": "egs-myapp-dev-weu",
+    "nameUnique": "egs-myapp-dev-weu-cv7z",
     "slug": "egs"
   },
   "eventGridTopic": {
-    "name": "egt-myapp-dev",
-    "nameUnique": "egt-myapp-dev-cv7z",
+    "name": "egt-myapp-dev-weu",
+    "nameUnique": "egt-myapp-dev-weu-cv7z",
     "slug": "egt"
   },
   "eventHub": {
-    "name": "evh-myapp-dev",
-    "nameUnique": "evh-myapp-dev-cv7z",
+    "name": "evh-myapp-dev-weu",
+    "nameUnique": "evh-myapp-dev-weu-cv7z",
     "slug": "evh"
   },
   "eventHubAuthorizationRule": {
-    "name": "ehar-myapp-dev",
-    "nameUnique": "ehar-myapp-dev-cv7z",
+    "name": "ehar-myapp-dev-weu",
+    "nameUnique": "ehar-myapp-dev-weu-cv7z",
     "slug": "ehar"
   },
   "eventHubConsumerGroup": {
-    "name": "ehcg-myapp-dev",
-    "nameUnique": "ehcg-myapp-dev-cv7z",
+    "name": "ehcg-myapp-dev-weu",
+    "nameUnique": "ehcg-myapp-dev-weu-cv7z",
     "slug": "ehcg"
   },
   "eventHubNamespace": {
-    "name": "ehn-myapp-dev",
-    "nameUnique": "ehn-myapp-dev-cv7z",
+    "name": "ehn-myapp-dev-weu",
+    "nameUnique": "ehn-myapp-dev-weu-cv7z",
     "slug": "ehn"
   },
   "eventHubNamespaceAuthorizationRule": {
-    "name": "ehnar-myapp-dev",
-    "nameUnique": "ehnar-myapp-dev-cv7z",
+    "name": "ehnar-myapp-dev-weu",
+    "nameUnique": "ehnar-myapp-dev-weu-cv7z",
     "slug": "ehnar"
   },
   "eventHubNamespaceDisasterRecoveryConfig": {
-    "name": "ehdr-myapp-dev",
-    "nameUnique": "ehdr-myapp-dev-cv7z",
+    "name": "ehdr-myapp-dev-weu",
+    "nameUnique": "ehdr-myapp-dev-weu-cv7z",
     "slug": "ehdr"
   },
   "expressRouteCircuit": {
-    "name": "erc-myapp-dev",
-    "nameUnique": "erc-myapp-dev-cv7z",
+    "name": "erc-myapp-dev-weu",
+    "nameUnique": "erc-myapp-dev-weu-cv7z",
     "slug": "erc"
   },
   "expressRouteGateway": {
-    "name": "ergw-myapp-dev",
-    "nameUnique": "ergw-myapp-dev-cv7z",
+    "name": "ergw-myapp-dev-weu",
+    "nameUnique": "ergw-myapp-dev-weu-cv7z",
     "slug": "ergw"
   },
   "firewall": {
-    "name": "afw-myapp-dev",
-    "nameUnique": "afw-myapp-dev-cv7z",
+    "name": "afw-myapp-dev-weu",
+    "nameUnique": "afw-myapp-dev-weu-cv7z",
     "slug": "afw"
   },
   "firewallPolicy": {
-    "name": "afwp-myapp-dev",
-    "nameUnique": "afwp-myapp-dev-cv7z",
+    "name": "afwp-myapp-dev-weu",
+    "nameUnique": "afwp-myapp-dev-weu-cv7z",
     "slug": "afwp"
   },
   "frontDoor": {
-    "name": "fd-myapp-dev",
-    "nameUnique": "fd-myapp-dev-cv7z",
+    "name": "fd-myapp-dev-weu",
+    "nameUnique": "fd-myapp-dev-weu-cv7z",
     "slug": "fd"
   },
   "frontDoorFirewallPolicy": {
-    "name": "fdfw-myapp-dev",
-    "nameUnique": "fdfw-myapp-dev-cv7z",
+    "name": "fdfw-myapp-dev-weu",
+    "nameUnique": "fdfw-myapp-dev-weu-cv7z",
     "slug": "fdfw"
   },
   "functionApp": {
-    "name": "func-myapp-dev",
-    "nameUnique": "func-myapp-dev-cv7z",
+    "name": "func-myapp-dev-weu",
+    "nameUnique": "func-myapp-dev-weu-cv7z",
     "slug": "func"
   },
   "hdInsightHadoopCluster": {
-    "name": "hadoop-myapp-dev",
-    "nameUnique": "hadoop-myapp-dev-cv7z",
+    "name": "hadoop-myapp-dev-weu",
+    "nameUnique": "hadoop-myapp-dev-weu-cv7z",
     "slug": "hadoop"
   },
   "hdInsightHbaseCluster": {
-    "name": "hbase-myapp-dev",
-    "nameUnique": "hbase-myapp-dev-cv7z",
+    "name": "hbase-myapp-dev-weu",
+    "nameUnique": "hbase-myapp-dev-weu-cv7z",
     "slug": "hbase"
   },
   "hdInsightInteractiveQueryCluster": {
-    "name": "iqr-myapp-dev",
-    "nameUnique": "iqr-myapp-dev-cv7z",
+    "name": "iqr-myapp-dev-weu",
+    "nameUnique": "iqr-myapp-dev-weu-cv7z",
     "slug": "iqr"
   },
   "hdInsightKafkaCluster": {
-    "name": "kafka-myapp-dev",
-    "nameUnique": "kafka-myapp-dev-cv7z",
+    "name": "kafka-myapp-dev-weu",
+    "nameUnique": "kafka-myapp-dev-weu-cv7z",
     "slug": "kafka"
   },
   "hdInsightMlServicesCluster": {
-    "name": "mls-myapp-dev",
-    "nameUnique": "mls-myapp-dev-cv7z",
+    "name": "mls-myapp-dev-weu",
+    "nameUnique": "mls-myapp-dev-weu-cv7z",
     "slug": "mls"
   },
   "hdInsightRserverCluster": {
-    "name": "rsv-myapp-dev",
-    "nameUnique": "rsv-myapp-dev-cv7z",
+    "name": "rsv-myapp-dev-weu",
+    "nameUnique": "rsv-myapp-dev-weu-cv7z",
     "slug": "rsv"
   },
   "hdInsightSparkCluster": {
-    "name": "spark-myapp-dev",
-    "nameUnique": "spark-myapp-dev-cv7z",
+    "name": "spark-myapp-dev-weu",
+    "nameUnique": "spark-myapp-dev-weu-cv7z",
     "slug": "spark"
   },
   "hdInsightStormCluster": {
-    "name": "storm-myapp-dev",
-    "nameUnique": "storm-myapp-dev-cv7z",
+    "name": "storm-myapp-dev-weu",
+    "nameUnique": "storm-myapp-dev-weu-cv7z",
     "slug": "storm"
   },
   "image": {
-    "name": "img-myapp-dev",
-    "nameUnique": "img-myapp-dev-cv7z",
+    "name": "img-myapp-dev-weu",
+    "nameUnique": "img-myapp-dev-weu-cv7z",
     "slug": "img"
   },
   "iotCentralApplication": {
-    "name": "iotapp-myapp-dev",
-    "nameUnique": "iotapp-myapp-dev-cv7z",
+    "name": "iotapp-myapp-dev-weu",
+    "nameUnique": "iotapp-myapp-dev-weu-cv7z",
     "slug": "iotapp"
   },
   "iotHub": {
-    "name": "iot-myapp-dev",
-    "nameUnique": "iot-myapp-dev-cv7z",
+    "name": "iot-myapp-dev-weu",
+    "nameUnique": "iot-myapp-dev-weu-cv7z",
     "slug": "iot"
   },
   "iotHubConsumerGroup": {
-    "name": "iotcg-myapp-dev",
-    "nameUnique": "iotcg-myapp-dev-cv7z",
+    "name": "iotcg-myapp-dev-weu",
+    "nameUnique": "iotcg-myapp-dev-weu-cv7z",
     "slug": "iotcg"
   },
   "iotHubDps": {
-    "name": "dps-myapp-dev",
-    "nameUnique": "dps-myapp-dev-cv7z",
+    "name": "dps-myapp-dev-weu",
+    "nameUnique": "dps-myapp-dev-weu-cv7z",
     "slug": "dps"
   },
   "iotHubDpsCertificate": {
-    "name": "dpscert-myapp-dev",
-    "nameUnique": "dpscert-myapp-dev-cv7z",
+    "name": "dpscert-myapp-dev-weu",
+    "nameUnique": "dpscert-myapp-dev-weu-cv7z",
     "slug": "dpscert"
   },
   "keyVault": {
-    "name": "kv-myapp-dev",
-    "nameUnique": "kv-myapp-dev-cv7z",
+    "name": "kv-myapp-dev-weu",
+    "nameUnique": "kv-myapp-dev-weu-cv7z",
     "slug": "kv"
   },
   "keyVaultCertificate": {
-    "name": "kvc-myapp-dev",
-    "nameUnique": "kvc-myapp-dev-cv7z",
+    "name": "kvc-myapp-dev-weu",
+    "nameUnique": "kvc-myapp-dev-weu-cv7z",
     "slug": "kvc"
   },
   "keyVaultKey": {
-    "name": "kvk-myapp-dev",
-    "nameUnique": "kvk-myapp-dev-cv7z",
+    "name": "kvk-myapp-dev-weu",
+    "nameUnique": "kvk-myapp-dev-weu-cv7z",
     "slug": "kvk"
   },
   "keyVaultSecret": {
-    "name": "kvs-myapp-dev",
-    "nameUnique": "kvs-myapp-dev-cv7z",
+    "name": "kvs-myapp-dev-weu",
+    "nameUnique": "kvs-myapp-dev-weu-cv7z",
     "slug": "kvs"
   },
   "kubernetesCluster": {
-    "name": "aks-myapp-dev",
-    "nameUnique": "aks-myapp-dev-cv7z",
+    "name": "aks-myapp-dev-weu",
+    "nameUnique": "aks-myapp-dev-weu-cv7z",
     "slug": "aks"
   },
   "kustoCluster": {
-    "name": "kcmyappdev",
-    "nameUnique": "kcmyappdevcv7z",
+    "name": "kcmyappdevweu",
+    "nameUnique": "kcmyappdevweucv7z",
     "slug": "kc"
   },
   "kustoDatabase": {
-    "name": "kdb-myapp-dev",
-    "nameUnique": "kdb-myapp-dev-cv7z",
+    "name": "kdb-myapp-dev-weu",
+    "nameUnique": "kdb-myapp-dev-weu-cv7z",
     "slug": "kdb"
   },
   "kustoEventHubDataConnection": {
-    "name": "kehc-myapp-dev",
-    "nameUnique": "kehc-myapp-dev-cv7z",
+    "name": "kehc-myapp-dev-weu",
+    "nameUnique": "kehc-myapp-dev-weu-cv7z",
     "slug": "kehc"
   },
   "linuxVirtualMachine": {
-    "name": "vm-myapp-dev",
-    "nameUnique": "vm-myapp-dev-cv7z",
+    "name": "vm-myapp-dev-weu",
+    "nameUnique": "vm-myapp-dev-weu-cv7z",
     "slug": "vm"
   },
   "linuxVirtualMachineScaleSet": {
-    "name": "vmss-myapp-dev",
-    "nameUnique": "vmss-myapp-dev-cv7z",
+    "name": "vmss-myapp-dev-weu",
+    "nameUnique": "vmss-myapp-dev-weu-cv7z",
     "slug": "vmss"
   },
   "loadBalancer": {
-    "name": "lb-myapp-dev",
-    "nameUnique": "lb-myapp-dev-cv7z",
+    "name": "lb-myapp-dev-weu",
+    "nameUnique": "lb-myapp-dev-weu-cv7z",
     "slug": "lb"
   },
   "loadBalancerNatRule": {
-    "name": "lbnatrl-myapp-dev",
-    "nameUnique": "lbnatrl-myapp-dev-cv7z",
+    "name": "lbnatrl-myapp-dev-weu",
+    "nameUnique": "lbnatrl-myapp-dev-weu-cv7z",
     "slug": "lbnatrl"
   },
   "localNetworkGateway": {
-    "name": "lgw-myapp-dev",
-    "nameUnique": "lgw-myapp-dev-cv7z",
+    "name": "lgw-myapp-dev-weu",
+    "nameUnique": "lgw-myapp-dev-weu-cv7z",
     "slug": "lgw"
   },
   "logAnalyticsWorkspace": {
-    "name": "log-myapp-dev",
-    "nameUnique": "log-myapp-dev-cv7z",
+    "name": "log-myapp-dev-weu",
+    "nameUnique": "log-myapp-dev-weu-cv7z",
     "slug": "log"
   },
   "machineLearningWorkspace": {
-    "name": "mlw-myapp-dev",
-    "nameUnique": "mlw-myapp-dev-cv7z",
+    "name": "mlw-myapp-dev-weu",
+    "nameUnique": "mlw-myapp-dev-weu-cv7z",
     "slug": "mlw"
   },
   "managedDisk": {
-    "name": "dsk-myapp-dev",
-    "nameUnique": "dsk-myapp-dev-cv7z",
+    "name": "dsk-myapp-dev-weu",
+    "nameUnique": "dsk-myapp-dev-weu-cv7z",
     "slug": "dsk"
   },
   "mapsAccount": {
-    "name": "map-myapp-dev",
-    "nameUnique": "map-myapp-dev-cv7z",
+    "name": "map-myapp-dev-weu",
+    "nameUnique": "map-myapp-dev-weu-cv7z",
     "slug": "map"
   },
   "mariadbDatabase": {
-    "name": "mariadb-myapp-dev",
-    "nameUnique": "mariadb-myapp-dev-cv7z",
+    "name": "mariadb-myapp-dev-weu",
+    "nameUnique": "mariadb-myapp-dev-weu-cv7z",
     "slug": "mariadb"
   },
   "mariadbFirewallRule": {
-    "name": "mariafw-myapp-dev",
-    "nameUnique": "mariafw-myapp-dev-cv7z",
+    "name": "mariafw-myapp-dev-weu",
+    "nameUnique": "mariafw-myapp-dev-weu-cv7z",
     "slug": "mariafw"
   },
   "mariadbServer": {
-    "name": "maria-myapp-dev",
-    "nameUnique": "maria-myapp-dev-cv7z",
+    "name": "maria-myapp-dev-weu",
+    "nameUnique": "maria-myapp-dev-weu-cv7z",
     "slug": "maria"
   },
   "mariadbVirtualNetworkRule": {
-    "name": "mariavn-myapp-dev",
-    "nameUnique": "mariavn-myapp-dev-cv7z",
+    "name": "mariavn-myapp-dev-weu",
+    "nameUnique": "mariavn-myapp-dev-weu-cv7z",
     "slug": "mariavn"
   },
   "mssqlDatabase": {
-    "name": "sqldb-myapp-dev",
-    "nameUnique": "sqldb-myapp-dev-cv7z",
+    "name": "sqldb-myapp-dev-weu",
+    "nameUnique": "sqldb-myapp-dev-weu-cv7z",
     "slug": "sqldb"
   },
   "mssqlElasticpool": {
-    "name": "sqlep-myapp-dev",
-    "nameUnique": "sqlep-myapp-dev-cv7z",
+    "name": "sqlep-myapp-dev-weu",
+    "nameUnique": "sqlep-myapp-dev-weu-cv7z",
     "slug": "sqlep"
   },
   "mssqlServer": {
-    "name": "sql-myapp-dev",
-    "nameUnique": "sql-myapp-dev-cv7z",
+    "name": "sql-myapp-dev-weu",
+    "nameUnique": "sql-myapp-dev-weu-cv7z",
     "slug": "sql"
   },
   "mysqlDatabase": {
-    "name": "mysqldb-myapp-dev",
-    "nameUnique": "mysqldb-myapp-dev-cv7z",
+    "name": "mysqldb-myapp-dev-weu",
+    "nameUnique": "mysqldb-myapp-dev-weu-cv7z",
     "slug": "mysqldb"
   },
   "mysqlFirewallRule": {
-    "name": "mysqlfw-myapp-dev",
-    "nameUnique": "mysqlfw-myapp-dev-cv7z",
+    "name": "mysqlfw-myapp-dev-weu",
+    "nameUnique": "mysqlfw-myapp-dev-weu-cv7z",
     "slug": "mysqlfw"
   },
   "mysqlServer": {
-    "name": "mysql-myapp-dev",
-    "nameUnique": "mysql-myapp-dev-cv7z",
+    "name": "mysql-myapp-dev-weu",
+    "nameUnique": "mysql-myapp-dev-weu-cv7z",
     "slug": "mysql"
   },
   "mysqlVirtualNetworkRule": {
-    "name": "mysqlvn-myapp-dev",
-    "nameUnique": "mysqlvn-myapp-dev-cv7z",
+    "name": "mysqlvn-myapp-dev-weu",
+    "nameUnique": "mysqlvn-myapp-dev-weu-cv7z",
     "slug": "mysqlvn"
   },
   "networkInterface": {
-    "name": "nic-myapp-dev",
-    "nameUnique": "nic-myapp-dev-cv7z",
+    "name": "nic-myapp-dev-weu",
+    "nameUnique": "nic-myapp-dev-weu-cv7z",
     "slug": "nic"
   },
   "networkSecurityGroup": {
-    "name": "nsg-myapp-dev",
-    "nameUnique": "nsg-myapp-dev-cv7z",
+    "name": "nsg-myapp-dev-weu",
+    "nameUnique": "nsg-myapp-dev-weu-cv7z",
     "slug": "nsg"
   },
   "networkSecurityGroupRule": {
-    "name": "nsgr-myapp-dev",
-    "nameUnique": "nsgr-myapp-dev-cv7z",
+    "name": "nsgr-myapp-dev-weu",
+    "nameUnique": "nsgr-myapp-dev-weu-cv7z",
     "slug": "nsgr"
   },
   "networkSecurityRule": {
-    "name": "nsgr-myapp-dev",
-    "nameUnique": "nsgr-myapp-dev-cv7z",
+    "name": "nsgr-myapp-dev-weu",
+    "nameUnique": "nsgr-myapp-dev-weu-cv7z",
     "slug": "nsgr"
   },
   "networkWatcher": {
-    "name": "nw-myapp-dev",
-    "nameUnique": "nw-myapp-dev-cv7z",
+    "name": "nw-myapp-dev-weu",
+    "nameUnique": "nw-myapp-dev-weu-cv7z",
     "slug": "nw"
   },
   "notificationHub": {
-    "name": "nh-myapp-dev",
-    "nameUnique": "nh-myapp-dev-cv7z",
+    "name": "nh-myapp-dev-weu",
+    "nameUnique": "nh-myapp-dev-weu-cv7z",
     "slug": "nh"
   },
   "notificationHubAuthorizationRule": {
-    "name": "dnsrec-myapp-dev",
-    "nameUnique": "dnsrec-myapp-dev-cv7z",
+    "name": "dnsrec-myapp-dev-weu",
+    "nameUnique": "dnsrec-myapp-dev-weu-cv7z",
     "slug": "dnsrec"
   },
   "notificationHubNamespace": {
-    "name": "dnsrec-myapp-dev",
-    "nameUnique": "dnsrec-myapp-dev-cv7z",
+    "name": "dnsrec-myapp-dev-weu",
+    "nameUnique": "dnsrec-myapp-dev-weu-cv7z",
     "slug": "dnsrec"
   },
   "pointToSiteVpnGateway": {
-    "name": "vpngw-myapp-dev",
-    "nameUnique": "vpngw-myapp-dev-cv7z",
+    "name": "vpngw-myapp-dev-weu",
+    "nameUnique": "vpngw-myapp-dev-weu-cv7z",
     "slug": "vpngw"
   },
   "postgresqlDatabase": {
-    "name": "psqldb-myapp-dev",
-    "nameUnique": "psqldb-myapp-dev-cv7z",
+    "name": "psqldb-myapp-dev-weu",
+    "nameUnique": "psqldb-myapp-dev-weu-cv7z",
     "slug": "psqldb"
   },
   "postgresqlFirewallRule": {
-    "name": "psqlfw-myapp-dev",
-    "nameUnique": "psqlfw-myapp-dev-cv7z",
+    "name": "psqlfw-myapp-dev-weu",
+    "nameUnique": "psqlfw-myapp-dev-weu-cv7z",
     "slug": "psqlfw"
   },
   "postgresqlServer": {
-    "name": "psql-myapp-dev",
-    "nameUnique": "psql-myapp-dev-cv7z",
+    "name": "psql-myapp-dev-weu",
+    "nameUnique": "psql-myapp-dev-weu-cv7z",
     "slug": "psql"
   },
   "postgresqlVirtualNetworkRule": {
-    "name": "psqlvn-myapp-dev",
-    "nameUnique": "psqlvn-myapp-dev-cv7z",
+    "name": "psqlvn-myapp-dev-weu",
+    "nameUnique": "psqlvn-myapp-dev-weu-cv7z",
     "slug": "psqlvn"
   },
   "powerbiEmbedded": {
-    "name": "pbi-myapp-dev",
-    "nameUnique": "pbi-myapp-dev-cv7z",
+    "name": "pbi-myapp-dev-weu",
+    "nameUnique": "pbi-myapp-dev-weu-cv7z",
     "slug": "pbi"
   },
   "privateDnsZone": {
-    "name": "pdns-myapp-dev",
-    "nameUnique": "pdns-myapp-dev-cv7z",
+    "name": "pdns-myapp-dev-weu",
+    "nameUnique": "pdns-myapp-dev-weu-cv7z",
     "slug": "pdns"
   },
   "publicIp": {
-    "name": "pip-myapp-dev",
-    "nameUnique": "pip-myapp-dev-cv7z",
+    "name": "pip-myapp-dev-weu",
+    "nameUnique": "pip-myapp-dev-weu-cv7z",
     "slug": "pip"
   },
   "publicIpPrefix": {
-    "name": "pippf-myapp-dev",
-    "nameUnique": "pippf-myapp-dev-cv7z",
+    "name": "pippf-myapp-dev-weu",
+    "nameUnique": "pippf-myapp-dev-weu-cv7z",
     "slug": "pippf"
   },
   "redisCache": {
-    "name": "redis-myapp-dev",
-    "nameUnique": "redis-myapp-dev-cv7z",
+    "name": "redis-myapp-dev-weu",
+    "nameUnique": "redis-myapp-dev-weu-cv7z",
     "slug": "redis"
   },
   "redisFirewallRule": {
-    "name": "redisfwmyappdev",
-    "nameUnique": "redisfwmyappdevcv7z",
+    "name": "redisfwmyappdevweu",
+    "nameUnique": "redisfwmyappdevweucv7z",
     "slug": "redisfw"
   },
   "relayHybridConnection": {
-    "name": "rlhc-myapp-dev",
-    "nameUnique": "rlhc-myapp-dev-cv7z",
+    "name": "rlhc-myapp-dev-weu",
+    "nameUnique": "rlhc-myapp-dev-weu-cv7z",
     "slug": "rlhc"
   },
   "relayNamespace": {
-    "name": "rln-myapp-dev",
-    "nameUnique": "rln-myapp-dev-cv7z",
+    "name": "rln-myapp-dev-weu",
+    "nameUnique": "rln-myapp-dev-weu-cv7z",
     "slug": "rln"
   },
   "resourceGroup": {
-    "name": "rg-myapp-dev",
-    "nameUnique": "rg-myapp-dev-cv7z",
+    "name": "rg-myapp-dev-weu",
+    "nameUnique": "rg-myapp-dev-weu-cv7z",
     "slug": "rg"
   },
   "roleAssignment": {
-    "name": "ra-myapp-dev",
-    "nameUnique": "ra-myapp-dev-cv7z",
+    "name": "ra-myapp-dev-weu",
+    "nameUnique": "ra-myapp-dev-weu-cv7z",
     "slug": "ra"
   },
   "roleDefinition": {
-    "name": "rd-myapp-dev",
-    "nameUnique": "rd-myapp-dev-cv7z",
+    "name": "rd-myapp-dev-weu",
+    "nameUnique": "rd-myapp-dev-weu-cv7z",
     "slug": "rd"
   },
   "route": {
-    "name": "rt-myapp-dev",
-    "nameUnique": "rt-myapp-dev-cv7z",
+    "name": "rt-myapp-dev-weu",
+    "nameUnique": "rt-myapp-dev-weu-cv7z",
     "slug": "rt"
   },
   "routeTable": {
-    "name": "route-myapp-dev",
-    "nameUnique": "route-myapp-dev-cv7z",
+    "name": "route-myapp-dev-weu",
+    "nameUnique": "route-myapp-dev-weu-cv7z",
     "slug": "route"
   },
   "serviceBusNamespace": {
-    "name": "sb-myapp-dev",
-    "nameUnique": "sb-myapp-dev-cv7z",
+    "name": "sb-myapp-dev-weu",
+    "nameUnique": "sb-myapp-dev-weu-cv7z",
     "slug": "sb"
   },
   "serviceBusNamespaceAuthorizationRule": {
-    "name": "sbar-myapp-dev",
-    "nameUnique": "sbar-myapp-dev-cv7z",
+    "name": "sbar-myapp-dev-weu",
+    "nameUnique": "sbar-myapp-dev-weu-cv7z",
     "slug": "sbar"
   },
   "serviceBusQueue": {
-    "name": "sbq-myapp-dev",
-    "nameUnique": "sbq-myapp-dev-cv7z",
+    "name": "sbq-myapp-dev-weu",
+    "nameUnique": "sbq-myapp-dev-weu-cv7z",
     "slug": "sbq"
   },
   "serviceBusQueueAuthorizationRule": {
-    "name": "sbqar-myapp-dev",
-    "nameUnique": "sbqar-myapp-dev-cv7z",
+    "name": "sbqar-myapp-dev-weu",
+    "nameUnique": "sbqar-myapp-dev-weu-cv7z",
     "slug": "sbqar"
   },
   "serviceBusSubscription": {
-    "name": "sbs-myapp-dev",
-    "nameUnique": "sbs-myapp-dev-cv7z",
+    "name": "sbs-myapp-dev-weu",
+    "nameUnique": "sbs-myapp-dev-weu-cv7z",
     "slug": "sbs"
   },
   "serviceBusSubscriptionRule": {
-    "name": "sbsr-myapp-dev",
-    "nameUnique": "sbsr-myapp-dev-cv7z",
+    "name": "sbsr-myapp-dev-weu",
+    "nameUnique": "sbsr-myapp-dev-weu-cv7z",
     "slug": "sbsr"
   },
   "serviceBusTopic": {
-    "name": "sbt-myapp-dev",
-    "nameUnique": "sbt-myapp-dev-cv7z",
+    "name": "sbt-myapp-dev-weu",
+    "nameUnique": "sbt-myapp-dev-weu-cv7z",
     "slug": "sbt"
   },
   "serviceBusTopicAuthorizationRule": {
-    "name": "dnsrec-myapp-dev",
-    "nameUnique": "dnsrec-myapp-dev-cv7z",
+    "name": "dnsrec-myapp-dev-weu",
+    "nameUnique": "dnsrec-myapp-dev-weu-cv7z",
     "slug": "dnsrec"
   },
   "serviceFabricCluster": {
-    "name": "sf-myapp-dev",
-    "nameUnique": "sf-myapp-dev-cv7z",
+    "name": "sf-myapp-dev-weu",
+    "nameUnique": "sf-myapp-dev-weu-cv7z",
     "slug": "sf"
   },
   "sharedImage": {
-    "name": "si-myapp-dev",
-    "nameUnique": "si-myapp-dev-cv7z",
+    "name": "si-myapp-dev-weu",
+    "nameUnique": "si-myapp-dev-weu-cv7z",
     "slug": "si"
   },
   "sharedImageGallery": {
-    "name": "sigmyappdev",
-    "nameUnique": "sigmyappdevcv7z",
+    "name": "sigmyappdevweu",
+    "nameUnique": "sigmyappdevweucv7z",
     "slug": "sig"
   },
   "signalrService": {
-    "name": "sgnlr-myapp-dev",
-    "nameUnique": "sgnlr-myapp-dev-cv7z",
+    "name": "sgnlr-myapp-dev-weu",
+    "nameUnique": "sgnlr-myapp-dev-weu-cv7z",
     "slug": "sgnlr"
   },
   "snapshots": {
-    "name": "snap-myapp-dev",
-    "nameUnique": "snap-myapp-dev-cv7z",
+    "name": "snap-myapp-dev-weu",
+    "nameUnique": "snap-myapp-dev-weu-cv7z",
     "slug": "snap"
   },
   "sqlElasticpool": {
-    "name": "sqlep-myapp-dev",
-    "nameUnique": "sqlep-myapp-dev-cv7z",
+    "name": "sqlep-myapp-dev-weu",
+    "nameUnique": "sqlep-myapp-dev-weu-cv7z",
     "slug": "sqlep"
   },
   "sqlFailoverGroup": {
-    "name": "sqlfg-myapp-dev",
-    "nameUnique": "sqlfg-myapp-dev-cv7z",
+    "name": "sqlfg-myapp-dev-weu",
+    "nameUnique": "sqlfg-myapp-dev-weu-cv7z",
     "slug": "sqlfg"
   },
   "sqlFirewallRule": {
-    "name": "sqlfw-myapp-dev",
-    "nameUnique": "sqlfw-myapp-dev-cv7z",
+    "name": "sqlfw-myapp-dev-weu",
+    "nameUnique": "sqlfw-myapp-dev-weu-cv7z",
     "slug": "sqlfw"
   },
   "sqlServer": {
-    "name": "sql-myapp-dev",
-    "nameUnique": "sql-myapp-dev-cv7z",
+    "name": "sql-myapp-dev-weu",
+    "nameUnique": "sql-myapp-dev-weu-cv7z",
     "slug": "sql"
   },
   "storageAccount": {
-    "name": "stmyappdev",
-    "nameUnique": "stmyappdevcv7z",
+    "name": "stmyappdevweu",
+    "nameUnique": "stmyappdevweucv7z",
     "slug": "st"
   },
   "storageBlob": {
-    "name": "blob-myapp-dev",
-    "nameUnique": "blob-myapp-dev-cv7z",
+    "name": "blob-myapp-dev-weu",
+    "nameUnique": "blob-myapp-dev-weu-cv7z",
     "slug": "blob"
   },
   "storageContainer": {
-    "name": "stct-myapp-dev",
-    "nameUnique": "stct-myapp-dev-cv7z",
+    "name": "stct-myapp-dev-weu",
+    "nameUnique": "stct-myapp-dev-weu-cv7z",
     "slug": "stct"
   },
   "storageDataLakeGen2Filesystem": {
-    "name": "stdl-myapp-dev",
-    "nameUnique": "stdl-myapp-dev-cv7z",
+    "name": "stdl-myapp-dev-weu",
+    "nameUnique": "stdl-myapp-dev-weu-cv7z",
     "slug": "stdl"
   },
   "storageQueue": {
-    "name": "stq-myapp-dev",
-    "nameUnique": "stq-myapp-dev-cv7z",
+    "name": "stq-myapp-dev-weu",
+    "nameUnique": "stq-myapp-dev-weu-cv7z",
     "slug": "stq"
   },
   "storageShare": {
-    "name": "sts-myapp-dev",
-    "nameUnique": "sts-myapp-dev-cv7z",
+    "name": "sts-myapp-dev-weu",
+    "nameUnique": "sts-myapp-dev-weu-cv7z",
     "slug": "sts"
   },
   "storageShareDirectory": {
-    "name": "sts-myapp-dev",
-    "nameUnique": "sts-myapp-dev-cv7z",
+    "name": "sts-myapp-dev-weu",
+    "nameUnique": "sts-myapp-dev-weu-cv7z",
     "slug": "sts"
   },
   "storageTable": {
-    "name": "stt-myapp-dev",
-    "nameUnique": "stt-myapp-dev-cv7z",
+    "name": "stt-myapp-dev-weu",
+    "nameUnique": "stt-myapp-dev-weu-cv7z",
     "slug": "stt"
   },
   "streamAnalyticsFunctionJavascriptUdf": {
-    "name": "asafunc-myapp-dev",
-    "nameUnique": "asafunc-myapp-dev-cv7z",
+    "name": "asafunc-myapp-dev-weu",
+    "nameUnique": "asafunc-myapp-dev-weu-cv7z",
     "slug": "asafunc"
   },
   "streamAnalyticsJob": {
-    "name": "asa-myapp-dev",
-    "nameUnique": "asa-myapp-dev-cv7z",
+    "name": "asa-myapp-dev-weu",
+    "nameUnique": "asa-myapp-dev-weu-cv7z",
     "slug": "asa"
   },
   "streamAnalyticsOutputBlob": {
-    "name": "asaoblob-myapp-dev",
-    "nameUnique": "asaoblob-myapp-dev-cv7z",
+    "name": "asaoblob-myapp-dev-weu",
+    "nameUnique": "asaoblob-myapp-dev-weu-cv7z",
     "slug": "asaoblob"
   },
   "streamAnalyticsOutputEventHub": {
-    "name": "asaoeh-myapp-dev",
-    "nameUnique": "asaoeh-myapp-dev-cv7z",
+    "name": "asaoeh-myapp-dev-weu",
+    "nameUnique": "asaoeh-myapp-dev-weu-cv7z",
     "slug": "asaoeh"
   },
   "streamAnalyticsOutputMssql": {
-    "name": "asaomssql-myapp-dev",
-    "nameUnique": "asaomssql-myapp-dev-cv7z",
+    "name": "asaomssql-myapp-dev-weu",
+    "nameUnique": "asaomssql-myapp-dev-weu-cv7z",
     "slug": "asaomssql"
   },
   "streamAnalyticsOutputServiceBusQueue": {
-    "name": "asaosbq-myapp-dev",
-    "nameUnique": "asaosbq-myapp-dev-cv7z",
+    "name": "asaosbq-myapp-dev-weu",
+    "nameUnique": "asaosbq-myapp-dev-weu-cv7z",
     "slug": "asaosbq"
   },
   "streamAnalyticsOutputServiceBusTopic": {
-    "name": "asaosbt-myapp-dev",
-    "nameUnique": "asaosbt-myapp-dev-cv7z",
+    "name": "asaosbt-myapp-dev-weu",
+    "nameUnique": "asaosbt-myapp-dev-weu-cv7z",
     "slug": "asaosbt"
   },
   "streamAnalyticsReferenceInputBlob": {
-    "name": "asarblob-myapp-dev",
-    "nameUnique": "asarblob-myapp-dev-cv7z",
+    "name": "asarblob-myapp-dev-weu",
+    "nameUnique": "asarblob-myapp-dev-weu-cv7z",
     "slug": "asarblob"
   },
   "streamAnalyticsStreamInputBlob": {
-    "name": "asaiblob-myapp-dev",
-    "nameUnique": "asaiblob-myapp-dev-cv7z",
+    "name": "asaiblob-myapp-dev-weu",
+    "nameUnique": "asaiblob-myapp-dev-weu-cv7z",
     "slug": "asaiblob"
   },
   "streamAnalyticsStreamInputEventHub": {
-    "name": "asaieh-myapp-dev",
-    "nameUnique": "asaieh-myapp-dev-cv7z",
+    "name": "asaieh-myapp-dev-weu",
+    "nameUnique": "asaieh-myapp-dev-weu-cv7z",
     "slug": "asaieh"
   },
   "streamAnalyticsStreamInputIotHub": {
-    "name": "asaiiot-myapp-dev",
-    "nameUnique": "asaiiot-myapp-dev-cv7z",
+    "name": "asaiiot-myapp-dev-weu",
+    "nameUnique": "asaiiot-myapp-dev-weu-cv7z",
     "slug": "asaiiot"
   },
   "subnet": {
-    "name": "snet-myapp-dev",
-    "nameUnique": "snet-myapp-dev-cv7z",
+    "name": "snet-myapp-dev-weu",
+    "nameUnique": "snet-myapp-dev-weu-cv7z",
     "slug": "snet"
   },
   "templateDeployment": {
-    "name": "deploy-myapp-dev",
-    "nameUnique": "deploy-myapp-dev-cv7z",
+    "name": "deploy-myapp-dev-weu",
+    "nameUnique": "deploy-myapp-dev-weu-cv7z",
     "slug": "deploy"
   },
   "trafficManagerProfile": {
-    "name": "traf-myapp-dev",
-    "nameUnique": "traf-myapp-dev-cv7z",
+    "name": "traf-myapp-dev-weu",
+    "nameUnique": "traf-myapp-dev-weu-cv7z",
     "slug": "traf"
   },
   "virtualMachine": {
-    "name": "vm-myapp-dev",
-    "nameUnique": "vm-myapp-dev-cv",
+    "name": "vm-myapp-dev-we",
+    "nameUnique": "vm-myapp-dev-we",
     "slug": "vm"
   },
   "virtualMachineScaleSet": {
-    "name": "vmss-myapp-dev",
+    "name": "vmss-myapp-dev-",
     "nameUnique": "vmss-myapp-dev-",
     "slug": "vmss"
   },
   "virtualNetwork": {
-    "name": "vnet-myapp-dev",
-    "nameUnique": "vnet-myapp-dev-cv7z",
+    "name": "vnet-myapp-dev-weu",
+    "nameUnique": "vnet-myapp-dev-weu-cv7z",
     "slug": "vnet"
   },
   "virtualNetworkGateway": {
-    "name": "vgw-myapp-dev",
-    "nameUnique": "vgw-myapp-dev-cv7z",
+    "name": "vgw-myapp-dev-weu",
+    "nameUnique": "vgw-myapp-dev-weu-cv7z",
     "slug": "vgw"
   },
   "virtualNetworkPeering": {
-    "name": "vpeer-myapp-dev",
-    "nameUnique": "vpeer-myapp-dev-cv7z",
+    "name": "vpeer-myapp-dev-weu",
+    "nameUnique": "vpeer-myapp-dev-weu-cv7z",
     "slug": "vpeer"
   },
   "virtualWan": {
-    "name": "vwan-myapp-dev",
-    "nameUnique": "vwan-myapp-dev-cv7z",
+    "name": "vwan-myapp-dev-weu",
+    "nameUnique": "vwan-myapp-dev-weu-cv7z",
     "slug": "vwan"
   },
   "windowsVirtualMachine": {
-    "name": "vm-myapp-dev",
-    "nameUnique": "vm-myapp-dev-cv",
+    "name": "vm-myapp-dev-we",
+    "nameUnique": "vm-myapp-dev-we",
     "slug": "vm"
   },
   "windowsVirtualMachineScaleSet": {
-    "name": "vmss-myapp-dev",
+    "name": "vmss-myapp-dev-",
     "nameUnique": "vmss-myapp-dev-",
     "slug": "vmss"
   }

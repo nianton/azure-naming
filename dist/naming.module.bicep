@@ -8,7 +8,7 @@
  * Microsoft naming convention best practices
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated on: 2022-05-12T13:13:46.896Z
+ * Generated/built on: 2022-05-13T18:58:54.820Z
  */
 
 @description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
@@ -29,14 +29,70 @@ param useDashes bool = true
 @description('Optional. Create names using lowercase letters -defaults to true')
 param useLowerCase bool = true
 
+@description('Optional. Used when region abbreviation is needed (placeholder value is "**location**)')
+param location string = resourceGroup().location
+
 var uniquePart = substring(uniqueString(uniqueSeed), 0, uniqueLength)
 var delimiter = useDashes ? '-' : ''
+var locationPlaceholder = '**location**'
+var regionAbbreviations = {
+    australiacentral: 'auc'
+    australiacentral2: 'auc2'
+    australiaeast: 'aue'
+    australiasoutheast: 'ause'
+    brazilsouth: 'brs'
+    brazilsoutheast: 'brse'
+    canadacentral: 'canc'
+    canadaeast: 'cane'
+    centralindia: 'cin'
+    centralus: 'cus'
+    centraluseuap: 'cuseuap'
+    eastasia: 'ea'
+    eastus: 'eus'
+    eastus2: 'eus2'
+    eastus2euap: 'eus2euap'
+    francecentral: 'frc'
+    francesouth: 'frs'
+    germanynorth: 'gern'
+    germanywestcentral: 'gerwc'
+    japaneast: 'jae'
+    japanwest: 'jaw'
+    jioindiacentral: 'jioinc'
+    jioindiawest: 'jioinw'
+    koreacentral: 'koc'
+    koreasouth: 'kors'
+    northcentralus: 'ncus'
+    northeurope: 'neu'
+    norwayeast: 'nore'
+    norwaywest: 'norw'
+    southafricanorth: 'san'
+    southafricawest: 'saw'
+    southcentralus: 'scus'
+    southeastasia: 'sea'
+    southindia: 'sin'
+    swedencentral: 'swc'
+    switzerlandnorth: 'swn'
+    switzerlandwest: 'sww'
+    uaecentral: 'uaec'
+    uaenorth: 'uaen'
+    uksouth: 'uks'
+    ukwest: 'ukw'
+    westcentralus: 'wcus'
+    westeurope: 'weu'
+    westindia: 'win'
+    westus: 'wus'
+    westus2: 'wus2'
+    westus3: 'wus3'
+}
+
 
 var strPrefixJoined = empty(prefix) ? '' : '${replace(replace(replace(string(prefix), '["', ''), '"]', ''), '","', delimiter)}${delimiter}'
-var strPrefix = useLowerCase ? toLower(strPrefixJoined) : strPrefixJoined
+var strPrefixInterim = useLowerCase ? toLower(strPrefixJoined) : strPrefixJoined
+var strPrefix = replace(strPrefixInterim, locationPlaceholder, regionAbbreviations[location])
 
 var strSuffixJoined =  empty(suffix) ? '' : '${delimiter}${replace(replace(replace(string(suffix), '["', ''), '"]', ''), '","', delimiter)}'
-var strSuffix = useLowerCase ? toLower(strSuffixJoined) : strSuffixJoined
+var strSuffixInterim = useLowerCase ? toLower(strSuffixJoined) : strSuffixJoined
+var strSuffix = replace(strSuffixInterim, locationPlaceholder, regionAbbreviations[location])
 
 var placeholder = '[****]'
 var nameTemplate = '${strPrefix}${placeholder}${strSuffix}'
@@ -1017,52 +1073,4 @@ output names object = {
   }
 }
 
-output regionAbbreviations object = {
-    australiacentral: 'auc'
-    australiacentral2: 'auc2'
-    australiaeast: 'aue'
-    australiasoutheast: 'ause'
-    brazilsouth: 'brs'
-    brazilsoutheast: 'brse'
-    canadacentral: 'canc'
-    canadaeast: 'cane'
-    centralindia: 'cin'
-    centralus: 'cus'
-    centraluseuap: 'cuseuap'
-    eastasia: 'ea'
-    eastus: 'eus'
-    eastus2: 'eus2'
-    eastus2euap: 'eus2euap'
-    francecentral: 'frc'
-    francesouth: 'frs'
-    germanynorth: 'gern'
-    germanywestcentral: 'gerwc'
-    japaneast: 'jae'
-    japanwest: 'jaw'
-    jioindiacentral: 'jioinc'
-    jioindiawest: 'jioinw'
-    koreacentral: 'koc'
-    koreasouth: 'kors'
-    northcentralus: 'ncus'
-    northeurope: 'neu'
-    norwayeast: 'nore'
-    norwaywest: 'norw'
-    southafricanorth: 'san'
-    southafricawest: 'saw'
-    southcentralus: 'scus'
-    southeastasia: 'sea'
-    southindia: 'sin'
-    swedencentral: 'swc'
-    switzerlandnorth: 'swn'
-    switzerlandwest: 'sww'
-    uaecentral: 'uaec'
-    uaenorth: 'uaen'
-    uksouth: 'uks'
-    ukwest: 'ukw'
-    westcentralus: 'wcus'
-    westeurope: 'weu'
-    westindia: 'win'
-    westus: 'wus'
-    westus2: 'wus2'
-    westus3: 'wus3'
-}
+output regionAbbreviations object = regionAbbreviations
