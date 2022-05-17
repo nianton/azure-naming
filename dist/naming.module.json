@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.6.18.56646",
-      "templateHash": "3094972689133206237"
+      "templateHash": "3661953417590983886"
     }
   },
   "parameters": {
@@ -210,9 +210,9 @@
           "slug": "avail"
         },
         "bastionHost": {
-          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'snap'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'snap')), 80))]",
-          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snap'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'snap')), 80))]",
-          "slug": "snap"
+          "name": "[substring(replace(variables('nameTemplate'), variables('placeholder'), 'bas'), 0, min(length(replace(variables('nameTemplate'), variables('placeholder'), 'bas')), 80))]",
+          "nameUnique": "[substring(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bas'), 0, min(length(replace(variables('nameUniqueTemplate'), variables('placeholder'), 'bas')), 80))]",
+          "slug": "bas"
         },
         "batchAccount": {
           "name": "[substring(replace(variables('nameSafeTemplate'), variables('placeholder'), 'ba'), 0, min(length(replace(variables('nameSafeTemplate'), variables('placeholder'), 'ba')), 24))]",
