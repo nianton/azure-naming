@@ -41,7 +41,6 @@ var regionAbbreviations = {
   {{/each}}
 }
 
-
 var strPrefixJoined = empty(prefix) ? '' : '${replace(replace(replace(string(prefix), '["', ''), '"]', ''), '","', delimiter)}${delimiter}'
 var strPrefixInterim = useLowerCase ? toLower(strPrefixJoined) : strPrefixJoined
 var strPrefix = replace(strPrefixInterim, locationPlaceholder, regionAbbreviations[location])
@@ -56,14 +55,28 @@ var nameUniqueTemplate = '${strPrefix}${placeholder}${strSuffix}${delimiter}${un
 var nameSafeTemplate = toLower(replace(nameTemplate, delimiter, ''))
 var nameUniqueSafeTemplate = toLower(replace(nameUniqueTemplate, delimiter, ''))
 
-output names object = {
+var d = delimiter
+var ph = placeholder
+var nt = nameTemplate
+var nut = nameUniqueTemplate
+var nst = nameSafeTemplate
+var nust = nameUniqueSafeTemplate
+
+var names = {
 {{#each definitions}}
-  {{name}}: {
-    name: substring(replace(name{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}'), 0, min(length(replace(name{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}')), {{length.max}}))
-    nameUnique: substring(replace(nameUnique{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}'), 0, min(length(replace(nameUnique{{#unless dashes}}Safe{{/unless}}Template, placeholder, '{{slug}}')), {{length.max}}))
+  {{name}}: { 
+    {{#if dashes}}
+    name: endsWith(take(replace(nt, ph, '{{slug}}'), {{length.max}}), d) ? take(replace(nt, ph, '{{slug}}'), {{length.max}}-1) : take(replace(nt, ph, '{{slug}}'), {{length.max}})
+    nameUnique: endsWith(take(replace(nut, ph, '{{slug}}'), {{length.max}}), d) ? take(replace(nut, ph, '{{slug}}'), {{length.max}}-1) : take(replace(nut, ph, '{{slug}}'), {{length.max}})
     slug: '{{slug}}'
+    {{else}}
+    name: take(replace(nst, ph, '{{slug}}'), {{length.max}})
+    nameUnique: take(replace(nust, ph, '{{slug}}'), {{length.max}})
+    slug: '{{slug}}'
+    {{/if}}    
   }
 {{/each}}
 }
 
+output names object = names
 output regionAbbreviations object = regionAbbreviations

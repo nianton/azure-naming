@@ -935,8 +935,8 @@
     "slug": "vm"
   },
   "virtualMachineScaleSet": {
-    "name": "vmss-myapp-dev-",
-    "nameUnique": "vmss-myapp-dev-",
+    "name": "vmss-myapp-dev",
+    "nameUnique": "vmss-myapp-dev",
     "slug": "vmss"
   },
   "virtualNetwork": {
@@ -965,8 +965,8 @@
     "slug": "vm"
   },
   "windowsVirtualMachineScaleSet": {
-    "name": "vmss-myapp-dev-",
-    "nameUnique": "vmss-myapp-dev-",
+    "name": "vmss-myapp-dev",
+    "nameUnique": "vmss-myapp-dev",
     "slug": "vmss"
   }
 }
