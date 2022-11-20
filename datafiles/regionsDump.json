@@ -1,14 +1,14 @@
 [
   {
     "displayName": "East US",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastus",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastus",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "37.3719",
       "longitude": "-79.8164",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westus",
           "name": "westus",
           "subscriptionId": null
         }
@@ -23,14 +23,14 @@
   },
   {
     "displayName": "East US 2",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastus2",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastus2",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "36.6681",
       "longitude": "-78.3889",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/centralus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/centralus",
           "name": "centralus",
           "subscriptionId": null
         }
@@ -45,14 +45,14 @@
   },
   {
     "displayName": "South Central US",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southcentralus",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southcentralus",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "29.4167",
       "longitude": "-98.5",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/northcentralus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/northcentralus",
           "name": "northcentralus",
           "subscriptionId": null
         }
@@ -67,14 +67,14 @@
   },
   {
     "displayName": "West US 2",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westus2",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westus2",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "47.233",
       "longitude": "-119.852",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westcentralus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westcentralus",
           "name": "westcentralus",
           "subscriptionId": null
         }
@@ -89,14 +89,14 @@
   },
   {
     "displayName": "West US 3",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westus3",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westus3",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "33.448376",
       "longitude": "-112.074036",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastus",
           "name": "eastus",
           "subscriptionId": null
         }
@@ -111,14 +111,14 @@
   },
   {
     "displayName": "Australia East",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiaeast",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiaeast",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "-33.86",
       "longitude": "151.2094",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiasoutheast",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiasoutheast",
           "name": "australiasoutheast",
           "subscriptionId": null
         }
@@ -133,14 +133,14 @@
   },
   {
     "displayName": "Southeast Asia",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southeastasia",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southeastasia",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "1.283",
       "longitude": "103.833",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastasia",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastasia",
           "name": "eastasia",
           "subscriptionId": null
         }
@@ -155,14 +155,14 @@
   },
   {
     "displayName": "North Europe",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/northeurope",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/northeurope",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "53.3478",
       "longitude": "-6.2597",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westeurope",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westeurope",
           "name": "westeurope",
           "subscriptionId": null
         }
@@ -177,14 +177,14 @@
   },
   {
     "displayName": "Sweden Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/swedencentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/swedencentral",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "60.67488",
       "longitude": "17.14127",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/swedensouth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/swedensouth",
           "name": "swedensouth",
           "subscriptionId": null
         }
@@ -199,14 +199,14 @@
   },
   {
     "displayName": "UK South",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/uksouth",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/uksouth",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "50.941",
       "longitude": "-0.799",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/ukwest",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/ukwest",
           "name": "ukwest",
           "subscriptionId": null
         }
@@ -221,14 +221,14 @@
   },
   {
     "displayName": "West Europe",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westeurope",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westeurope",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "52.3667",
       "longitude": "4.9",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/northeurope",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/northeurope",
           "name": "northeurope",
           "subscriptionId": null
         }
@@ -243,14 +243,14 @@
   },
   {
     "displayName": "Central US",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/centralus",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/centralus",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "41.5908",
       "longitude": "-93.6208",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastus2",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastus2",
           "name": "eastus2",
           "subscriptionId": null
         }
@@ -265,14 +265,14 @@
   },
   {
     "displayName": "South Africa North",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southafricanorth",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southafricanorth",
     "metadata": {
       "geographyGroup": "Africa",
       "latitude": "-25.731340",
       "longitude": "28.218370",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southafricawest",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southafricawest",
           "name": "southafricawest",
           "subscriptionId": null
         }
@@ -287,14 +287,14 @@
   },
   {
     "displayName": "Central India",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/centralindia",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/centralindia",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "18.5822",
       "longitude": "73.9197",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southindia",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southindia",
           "name": "southindia",
           "subscriptionId": null
         }
@@ -309,14 +309,14 @@
   },
   {
     "displayName": "East Asia",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastasia",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastasia",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "22.267",
       "longitude": "114.188",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southeastasia",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southeastasia",
           "name": "southeastasia",
           "subscriptionId": null
         }
@@ -331,14 +331,14 @@
   },
   {
     "displayName": "Japan East",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/japaneast",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/japaneast",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "35.68",
       "longitude": "139.77",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/japanwest",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/japanwest",
           "name": "japanwest",
           "subscriptionId": null
         }
@@ -353,14 +353,14 @@
   },
   {
     "displayName": "Korea Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/koreacentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/koreacentral",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "37.5665",
       "longitude": "126.9780",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/koreasouth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/koreasouth",
           "name": "koreasouth",
           "subscriptionId": null
         }
@@ -375,14 +375,14 @@
   },
   {
     "displayName": "Canada Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/canadacentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/canadacentral",
     "metadata": {
       "geographyGroup": "Canada",
       "latitude": "43.653",
       "longitude": "-79.383",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/canadaeast",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/canadaeast",
           "name": "canadaeast",
           "subscriptionId": null
         }
@@ -397,14 +397,14 @@
   },
   {
     "displayName": "France Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/francecentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/francecentral",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "46.3772",
       "longitude": "2.3730",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/francesouth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/francesouth",
           "name": "francesouth",
           "subscriptionId": null
         }
@@ -419,14 +419,14 @@
   },
   {
     "displayName": "Germany West Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/germanywestcentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/germanywestcentral",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "50.110924",
       "longitude": "8.682127",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/germanynorth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/germanynorth",
           "name": "germanynorth",
           "subscriptionId": null
         }
@@ -441,14 +441,14 @@
   },
   {
     "displayName": "Norway East",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/norwayeast",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/norwayeast",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "59.913868",
       "longitude": "10.752245",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/norwaywest",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/norwaywest",
           "name": "norwaywest",
           "subscriptionId": null
         }
@@ -462,15 +462,59 @@
     "subscriptionId": null
   },
   {
+    "displayName": "Switzerland North",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/switzerlandnorth",
+    "metadata": {
+      "geographyGroup": "Europe",
+      "latitude": "47.451542",
+      "longitude": "8.564572",
+      "pairedRegion": [
+        {
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/switzerlandwest",
+          "name": "switzerlandwest",
+          "subscriptionId": null
+        }
+      ],
+      "physicalLocation": "Zurich",
+      "regionCategory": "Recommended",
+      "regionType": "Physical"
+    },
+    "name": "switzerlandnorth",
+    "regionalDisplayName": "(Europe) Switzerland North",
+    "subscriptionId": null
+  },
+  {
+    "displayName": "UAE North",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/uaenorth",
+    "metadata": {
+      "geographyGroup": "Middle East",
+      "latitude": "25.266666",
+      "longitude": "55.316666",
+      "pairedRegion": [
+        {
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/uaecentral",
+          "name": "uaecentral",
+          "subscriptionId": null
+        }
+      ],
+      "physicalLocation": "Dubai",
+      "regionCategory": "Recommended",
+      "regionType": "Physical"
+    },
+    "name": "uaenorth",
+    "regionalDisplayName": "(Middle East) UAE North",
+    "subscriptionId": null
+  },
+  {
     "displayName": "Brazil South",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/brazilsouth",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/brazilsouth",
     "metadata": {
       "geographyGroup": "South America",
       "latitude": "-23.55",
       "longitude": "-46.633",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southcentralus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southcentralus",
           "name": "southcentralus",
           "subscriptionId": null
         }
@@ -485,14 +529,14 @@
   },
   {
     "displayName": "East US 2 EUAP",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastus2euap",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastus2euap",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "36.6681",
       "longitude": "-78.3889",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/centraluseuap",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/centraluseuap",
           "name": "centraluseuap",
           "subscriptionId": null
         }
@@ -506,15 +550,37 @@
     "subscriptionId": null
   },
   {
+    "displayName": "Qatar Central",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/qatarcentral",
+    "metadata": {
+      "geographyGroup": "Middle East",
+      "latitude": "25.551462",
+      "longitude": "51.439327",
+      "pairedRegion": [
+        {
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westeurope",
+          "name": "westeurope",
+          "subscriptionId": null
+        }
+      ],
+      "physicalLocation": "Doha",
+      "regionCategory": "Recommended",
+      "regionType": "Physical"
+    },
+    "name": "qatarcentral",
+    "regionalDisplayName": "(Middle East) Qatar Central",
+    "subscriptionId": null
+  },
+  {
     "displayName": "North Central US",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/northcentralus",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/northcentralus",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "41.8819",
       "longitude": "-87.6278",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southcentralus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southcentralus",
           "name": "southcentralus",
           "subscriptionId": null
         }
@@ -529,14 +595,14 @@
   },
   {
     "displayName": "West US",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westus",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westus",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "37.783",
       "longitude": "-122.417",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastus",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastus",
           "name": "eastus",
           "subscriptionId": null
         }
@@ -551,14 +617,14 @@
   },
   {
     "displayName": "Jio India West",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/jioindiawest",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/jioindiawest",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "22.470701",
       "longitude": "70.05773",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/jioindiacentral",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/jioindiacentral",
           "name": "jioindiacentral",
           "subscriptionId": null
         }
@@ -572,59 +638,15 @@
     "subscriptionId": null
   },
   {
-    "displayName": "Switzerland North",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/switzerlandnorth",
-    "metadata": {
-      "geographyGroup": "Europe",
-      "latitude": "47.451542",
-      "longitude": "8.564572",
-      "pairedRegion": [
-        {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/switzerlandwest",
-          "name": "switzerlandwest",
-          "subscriptionId": null
-        }
-      ],
-      "physicalLocation": "Zurich",
-      "regionCategory": "Other",
-      "regionType": "Physical"
-    },
-    "name": "switzerlandnorth",
-    "regionalDisplayName": "(Europe) Switzerland North",
-    "subscriptionId": null
-  },
-  {
-    "displayName": "UAE North",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/uaenorth",
-    "metadata": {
-      "geographyGroup": "Middle East",
-      "latitude": "25.266666",
-      "longitude": "55.316666",
-      "pairedRegion": [
-        {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/uaecentral",
-          "name": "uaecentral",
-          "subscriptionId": null
-        }
-      ],
-      "physicalLocation": "Dubai",
-      "regionCategory": "Other",
-      "regionType": "Physical"
-    },
-    "name": "uaenorth",
-    "regionalDisplayName": "(Middle East) UAE North",
-    "subscriptionId": null
-  },
-  {
     "displayName": "Central US EUAP",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/centraluseuap",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/centraluseuap",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "41.5908",
       "longitude": "-93.6208",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/eastus2euap",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/eastus2euap",
           "name": "eastus2euap",
           "subscriptionId": null
         }
@@ -639,14 +661,14 @@
   },
   {
     "displayName": "West Central US",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westcentralus",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westcentralus",
     "metadata": {
       "geographyGroup": "US",
       "latitude": "40.890",
       "longitude": "-110.234",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westus2",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westus2",
           "name": "westus2",
           "subscriptionId": null
         }
@@ -661,14 +683,14 @@
   },
   {
     "displayName": "South Africa West",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southafricawest",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southafricawest",
     "metadata": {
       "geographyGroup": "Africa",
       "latitude": "-34.075691",
       "longitude": "18.843266",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southafricanorth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southafricanorth",
           "name": "southafricanorth",
           "subscriptionId": null
         }
@@ -683,14 +705,14 @@
   },
   {
     "displayName": "Australia Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiacentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiacentral",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "-35.3075",
       "longitude": "149.1244",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiacentral",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiacentral",
           "name": "australiacentral",
           "subscriptionId": null
         }
@@ -705,14 +727,14 @@
   },
   {
     "displayName": "Australia Central 2",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiacentral2",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiacentral2",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "-35.3075",
       "longitude": "149.1244",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiacentral2",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiacentral2",
           "name": "australiacentral2",
           "subscriptionId": null
         }
@@ -727,14 +749,14 @@
   },
   {
     "displayName": "Australia Southeast",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiasoutheast",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiasoutheast",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "-37.8136",
       "longitude": "144.9631",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/australiaeast",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/australiaeast",
           "name": "australiaeast",
           "subscriptionId": null
         }
@@ -749,14 +771,14 @@
   },
   {
     "displayName": "Japan West",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/japanwest",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/japanwest",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "34.6939",
       "longitude": "135.5022",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/japaneast",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/japaneast",
           "name": "japaneast",
           "subscriptionId": null
         }
@@ -771,14 +793,14 @@
   },
   {
     "displayName": "Jio India Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/jioindiacentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/jioindiacentral",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "21.146633",
       "longitude": "79.08886",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/jioindiawest",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/jioindiawest",
           "name": "jioindiawest",
           "subscriptionId": null
         }
@@ -793,14 +815,14 @@
   },
   {
     "displayName": "Korea South",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/koreasouth",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/koreasouth",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "35.1796",
       "longitude": "129.0756",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/koreacentral",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/koreacentral",
           "name": "koreacentral",
           "subscriptionId": null
         }
@@ -815,14 +837,14 @@
   },
   {
     "displayName": "South India",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southindia",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southindia",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "12.9822",
       "longitude": "80.1636",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/centralindia",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/centralindia",
           "name": "centralindia",
           "subscriptionId": null
         }
@@ -837,14 +859,14 @@
   },
   {
     "displayName": "West India",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/westindia",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/westindia",
     "metadata": {
       "geographyGroup": "Asia Pacific",
       "latitude": "19.088",
       "longitude": "72.868",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/southindia",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/southindia",
           "name": "southindia",
           "subscriptionId": null
         }
@@ -859,14 +881,14 @@
   },
   {
     "displayName": "Canada East",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/canadaeast",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/canadaeast",
     "metadata": {
       "geographyGroup": "Canada",
       "latitude": "46.817",
       "longitude": "-71.217",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/canadacentral",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/canadacentral",
           "name": "canadacentral",
           "subscriptionId": null
         }
@@ -881,14 +903,14 @@
   },
   {
     "displayName": "France South",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/francesouth",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/francesouth",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "43.8345",
       "longitude": "2.1972",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/francecentral",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/francecentral",
           "name": "francecentral",
           "subscriptionId": null
         }
@@ -903,14 +925,14 @@
   },
   {
     "displayName": "Germany North",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/germanynorth",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/germanynorth",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "53.073635",
       "longitude": "8.806422",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/germanywestcentral",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/germanywestcentral",
           "name": "germanywestcentral",
           "subscriptionId": null
         }
@@ -925,14 +947,14 @@
   },
   {
     "displayName": "Norway West",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/norwaywest",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/norwaywest",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "58.969975",
       "longitude": "5.733107",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/norwayeast",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/norwayeast",
           "name": "norwayeast",
           "subscriptionId": null
         }
@@ -947,14 +969,14 @@
   },
   {
     "displayName": "Switzerland West",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/switzerlandwest",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/switzerlandwest",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "46.204391",
       "longitude": "6.143158",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/switzerlandnorth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/switzerlandnorth",
           "name": "switzerlandnorth",
           "subscriptionId": null
         }
@@ -969,14 +991,14 @@
   },
   {
     "displayName": "UK West",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/ukwest",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/ukwest",
     "metadata": {
       "geographyGroup": "Europe",
       "latitude": "53.427",
       "longitude": "-3.084",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/uksouth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/uksouth",
           "name": "uksouth",
           "subscriptionId": null
         }
@@ -991,14 +1013,14 @@
   },
   {
     "displayName": "UAE Central",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/uaecentral",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/uaecentral",
     "metadata": {
       "geographyGroup": "Middle East",
       "latitude": "24.466667",
       "longitude": "54.366669",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/uaenorth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/uaenorth",
           "name": "uaenorth",
           "subscriptionId": null
         }
@@ -1013,14 +1035,14 @@
   },
   {
     "displayName": "Brazil Southeast",
-    "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/brazilsoutheast",
+    "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/brazilsoutheast",
     "metadata": {
       "geographyGroup": "South America",
       "latitude": "-22.90278",
       "longitude": "-43.2075",
       "pairedRegion": [
         {
-          "id": "/subscriptions/864eb9d0-e9c4-4d6b-bf11-bd4cfde05e81/locations/brazilsouth",
+          "id": "/subscriptions/2d80fc8b-1d52-4794-89fb-0333700b6037/locations/brazilsouth",
           "name": "brazilsouth",
           "subscriptionId": null
         }

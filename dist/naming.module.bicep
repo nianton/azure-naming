@@ -8,7 +8,7 @@
  * Microsoft naming convention best practices
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2022-05-20T06:18:44.108Z
+ * Generated/built on: 2022-11-20T10:22:51.767Z
  */
 
 @description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
@@ -262,10 +262,15 @@ var names = {
     nameUnique: endsWith(take(replace(nut, ph, 'cog'), 64), d) ? take(replace(nut, ph, 'cog'), 64-1) : take(replace(nut, ph, 'cog'), 64)
     slug: 'cog'
   }
-  containerApp: { 
-    name: endsWith(take(replace(nt, ph, 'capp'), 64), d) ? take(replace(nt, ph, 'capp'), 64-1) : take(replace(nt, ph, 'capp'), 64)
-    nameUnique: endsWith(take(replace(nut, ph, 'capp'), 64), d) ? take(replace(nut, ph, 'capp'), 64-1) : take(replace(nut, ph, 'capp'), 64)
-    slug: 'capp'
+  containerApps: { 
+    name: endsWith(take(replace(nt, ph, 'ca'), 32), d) ? take(replace(nt, ph, 'ca'), 32-1) : take(replace(nt, ph, 'ca'), 32)
+    nameUnique: endsWith(take(replace(nut, ph, 'ca'), 32), d) ? take(replace(nut, ph, 'ca'), 32-1) : take(replace(nut, ph, 'ca'), 32)
+    slug: 'ca'
+  }
+  containerAppsEnvironment: { 
+    name: endsWith(take(replace(nt, ph, 'cae'), 64), d) ? take(replace(nt, ph, 'cae'), 64-1) : take(replace(nt, ph, 'cae'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'cae'), 64), d) ? take(replace(nut, ph, 'cae'), 64-1) : take(replace(nut, ph, 'cae'), 64)
+    slug: 'cae'
   }
   containerGroup: { 
     name: endsWith(take(replace(nt, ph, 'cg'), 63), d) ? take(replace(nt, ph, 'cg'), 63-1) : take(replace(nt, ph, 'cg'), 63)
@@ -621,6 +626,11 @@ var names = {
     name: endsWith(take(replace(nt, ph, 'lbnatrl'), 80), d) ? take(replace(nt, ph, 'lbnatrl'), 80-1) : take(replace(nt, ph, 'lbnatrl'), 80)
     nameUnique: endsWith(take(replace(nut, ph, 'lbnatrl'), 80), d) ? take(replace(nut, ph, 'lbnatrl'), 80-1) : take(replace(nut, ph, 'lbnatrl'), 80)
     slug: 'lbnatrl'
+  }
+  loadTesting: { 
+    name: endsWith(take(replace(nt, ph, 'lt'), 64), d) ? take(replace(nt, ph, 'lt'), 64-1) : take(replace(nt, ph, 'lt'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'lt'), 64), d) ? take(replace(nut, ph, 'lt'), 64-1) : take(replace(nut, ph, 'lt'), 64)
+    slug: 'lt'
   }
   linuxVirtualMachine: { 
     name: endsWith(take(replace(nt, ph, 'vm'), 64), d) ? take(replace(nt, ph, 'vm'), 64-1) : take(replace(nt, ph, 'vm'), 64)

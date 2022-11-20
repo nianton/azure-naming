@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.6.18.56646",
-      "templateHash": "15287097254587959763"
+      "version": "0.12.40.16777",
+      "templateHash": "16205994613663188782"
     }
   },
   "parameters": {
@@ -285,10 +285,15 @@
         "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cog'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cog'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cog'), 64))]",
         "slug": "cog"
       },
-      "containerApp": {
-        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'capp'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'capp'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'capp'), 64))]",
-        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'capp'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'capp'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'capp'), 64))]",
-        "slug": "capp"
+      "containerApps": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'ca'), 32), variables('d')), take(replace(variables('nt'), variables('ph'), 'ca'), sub(32, 1)), take(replace(variables('nt'), variables('ph'), 'ca'), 32))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'ca'), 32), variables('d')), take(replace(variables('nut'), variables('ph'), 'ca'), sub(32, 1)), take(replace(variables('nut'), variables('ph'), 'ca'), 32))]",
+        "slug": "ca"
+      },
+      "containerAppsEnvironment": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cae'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'cae'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'cae'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cae'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cae'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cae'), 64))]",
+        "slug": "cae"
       },
       "containerGroup": {
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cg'), 63), variables('d')), take(replace(variables('nt'), variables('ph'), 'cg'), sub(63, 1)), take(replace(variables('nt'), variables('ph'), 'cg'), 63))]",
@@ -644,6 +649,11 @@
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'lbnatrl'), 80), variables('d')), take(replace(variables('nt'), variables('ph'), 'lbnatrl'), sub(80, 1)), take(replace(variables('nt'), variables('ph'), 'lbnatrl'), 80))]",
         "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'lbnatrl'), 80), variables('d')), take(replace(variables('nut'), variables('ph'), 'lbnatrl'), sub(80, 1)), take(replace(variables('nut'), variables('ph'), 'lbnatrl'), 80))]",
         "slug": "lbnatrl"
+      },
+      "loadTesting": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'lt'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'lt'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'lt'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'lt'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'lt'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'lt'), 64))]",
+        "slug": "lt"
       },
       "linuxVirtualMachine": {
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'vm'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'vm'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'vm'), 64))]",

@@ -341,14 +341,25 @@
       "dashes": true
     },
     {
-      "name": "container_app",
+      "name": "container_apps",
+      "length": {
+        "min": 2,
+        "max": 32
+      },
+      "regex": "^(?=.{2,32}$)(?!.*--)[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$",
+      "scope": "resourceGroup",
+      "slug": "ca",
+      "dashes": true
+    },
+    {
+      "name": "container_apps_environment",
       "length": {
         "min": 1,
         "max": 64
       },
       "regex": "^(?=.{1,64}$)(?!.*--)[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$",
       "scope": "resourceGroup",
-      "slug": "capp",
+      "slug": "cae",
       "dashes": true
     },
     {
@@ -1130,6 +1141,17 @@
       "regex": "^(?=.{1,80}$)[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$",
       "scope": "parent",
       "slug": "lbnatrl",
+      "dashes": true
+    },
+    {
+      "name": "load_testing",
+      "length": {
+        "min": 1,
+        "max": 64
+      },
+      "regex": "^(?=.{1,64}$)[a-zA-Z0-9][a-zA-Z0-9-._]+[a-zA-Z0-9_]$",
+      "scope": "parent",
+      "slug": "lt",
       "dashes": true
     },
     {
