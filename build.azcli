@@ -1,22 +1,59 @@
+GREEN='\e[1;32m%s\e[0m\n'
+BLUE='\e[1;34m%s\e[0m\n'
+EMPTYLINE='\n\n'
+
 # Ensure dependencies
+printf "$BLUE" "*** Ensuring dependencies (node packages)... ***"
 npm install
+printf "$GREEN" "*** Success: Ensuring dependencies. ***"
+printf '\n'
 
 # Run the bicep generation
+printf "$BLUE" "*** Generating naming modules bicep file... ***"
 npm start bicep
+printf "$GREEN" "*** Successfully generated naming module bicep file. ***"
+printf '\n'
 
 # Ensure latest bicep version
 az bicep upgrade
 
 # Build ARM template
+printf "$BLUE" "*** Building respective ARM template from bicep for naming module... ***"
 az bicep build --file ./dist/naming.module.bicep --outfile ./dist/naming.module.json
+printf "$GREEN" "*** Successfully compiled ARM Template to ./dist/naming.module.json ***"
+printf '\n'
 
 # Build Regions dump file, including only Physical ones
+printf "$BLUE" "*** Generating data files for available Azure regions... ***"
 az account list-locations --query "[?metadata.regionType=='Physical']" > ./datafiles/regionsDump.json
+printf "$GREEN" "*** Successfully saved Azure regions info to ./datafiles/regionsDump.json ***"
+printf '\n'
 
 # Get the module's real output 
-RESOURCE_GROUP="rg-dummy"
+printf "$BLUE" "*** Creating an actual deployment of the naming module... ***"
+
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
+RESOURCE_GROUP="rg-dummy-$TIMESTAMP"
+
+printf "$BLUE" "*** Creating temporary Azure resource group as target: $RESOURCE_GROUP.  ***"
 az group create -n $RESOURCE_GROUP -l westeurope
+printf "$GREEN" "*** Successfully created resource group: $RESOURCE_GROUP.  ***"
+
+printf "$BLUE" "*** Creating a sample deployment to the above resource group...  ***"
 az deployment group create --resource-group $RESOURCE_GROUP --template-file ./dist/naming.module.bicep --parameters suffix='("myapp", "dev", "**location**")' uniqueLength=4 | jq '.properties.outputs.names.value' > ./datafiles/sample.output.json
+printf "$GREEN" "*** Successfully created the deployment -output was written to ./datafiles/sample.output.json  ***"
+
+printf "$BLUE" "*** Deleting temporary Azure resource group: $RESOURCE_GROUP...  ***"
+az group delete -n $RESOURCE_GROUP --yes
+printf "$GREEN" "*** Successfully deleted the resource group: $RESOURCE_GROUP  ***"
+printf '\n'
 
 # Run the README.md generation
+printf "$BLUE" "*** Generating README.md file...  ***"
 npm start readme
+printf "$GREEN" "*** Successfully generated README.md file.  ***"
+printf '\n'
+
+# END message
+printf "$GREEN" "*** Successfully built azure-naming module and related files.  ***"
+printf '\n'
