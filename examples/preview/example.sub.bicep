@@ -1,3 +1,5 @@
+import { NamingOutput } from '../../dist/naming.module.preview.bicep'
+
 targetScope = 'subscription'
 
 param location string
@@ -16,7 +18,7 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   tags: defaultTags
 }
 
-module naming '../dist/naming.module.bicep' = {
+module naming '../../dist/naming.module.preview.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'NamingDeployment'  
   params: {
@@ -39,7 +41,7 @@ module main 'example.bicep' = {
   }
 }
 
-output naming object = naming.outputs.names
+output naming NamingOutput = naming.outputs.names
 output appServiceName string = main.outputs.appServiceName
 output appServicePlanName string = main.outputs.appServicePlanName
 output storageAccountName string = main.outputs.storageAccountName

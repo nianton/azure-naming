@@ -4,8 +4,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.12.40.16777",
-      "templateHash": "16205994613663188782"
+      "version": "0.14.46.61228",
+      "templateHash": "7588630156727772764"
     }
   },
   "parameters": {
@@ -530,6 +530,11 @@
         "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'func'), 60), variables('d')), take(replace(variables('nut'), variables('ph'), 'func'), sub(60, 1)), take(replace(variables('nut'), variables('ph'), 'func'), 60))]",
         "slug": "func"
       },
+      "grafana": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'grfn'), 23), variables('d')), take(replace(variables('nt'), variables('ph'), 'grfn'), sub(23, 1)), take(replace(variables('nt'), variables('ph'), 'grfn'), 23))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'grfn'), 23), variables('d')), take(replace(variables('nut'), variables('ph'), 'grfn'), sub(23, 1)), take(replace(variables('nut'), variables('ph'), 'grfn'), 23))]",
+        "slug": "grfn"
+      },
       "hdInsightHadoopCluster": {
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'hadoop'), 59), variables('d')), take(replace(variables('nt'), variables('ph'), 'hadoop'), sub(59, 1)), take(replace(variables('nt'), variables('ph'), 'hadoop'), 59))]",
         "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'hadoop'), 59), variables('d')), take(replace(variables('nut'), variables('ph'), 'hadoop'), sub(59, 1)), take(replace(variables('nut'), variables('ph'), 'hadoop'), 59))]",
@@ -684,6 +689,11 @@
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'dsk'), 80), variables('d')), take(replace(variables('nt'), variables('ph'), 'dsk'), sub(80, 1)), take(replace(variables('nt'), variables('ph'), 'dsk'), 80))]",
         "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'dsk'), 80), variables('d')), take(replace(variables('nut'), variables('ph'), 'dsk'), sub(80, 1)), take(replace(variables('nut'), variables('ph'), 'dsk'), 80))]",
         "slug": "dsk"
+      },
+      "managedIdentity": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'id'), 128), variables('d')), take(replace(variables('nt'), variables('ph'), 'id'), sub(128, 1)), take(replace(variables('nt'), variables('ph'), 'id'), 128))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'id'), 128), variables('d')), take(replace(variables('nut'), variables('ph'), 'id'), sub(128, 1)), take(replace(variables('nut'), variables('ph'), 'id'), 128))]",
+        "slug": "id"
       },
       "mapsAccount": {
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'map'), 98), variables('d')), take(replace(variables('nt'), variables('ph'), 'map'), sub(98, 1)), take(replace(variables('nt'), variables('ph'), 'map'), 98))]",

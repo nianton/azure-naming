@@ -8,9 +8,28 @@
  * Microsoft naming convention best practices
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
+{{#if isPreview}} * This is a preview version of the naming module supporting user-defined types. 
+ * The experimental flag 'compileTimeImports' must be enabled in Bicep config file.
+ * https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/user-defined-data-types#import-types-between-bicep-files-preview
+ * ----------------------------------------------------------------------------{{/if}}
  * Generated/built on: {{_metadata.timestamp}}
  */
 
+{{#if isPreview}}
+@export()
+type ServiceNameType = {
+  name: string
+  nameUnique: string
+  slug: string
+}
+
+@export()
+type NamingOutput = {
+  {{#each definitions}}
+  {{name}}: ServiceNameType
+  {{/each}}
+}
+{{/if}}
 @description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
 param prefix array = []
 
@@ -78,5 +97,9 @@ var names = {
 {{/each}}
 }
 
+{{#if isPreview}}
+output names NamingOutput = names
+{{else}}
 output names object = names
+{{/if}}
 output regionAbbreviations object = regionAbbreviations

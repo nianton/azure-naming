@@ -1,4 +1,6 @@
-param naming object
+import { NamingOutput } from '../../dist/naming.module.preview.bicep'
+
+param naming NamingOutput
 param location string = resourceGroup().location
 
 var serviceNames = {

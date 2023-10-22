@@ -1,5 +1,5 @@
 <!-- NOTE: This is a generated file, do not update directly. -->
-<!-- Generated on: 2022-11-20T10:24:06.344Z. -->
+<!-- Generated on: 2023-10-22T08:50:44.012Z. -->
 # Bicep Azure Naming module
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)

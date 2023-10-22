@@ -40,5 +40,9 @@
                 }
             }
         }
+    },
+    "experimentalFeaturesEnabled": {
+        "extensibility": true,
+        "compileTimeImports": true
     }
 }

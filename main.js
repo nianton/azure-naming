@@ -14,6 +14,7 @@ const readmeTemplateFile = 'templates/README.md.hbs'
 
 // Generated files
 const bicepFile = 'dist/naming.module.bicep'
+const bicepPreviewFile = 'dist/naming.module.preview.bicep'
 const readmeFile = 'README.md'
 
 Handlebars.registerHelper('upper', str => str.toUpperCase())
@@ -22,6 +23,7 @@ try {
     if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'bicep') {
         // Generate the templated files
         generateBicepModule()
+        generateBicepModule(true) // Preview file including type definitions
     }
 
     if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'readme') {
@@ -38,7 +40,7 @@ catch (ex) {
 /**
  * Generates the bicep module file based on the template.
  */
-function generateBicepModule() {
+function generateBicepModule(preview) {
     if (!fs.existsSync(resourceDefinitionsFile))
         throw new Error(`Resource definition file (${resourceDefinitionsFile}) was not found.`)
 
@@ -50,9 +52,11 @@ function generateBicepModule() {
     _.forEach(definitions, v => v.name = _.camelCase(v.name));
 
     const regionAbbreviations = readFileAsJson(regionAbbreviationsFile)
-    const templateInput = { definitions, regionAbbreviations }
+    const isPreview = !!preview
+    const templateInput = { isPreview, definitions, regionAbbreviations }
+    const resultBicepFile = isPreview ? bicepPreviewFile : bicepFile
     
-    generateFile(bicepTemplateFile, templateInput, bicepFile)
+    generateFile(bicepTemplateFile, templateInput, resultBicepFile)
 }
 
 /**
