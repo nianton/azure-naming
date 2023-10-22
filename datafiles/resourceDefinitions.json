@@ -369,7 +369,7 @@
     "scope": "resourceGroup",
     "slug": "chaosexp",
     "dashes": true,
-    "description": "CDN Profile"
+    "description": "Chaos Experiment"
   },
   {
     "name": "chaos_target",
@@ -381,7 +381,7 @@
     "scope": "resourceGroup",
     "slug": "chaostarget",
     "dashes": true,
-    "description": "CDN Profile"
+    "description": "Chaos Experiment Target"
   },
   {
     "name": "cognitive_account",

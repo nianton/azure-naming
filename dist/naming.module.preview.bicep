@@ -12,7 +12,7 @@
  * The experimental flag 'compileTimeImports' must be enabled in Bicep config file.
  * https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/user-defined-data-types#import-types-between-bicep-files-preview
  * ----------------------------------------------------------------------------
- * Generated/built on: 2023-10-22T08:50:44.001Z
+ * Generated/built on: 2023-10-22T11:38:58.958Z
  */
 
 @export()

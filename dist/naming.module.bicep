@@ -9,7 +9,7 @@
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
 
- * Generated/built on: 2023-10-22T08:50:43.965Z
+ * Generated/built on: 2023-10-22T11:38:58.922Z
  */
 
 @description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')

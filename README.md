@@ -1,5 +1,5 @@
 <!-- NOTE: This is a generated file, do not update directly. -->
-<!-- Generated on: 2023-10-22T08:50:44.012Z. -->
+<!-- Generated on: 2023-10-22T11:38:58.979Z. -->
 # Bicep Azure Naming module
 
 [![bicep-CI](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml/badge.svg)](https://github.com/nianton/azure-naming/actions/workflows/bicep-CI.yml)
@@ -9,6 +9,12 @@ Bicep and ARM template module for keeping a consistent Azure resources naming co
 ## How to use / Getting started
 
 A template sample repository was created to showcase how to use this module (**https://github.com/nianton/bicep-starter**), and you will also find an example in the **`/examples`** folder, with the **`example.sub.bicep`** demonstrating how to use this module to facilitate naming resources on Azure.
+
+## Preview version with user-defined types and imports
+
+There is a preview version of naming module under `dist/naming.module.preview.bicep` leveraging the user-defined types, as well as the imports, to offer a more strongly-typed reference of the module. The `examples/preview` folder contains a sample of how to use it. Please make sure to enable preview features via the bicepconfig.json file, reference: [documentation article](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/user-defined-data-types). The coding experience would like the below:
+
+![Naming module VS Code autocomplete](./assets/namingAnimation.gif?raw=true)
 
 ## <a name="reference"></a>Reference
 
