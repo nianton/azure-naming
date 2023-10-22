@@ -23,3 +23,10 @@ This is a semi generated file based on the **regionsDump.json** file where hard-
 ### **sample.output.json**
 
 This is the actual output of the `names` property of the naming module. It is used to generate the main **README.md** documentation file of the repository.
+
+```bash
+az deployment group create --resource-group test-rg \
+  --template-file .\dist\naming.module.bicep \
+  --parameters '{\"suffix\":{ \"value\": [\"myapp\", \"dev\", \"**location**\"]}}' \
+  --query "properties.outputs.names.value"
+```
