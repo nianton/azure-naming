@@ -55,7 +55,7 @@ function generateBicepModule(preview) {
     const isPreview = !!preview
     const templateInput = { isPreview, definitions, regionAbbreviations }
     const resultBicepFile = isPreview ? bicepPreviewFile : bicepFile
-    
+
     generateFile(bicepTemplateFile, templateInput, resultBicepFile)
 }
 
