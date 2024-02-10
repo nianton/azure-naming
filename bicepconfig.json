@@ -42,7 +42,6 @@
         }
     },
     "experimentalFeaturesEnabled": {
-        "extensibility": true,
-        "compileTimeImports": true
+        // "extensibility": true
     }
 }

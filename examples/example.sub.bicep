@@ -1,5 +1,7 @@
 targetScope = 'subscription'
 
+import { NamingOutput } from '../dist/naming.module.bicep'
+
 param location string
 param applicationName string
 param environment string
@@ -39,7 +41,7 @@ module main 'example.bicep' = {
   }
 }
 
-output naming object = naming.outputs.names
+output naming NamingOutput = naming.outputs.names
 output appServiceName string = main.outputs.appServiceName
 output appServicePlanName string = main.outputs.appServicePlanName
 output storageAccountName string = main.outputs.storageAccountName

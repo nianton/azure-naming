@@ -23,7 +23,10 @@ try {
     if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'bicep') {
         // Generate the templated files
         generateBicepModule()
-        generateBicepModule(true) // Preview file including type definitions
+        
+        // Commented out as type definitions are not supported in Bicep
+        // Keeping it here for future preview features
+        // generateBicepModule(true) 
     }
 
     if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'readme') {
