@@ -8,6 +8,7 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
+ * Generated/built on: 2024-02-11T11:06:16.114Z
  */
 
 metadata name = 'Azure Naming module'
