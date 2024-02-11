@@ -6,11 +6,11 @@
     "_generator": {
       "name": "bicep",
       "version": "0.25.3.34343",
-      "templateHash": "18039693105299386105"
+      "templateHash": "14758068967526734128"
     },
     "name": "Azure Naming module",
-    "description": "This module help maintaining a consistent naming.",
-    "owner": "Azure/module-maintainers"
+    "description": "Module to maintain a consistent naming of Azure resources.",
+    "owner": "https://github.com/nianton"
   },
   "definitions": {
     "ServiceNameType": {

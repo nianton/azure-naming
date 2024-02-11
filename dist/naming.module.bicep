@@ -8,12 +8,11 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2024-02-11T10:50:07.615Z
  */
 
 metadata name = 'Azure Naming module'
-metadata description = 'This module help maintaining a consistent naming.'
-metadata owner = 'Azure/module-maintainers'
+metadata description = 'Module to maintain a consistent naming of Azure resources.'
+metadata owner = 'https://github.com/nianton'
 
 @description('Optional. It is not recommended that you use prefix by azure you should be using a suffix for your resources.')
 param prefix array = []
