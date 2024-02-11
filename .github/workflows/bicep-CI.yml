@@ -46,14 +46,14 @@ jobs:
       - name: Bicep build naming module with Azure CLI
         uses: azure/CLI@v1
         with:
-          azcliversion: 2.56.0
+          azcliversion: 2.57.0
           inlineScript: |
-            az bicep build ./dist/naming.module.bicep
+            az bicep build --file ./dist/naming.module.bicep
       
       # Build and validate bicep files
       - name: Bicep build example module with Azure CLI
         uses: azure/CLI@v1
         with:
-          azcliversion: 2.56.0
+          azcliversion: 2.57.0
           inlineScript: |
-            az bicep build ./examples/example.sub.bicep
+            az bicep build --file ./examples/example.sub.bicep
