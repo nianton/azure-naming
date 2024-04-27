@@ -5,8 +5,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.25.3.34343",
-      "templateHash": "14758068967526734128"
+      "version": "0.26.170.59819",
+      "templateHash": "6346829860353169697"
     },
     "name": "Azure Naming module",
     "description": "Module to maintain a consistent naming of Azure resources.",
@@ -33,6 +33,9 @@
     "NamingOutput": {
       "type": "object",
       "properties": {
+        "aiSearch": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
         "analysisServicesServer": {
           "$ref": "#/definitions/ServiceNameType"
         },
@@ -130,6 +133,48 @@
           "$ref": "#/definitions/ServiceNameType"
         },
         "cognitiveAccount": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesOpenAi": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesComputerVision": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesContentModerator": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesContentSafety": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesCustomVisionPrediction": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesCustomVisionTraining": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesDocumentIntelligence": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesMultiServiceAccount": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesVideoIndexer": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesFaceApi": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesImmersiveReader": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesLanguageService": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesSpeechService": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "cognitiveServicesTranslator": {
           "$ref": "#/definitions/ServiceNameType"
         },
         "containerApps": {
@@ -770,6 +815,11 @@
     "nst": "[variables('nameSafeTemplate')]",
     "nust": "[variables('nameUniqueSafeTemplate')]",
     "names": {
+      "aiSearch": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'srch'), 60), variables('d')), take(replace(variables('nt'), variables('ph'), 'srch'), sub(60, 1)), take(replace(variables('nt'), variables('ph'), 'srch'), 60))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'srch'), 60), variables('d')), take(replace(variables('nut'), variables('ph'), 'srch'), sub(60, 1)), take(replace(variables('nut'), variables('ph'), 'srch'), 60))]",
+        "slug": "srch"
+      },
       "analysisServicesServer": {
         "name": "[take(replace(variables('nst'), variables('ph'), 'as'), 63)]",
         "nameUnique": "[take(replace(variables('nust'), variables('ph'), 'as'), 63)]",
@@ -934,6 +984,76 @@
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cog'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'cog'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'cog'), 64))]",
         "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cog'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cog'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cog'), 64))]",
         "slug": "cog"
+      },
+      "cognitiveServicesOpenAi": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'oai'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'oai'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'oai'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'oai'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'oai'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'oai'), 64))]",
+        "slug": "oai"
+      },
+      "cognitiveServicesComputerVision": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cv'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'cv'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'cv'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cv'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cv'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cv'), 64))]",
+        "slug": "cv"
+      },
+      "cognitiveServicesContentModerator": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cm'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'cm'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'cm'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cm'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cm'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cm'), 64))]",
+        "slug": "cm"
+      },
+      "cognitiveServicesContentSafety": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cs'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'cs'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'cs'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cs'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cs'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cs'), 64))]",
+        "slug": "cs"
+      },
+      "cognitiveServicesCustomVisionPrediction": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cstv'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'cstv'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'cstv'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cstv'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cstv'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cstv'), 64))]",
+        "slug": "cstv"
+      },
+      "cognitiveServicesCustomVisionTraining": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'cstvt'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'cstvt'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'cstvt'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'cstvt'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'cstvt'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'cstvt'), 64))]",
+        "slug": "cstvt"
+      },
+      "cognitiveServicesDocumentIntelligence": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'di'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'di'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'di'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'di'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'di'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'di'), 64))]",
+        "slug": "di"
+      },
+      "cognitiveServicesMultiServiceAccount": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'aisa'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'aisa'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'aisa'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'aisa'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'aisa'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'aisa'), 64))]",
+        "slug": "aisa"
+      },
+      "cognitiveServicesVideoIndexer": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'avi'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'avi'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'avi'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'avi'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'avi'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'avi'), 64))]",
+        "slug": "avi"
+      },
+      "cognitiveServicesFaceApi": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'face'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'face'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'face'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'face'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'face'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'face'), 64))]",
+        "slug": "face"
+      },
+      "cognitiveServicesImmersiveReader": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'ir'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'ir'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'ir'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'ir'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'ir'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'ir'), 64))]",
+        "slug": "ir"
+      },
+      "cognitiveServicesLanguageService": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'lang'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'lang'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'lang'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'lang'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'lang'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'lang'), 64))]",
+        "slug": "lang"
+      },
+      "cognitiveServicesSpeechService": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'spch'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'spch'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'spch'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'spch'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'spch'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'spch'), 64))]",
+        "slug": "spch"
+      },
+      "cognitiveServicesTranslator": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'trsl'), 64), variables('d')), take(replace(variables('nt'), variables('ph'), 'trsl'), sub(64, 1)), take(replace(variables('nt'), variables('ph'), 'trsl'), 64))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'trsl'), 64), variables('d')), take(replace(variables('nut'), variables('ph'), 'trsl'), sub(64, 1)), take(replace(variables('nut'), variables('ph'), 'trsl'), 64))]",
+        "slug": "trsl"
       },
       "containerApps": {
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'ca'), 32), variables('d')), take(replace(variables('nt'), variables('ph'), 'ca'), sub(32, 1)), take(replace(variables('nt'), variables('ph'), 'ca'), 32))]",

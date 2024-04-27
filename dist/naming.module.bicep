@@ -8,7 +8,7 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2024-02-11T11:06:16.114Z
+ * Generated/built on: 2024-04-27T08:17:03.610Z
  */
 
 metadata name = 'Azure Naming module'
@@ -117,6 +117,11 @@ var nst = nameSafeTemplate
 var nust = nameUniqueSafeTemplate
 
 var names = {
+  aiSearch: { 
+    name: endsWith(take(replace(nt, ph, 'srch'), 60), d) ? take(replace(nt, ph, 'srch'), 60-1) : take(replace(nt, ph, 'srch'), 60)
+    nameUnique: endsWith(take(replace(nut, ph, 'srch'), 60), d) ? take(replace(nut, ph, 'srch'), 60-1) : take(replace(nut, ph, 'srch'), 60)
+    slug: 'srch'
+  }
   analysisServicesServer: { 
     name: take(replace(nst, ph, 'as'), 63)
     nameUnique: take(replace(nust, ph, 'as'), 63)
@@ -281,6 +286,76 @@ var names = {
     name: endsWith(take(replace(nt, ph, 'cog'), 64), d) ? take(replace(nt, ph, 'cog'), 64-1) : take(replace(nt, ph, 'cog'), 64)
     nameUnique: endsWith(take(replace(nut, ph, 'cog'), 64), d) ? take(replace(nut, ph, 'cog'), 64-1) : take(replace(nut, ph, 'cog'), 64)
     slug: 'cog'
+  }
+  cognitiveServicesOpenAi: { 
+    name: endsWith(take(replace(nt, ph, 'oai'), 64), d) ? take(replace(nt, ph, 'oai'), 64-1) : take(replace(nt, ph, 'oai'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'oai'), 64), d) ? take(replace(nut, ph, 'oai'), 64-1) : take(replace(nut, ph, 'oai'), 64)
+    slug: 'oai'
+  }
+  cognitiveServicesComputerVision: { 
+    name: endsWith(take(replace(nt, ph, 'cv'), 64), d) ? take(replace(nt, ph, 'cv'), 64-1) : take(replace(nt, ph, 'cv'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'cv'), 64), d) ? take(replace(nut, ph, 'cv'), 64-1) : take(replace(nut, ph, 'cv'), 64)
+    slug: 'cv'
+  }
+  cognitiveServicesContentModerator: { 
+    name: endsWith(take(replace(nt, ph, 'cm'), 64), d) ? take(replace(nt, ph, 'cm'), 64-1) : take(replace(nt, ph, 'cm'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'cm'), 64), d) ? take(replace(nut, ph, 'cm'), 64-1) : take(replace(nut, ph, 'cm'), 64)
+    slug: 'cm'
+  }
+  cognitiveServicesContentSafety: { 
+    name: endsWith(take(replace(nt, ph, 'cs'), 64), d) ? take(replace(nt, ph, 'cs'), 64-1) : take(replace(nt, ph, 'cs'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'cs'), 64), d) ? take(replace(nut, ph, 'cs'), 64-1) : take(replace(nut, ph, 'cs'), 64)
+    slug: 'cs'
+  }
+  cognitiveServicesCustomVisionPrediction: { 
+    name: endsWith(take(replace(nt, ph, 'cstv'), 64), d) ? take(replace(nt, ph, 'cstv'), 64-1) : take(replace(nt, ph, 'cstv'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'cstv'), 64), d) ? take(replace(nut, ph, 'cstv'), 64-1) : take(replace(nut, ph, 'cstv'), 64)
+    slug: 'cstv'
+  }
+  cognitiveServicesCustomVisionTraining: { 
+    name: endsWith(take(replace(nt, ph, 'cstvt'), 64), d) ? take(replace(nt, ph, 'cstvt'), 64-1) : take(replace(nt, ph, 'cstvt'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'cstvt'), 64), d) ? take(replace(nut, ph, 'cstvt'), 64-1) : take(replace(nut, ph, 'cstvt'), 64)
+    slug: 'cstvt'
+  }
+  cognitiveServicesDocumentIntelligence: { 
+    name: endsWith(take(replace(nt, ph, 'di'), 64), d) ? take(replace(nt, ph, 'di'), 64-1) : take(replace(nt, ph, 'di'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'di'), 64), d) ? take(replace(nut, ph, 'di'), 64-1) : take(replace(nut, ph, 'di'), 64)
+    slug: 'di'
+  }
+  cognitiveServicesMultiServiceAccount: { 
+    name: endsWith(take(replace(nt, ph, 'aisa'), 64), d) ? take(replace(nt, ph, 'aisa'), 64-1) : take(replace(nt, ph, 'aisa'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'aisa'), 64), d) ? take(replace(nut, ph, 'aisa'), 64-1) : take(replace(nut, ph, 'aisa'), 64)
+    slug: 'aisa'
+  }
+  cognitiveServicesVideoIndexer: { 
+    name: endsWith(take(replace(nt, ph, 'avi'), 64), d) ? take(replace(nt, ph, 'avi'), 64-1) : take(replace(nt, ph, 'avi'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'avi'), 64), d) ? take(replace(nut, ph, 'avi'), 64-1) : take(replace(nut, ph, 'avi'), 64)
+    slug: 'avi'
+  }
+  cognitiveServicesFaceApi: { 
+    name: endsWith(take(replace(nt, ph, 'face'), 64), d) ? take(replace(nt, ph, 'face'), 64-1) : take(replace(nt, ph, 'face'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'face'), 64), d) ? take(replace(nut, ph, 'face'), 64-1) : take(replace(nut, ph, 'face'), 64)
+    slug: 'face'
+  }
+  cognitiveServicesImmersiveReader: { 
+    name: endsWith(take(replace(nt, ph, 'ir'), 64), d) ? take(replace(nt, ph, 'ir'), 64-1) : take(replace(nt, ph, 'ir'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'ir'), 64), d) ? take(replace(nut, ph, 'ir'), 64-1) : take(replace(nut, ph, 'ir'), 64)
+    slug: 'ir'
+  }
+  cognitiveServicesLanguageService: { 
+    name: endsWith(take(replace(nt, ph, 'lang'), 64), d) ? take(replace(nt, ph, 'lang'), 64-1) : take(replace(nt, ph, 'lang'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'lang'), 64), d) ? take(replace(nut, ph, 'lang'), 64-1) : take(replace(nut, ph, 'lang'), 64)
+    slug: 'lang'
+  }
+  cognitiveServicesSpeechService: { 
+    name: endsWith(take(replace(nt, ph, 'spch'), 64), d) ? take(replace(nt, ph, 'spch'), 64-1) : take(replace(nt, ph, 'spch'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'spch'), 64), d) ? take(replace(nut, ph, 'spch'), 64-1) : take(replace(nut, ph, 'spch'), 64)
+    slug: 'spch'
+  }
+  cognitiveServicesTranslator: { 
+    name: endsWith(take(replace(nt, ph, 'trsl'), 64), d) ? take(replace(nt, ph, 'trsl'), 64-1) : take(replace(nt, ph, 'trsl'), 64)
+    nameUnique: endsWith(take(replace(nut, ph, 'trsl'), 64), d) ? take(replace(nut, ph, 'trsl'), 64-1) : take(replace(nut, ph, 'trsl'), 64)
+    slug: 'trsl'
   }
   containerApps: { 
     name: endsWith(take(replace(nt, ph, 'ca'), 32), d) ? take(replace(nt, ph, 'ca'), 32-1) : take(replace(nt, ph, 'ca'), 32)
@@ -1140,6 +1215,7 @@ type ServiceNameType = {
 
 @export()
 type NamingOutput = {
+  aiSearch: ServiceNameType
   analysisServicesServer: ServiceNameType
   apiManagement: ServiceNameType
   appConfiguration: ServiceNameType
@@ -1173,6 +1249,20 @@ type NamingOutput = {
   chaosExperiment: ServiceNameType
   chaosTarget: ServiceNameType
   cognitiveAccount: ServiceNameType
+  cognitiveServicesOpenAi: ServiceNameType
+  cognitiveServicesComputerVision: ServiceNameType
+  cognitiveServicesContentModerator: ServiceNameType
+  cognitiveServicesContentSafety: ServiceNameType
+  cognitiveServicesCustomVisionPrediction: ServiceNameType
+  cognitiveServicesCustomVisionTraining: ServiceNameType
+  cognitiveServicesDocumentIntelligence: ServiceNameType
+  cognitiveServicesMultiServiceAccount: ServiceNameType
+  cognitiveServicesVideoIndexer: ServiceNameType
+  cognitiveServicesFaceApi: ServiceNameType
+  cognitiveServicesImmersiveReader: ServiceNameType
+  cognitiveServicesLanguageService: ServiceNameType
+  cognitiveServicesSpeechService: ServiceNameType
+  cognitiveServicesTranslator: ServiceNameType
   containerApps: ServiceNameType
   containerAppsEnvironment: ServiceNameType
   containerGroup: ServiceNameType

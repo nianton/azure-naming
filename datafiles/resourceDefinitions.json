@@ -1,5 +1,17 @@
 [
   {
+    "name": "ai_search",
+    "length": {
+      "min": 2,
+      "max": 60
+    },
+    "regex": "^(?=.{2,60}$)[a-z][a-z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "srch",
+    "dashes": true,
+    "description": "AI Search"
+  },
+  {
     "name": "analysis_services_server",
     "length": {
       "min": 3,
@@ -394,6 +406,174 @@
     "slug": "cog",
     "dashes": true,
     "description": "Cognitive Account"
+  },
+  {
+    "name": "cognitive_services_open_ai",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "oai",
+    "dashes": true,
+    "description": "Cognitive Services: Open AI"
+  },
+  {
+    "name": "cognitive_services_computer_vision",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "cv",
+    "dashes": true,
+    "description": "Cognitive Services: Computer vision"
+  },
+  {
+    "name": "cognitive_services_content_moderator",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "cm",
+    "dashes": true,
+    "description": "Cognitive Services: Content Moderator"
+  },
+  {
+    "name": "cognitive_services_content_safety",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "cs",
+    "dashes": true,
+    "description": "Cognitive Services: Content Safety"
+  },
+  {
+    "name": "cognitive_services_custom_vision_prediction",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "cstv",
+    "dashes": true,
+    "description": "Cognitive Services: Custom Vision (prediction)"
+  },
+  {
+    "name": "cognitive_services_custom_vision_training",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "cstvt",
+    "dashes": true,
+    "description": "Cognitive Services: Custom Vision (training)"
+  },
+  {
+    "name": "cognitive_services_document_intelligence",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "di",
+    "dashes": true,
+    "description": "Cognitive Services: Doument Intelligence"
+  },
+  {
+    "name": "cognitive_services_multi_service_account",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "aisa",
+    "dashes": true,
+    "description": "Cognitive Services: Multi-service Account"
+  },
+  {
+    "name": "cognitive_services_video_indexer",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "avi",
+    "dashes": true,
+    "description": "Cognitive Services: AI Video Indexer"
+  },
+  {
+    "name": "cognitive_services_face_api",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "face",
+    "dashes": true,
+    "description": "Cognitive Services: Face API"
+  },
+  {
+    "name": "cognitive_services_immersive_reader",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "ir",
+    "dashes": true,
+    "description": "Cognitive Services: Immersive Reader"
+  },
+  {
+    "name": "cognitive_services_language_service",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "lang",
+    "dashes": true,
+    "description": "Cognitive Services: Language Service"
+  },
+  {
+    "name": "cognitive_services_speech_service",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "spch",
+    "dashes": true,
+    "description": "Cognitive Services: Speech Service"
+  },
+  {
+    "name": "cognitive_services_translator",
+    "length": {
+      "min": 2,
+      "max": 64
+    },
+    "regex": "^(?=.{2,64}$)[a-zA-Z0-9][a-zA-Z0-9-]+$",
+    "scope": "resourceGroup",
+    "slug": "trsl",
+    "dashes": true,
+    "description": "Cognitive Services: Translator"
   },
   {
     "name": "container_apps",
