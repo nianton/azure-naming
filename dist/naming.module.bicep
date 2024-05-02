@@ -8,7 +8,7 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2024-05-02T11:06:03.665Z
+ * Generated/built on: 2024-05-02T13:30:03.233Z
  */
 
 metadata name = 'Azure Naming module'
@@ -748,6 +748,11 @@ var names = {
     nameUnique: endsWith(take(replace(nut, ph, 'lgw'), 80), d) ? take(replace(nut, ph, 'lgw'), 80-1) : take(replace(nut, ph, 'lgw'), 80)
     slug: 'lgw'
   }
+  logicApp: { 
+    name: endsWith(take(replace(nt, ph, 'logic'), 43), d) ? take(replace(nt, ph, 'logic'), 43-1) : take(replace(nt, ph, 'logic'), 43)
+    nameUnique: endsWith(take(replace(nut, ph, 'logic'), 43), d) ? take(replace(nut, ph, 'logic'), 43-1) : take(replace(nut, ph, 'logic'), 43)
+    slug: 'logic'
+  }
   logAnalyticsWorkspace: { 
     name: endsWith(take(replace(nt, ph, 'log'), 63), d) ? take(replace(nt, ph, 'log'), 63-1) : take(replace(nt, ph, 'log'), 63)
     nameUnique: endsWith(take(replace(nut, ph, 'log'), 63), d) ? take(replace(nut, ph, 'log'), 63-1) : take(replace(nut, ph, 'log'), 63)
@@ -1342,6 +1347,7 @@ type NamingOutput = {
   linuxVirtualMachine: ServiceNameType
   linuxVirtualMachineScaleSet: ServiceNameType
   localNetworkGateway: ServiceNameType
+  logicApp: ServiceNameType
   logAnalyticsWorkspace: ServiceNameType
   machineLearningWorkspace: ServiceNameType
   managedDisk: ServiceNameType

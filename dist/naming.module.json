@@ -6,7 +6,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.26.170.59819",
-      "templateHash": "13487098228061106529"
+      "templateHash": "9248964650682956011"
     },
     "name": "Azure Naming module",
     "description": "Module to maintain a consistent naming of Azure resources.",
@@ -409,6 +409,9 @@
           "$ref": "#/definitions/ServiceNameType"
         },
         "localNetworkGateway": {
+          "$ref": "#/definitions/ServiceNameType"
+        },
+        "logicApp": {
           "$ref": "#/definitions/ServiceNameType"
         },
         "logAnalyticsWorkspace": {
@@ -1445,6 +1448,11 @@
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'lgw'), 80), variables('d')), take(replace(variables('nt'), variables('ph'), 'lgw'), sub(80, 1)), take(replace(variables('nt'), variables('ph'), 'lgw'), 80))]",
         "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'lgw'), 80), variables('d')), take(replace(variables('nut'), variables('ph'), 'lgw'), sub(80, 1)), take(replace(variables('nut'), variables('ph'), 'lgw'), 80))]",
         "slug": "lgw"
+      },
+      "logicApp": {
+        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'logic'), 43), variables('d')), take(replace(variables('nt'), variables('ph'), 'logic'), sub(43, 1)), take(replace(variables('nt'), variables('ph'), 'logic'), 43))]",
+        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'logic'), 43), variables('d')), take(replace(variables('nut'), variables('ph'), 'logic'), sub(43, 1)), take(replace(variables('nut'), variables('ph'), 'logic'), 43))]",
+        "slug": "logic"
       },
       "logAnalyticsWorkspace": {
         "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'log'), 63), variables('d')), take(replace(variables('nt'), variables('ph'), 'log'), sub(63, 1)), take(replace(variables('nt'), variables('ph'), 'log'), 63))]",

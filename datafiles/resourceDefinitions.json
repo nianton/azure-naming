@@ -1512,6 +1512,18 @@
     "description": "Local Network Gateway"
   },
   {
+    "name": "logic_app",
+    "length": {
+      "min": 1,
+      "max": 43
+    },
+    "regex": "^(?=.{1,43}$)[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$",
+    "scope": "resourceGroup",
+    "slug": "logic",
+    "dashes": true,
+    "description": "Logic App"
+  },
+  {
     "name": "log_analytics_workspace",
     "length": {
       "min": 4,
