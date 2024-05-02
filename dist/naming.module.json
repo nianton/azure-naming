@@ -6,7 +6,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.26.170.59819",
-      "templateHash": "6346829860353169697"
+      "templateHash": "13487098228061106529"
     },
     "name": "Azure Naming module",
     "description": "Module to maintain a consistent naming of Azure resources.",
@@ -772,6 +772,7 @@
       "jioindiawest": "jioinw",
       "koreacentral": "koc",
       "koreasouth": "kors",
+      "mexicocentral": "mxc",
       "northcentralus": "ncus",
       "northeurope": "neu",
       "norwayeast": "nore",
@@ -1781,8 +1782,8 @@
         "slug": "sts"
       },
       "storageTable": {
-        "name": "[if(endsWith(take(replace(variables('nt'), variables('ph'), 'stt'), 63), variables('d')), take(replace(variables('nt'), variables('ph'), 'stt'), sub(63, 1)), take(replace(variables('nt'), variables('ph'), 'stt'), 63))]",
-        "nameUnique": "[if(endsWith(take(replace(variables('nut'), variables('ph'), 'stt'), 63), variables('d')), take(replace(variables('nut'), variables('ph'), 'stt'), sub(63, 1)), take(replace(variables('nut'), variables('ph'), 'stt'), 63))]",
+        "name": "[take(replace(variables('nst'), variables('ph'), 'stt'), 63)]",
+        "nameUnique": "[take(replace(variables('nust'), variables('ph'), 'stt'), 63)]",
         "slug": "stt"
       },
       "streamAnalyticsFunctionJavascriptUdf": {

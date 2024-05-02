@@ -2321,10 +2321,10 @@
       "min": 3,
       "max": 63
     },
-    "regex": "^(?=.{3,63}$)(?!.*--)[a-z0-9][a-z0-9-]+[a-z0-9]$",
+    "regex": "^(?=.{2,63}$)^[A-Za-z][A-Za-z0-9]+$",
     "scope": "parent",
     "slug": "stt",
-    "dashes": true,
+    "dashes": false,
     "description": "Storage Table"
   },
   {

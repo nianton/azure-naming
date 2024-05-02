@@ -8,7 +8,7 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2024-04-27T08:17:03.610Z
+ * Generated/built on: 2024-05-02T11:06:03.665Z
  */
 
 metadata name = 'Azure Naming module'
@@ -69,6 +69,7 @@ var regionAbbreviations = {
     jioindiawest: 'jioinw'
     koreacentral: 'koc'
     koreasouth: 'kors'
+    mexicocentral: 'mxc'
     northcentralus: 'ncus'
     northeurope: 'neu'
     norwayeast: 'nore'
@@ -1083,8 +1084,8 @@ var names = {
     slug: 'sts'
   }
   storageTable: { 
-    name: endsWith(take(replace(nt, ph, 'stt'), 63), d) ? take(replace(nt, ph, 'stt'), 63-1) : take(replace(nt, ph, 'stt'), 63)
-    nameUnique: endsWith(take(replace(nut, ph, 'stt'), 63), d) ? take(replace(nut, ph, 'stt'), 63-1) : take(replace(nut, ph, 'stt'), 63)
+    name: take(replace(nst, ph, 'stt'), 63)
+    nameUnique: take(replace(nust, ph, 'stt'), 63)
     slug: 'stt'
   }
   streamAnalyticsFunctionJavascriptUdf: { 
