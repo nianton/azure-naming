@@ -752,6 +752,11 @@ var names = {
     nameUnique: endsWith(take(replace(nut, ph, 'log'), 63), d) ? take(replace(nut, ph, 'log'), 63-1) : take(replace(nut, ph, 'log'), 63)
     slug: 'log'
   }
+  logicApp: { 
+    name: endsWith(take(replace(nt, ph, 'logic'), 60), d) ? take(replace(nt, ph, 'logic'), 60-1) : take(replace(nt, ph, 'logic'), 60)
+    nameUnique: endsWith(take(replace(nut, ph, 'logic'), 60), d) ? take(replace(nut, ph, 'logic'), 60-1) : take(replace(nut, ph, 'logic'), 60)
+    slug: 'logic'
+  }
   machineLearningWorkspace: { 
     name: endsWith(take(replace(nt, ph, 'mlw'), 260), d) ? take(replace(nt, ph, 'mlw'), 260-1) : take(replace(nt, ph, 'mlw'), 260)
     nameUnique: endsWith(take(replace(nut, ph, 'mlw'), 260), d) ? take(replace(nut, ph, 'mlw'), 260-1) : take(replace(nut, ph, 'mlw'), 260)
@@ -1342,6 +1347,7 @@ type NamingOutput = {
   linuxVirtualMachineScaleSet: ServiceNameType
   localNetworkGateway: ServiceNameType
   logAnalyticsWorkspace: ServiceNameType
+  logicApp: ServiceNameType
   machineLearningWorkspace: ServiceNameType
   managedDisk: ServiceNameType
   managedIdentity: ServiceNameType
