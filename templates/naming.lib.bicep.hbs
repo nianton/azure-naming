@@ -1,0 +1,143 @@
+/**
+ * Azure naming function library - helps maintaining a consistent naming convention
+ * Licensed to use under the MIT license.
+ * ----------------------------------------------------------------------------
+ * Module repository & documentation: https://github.com/nianton/azure-naming
+ * Starter repository template:       https://github.com/nianton/bicep-starter
+ * ----------------------------------------------------------------------------
+ * Microsoft naming convention best practices (supports user-defined types and compile time imports)
+ * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
+ * ----------------------------------------------------------------------------
+ * Generated/built on: {{_metadata.timestamp}}
+ */
+
+metadata name = 'Azure Naming function library'
+metadata description = 'Function library to maintain a consistent naming of Azure resources.'
+metadata owner = 'https://github.com/nianton'
+
+func placeholder() string => '[****]'
+
+@export()
+func locationPlaceholder() string => '**location**'
+
+func delimiter(useDashes bool) string => useDashes ? '-' : ''
+
+func regionAbbreviations() object => {
+{{#each regionAbbreviations}}
+  {{@key}}: '{{this}}'
+{{/each}}
+}
+
+func configWithIndex(config NamingConfig, index int) NamingConfig => {
+  prefix: config.prefix
+  suffix: concat(config.suffix, [padLeft(string(index), 3, '0')])
+  useDashes: config.useDashes
+  useLowerCase: config.useLowerCase
+  uniqueLength: config.uniqueLength
+  uniqueSeed: config.uniqueSeed
+  location: config.location
+}
+
+func stringify(array array, delimit string) string =>
+  '${replace(replace(replace(string(array), '["', ''), '"]', ''), '","', delimit)}'
+
+func createNamingPart(prefixOrSuffix array, useDashes bool, useLowerCase bool) string => 
+  empty(prefixOrSuffix) 
+  ? '' 
+  : useLowerCase 
+    ? toLower(stringify(prefixOrSuffix, delimiter(useDashes)))
+    : stringify(prefixOrSuffix, delimiter(useDashes))
+
+func prefix(config NamingConfig) string => 
+  replace(createNamingPart(config.prefix, config.useDashes, config.useLowerCase), locationPlaceholder(), regionAbbreviations()[config.location])
+  
+func suffix(config NamingConfig) string =>
+  replace(createNamingPart(config.suffix, config.useDashes, config.useLowerCase), locationPlaceholder(), regionAbbreviations()[config.location])
+
+func uniquePart(config NamingConfig) string => 
+  config.uniqueLength > 0 ? toLower(take(uniqueString(config.uniqueSeed), config.uniqueLength)) : ''
+
+func nameTemplate(config NamingConfig) string => join(filter([
+    prefix(config)
+    placeholder()
+    suffix(config)
+  ], s => !empty(s)), delimiter(config.useDashes))
+
+func nameUniqueTemplate(config NamingConfig) string => join(filter([
+    prefix(config)
+    placeholder()
+    suffix(config)
+    uniquePart(config)
+  ], s => !empty(s)), delimiter(config.useDashes))
+
+func nameSafeTemplate(config NamingConfig) string =>
+  toLower(replace(nameTemplate(config), delimiter(config.useDashes), ''))
+
+func nameUniqueSafeTemplate(config NamingConfig) string =>
+  toLower(replace(nameUniqueTemplate(config), delimiter(config.useDashes), ''))
+
+func name(config NamingConfig, slug string, maxLength int) string => 
+  nameInner(nameTemplate(config), slug, maxLength, delimiter(config.useDashes))
+
+func nameUnique(config NamingConfig, slug string, maxLength int) string => 
+  nameInner(nameUniqueTemplate(config), slug, maxLength, delimiter(config.useDashes))
+
+func nameSafe(config NamingConfig, slug string, maxLength int) string => 
+  nameInner(nameSafeTemplate(config), slug, maxLength, delimiter(config.useDashes))
+
+func nameSafeUnique(config NamingConfig, slug string, maxLength int) string => 
+  nameInner(nameUniqueSafeTemplate(config), slug, maxLength, delimiter(config.useDashes))
+
+func nameInner(templatedName string, slug string, maxLength int, delimiterChar string) string => 
+  endsWith(take(replace(templatedName, placeholder(), slug), maxLength), delimiterChar) 
+    ? take(replace(templatedName, placeholder(), slug), maxLength - 1) 
+    : take(replace(templatedName, placeholder(), slug), maxLength)
+
+@export()
+func subnet(config NamingConfig, index int) string => 
+  name(configWithIndex(config, index), 'subnet', 80)
+
+@export()
+func createResourceNames(config NamingConfig) object => {
+{{#each definitions}}
+  {{name}}: { 
+    {{#if dashes}}
+    name: name(config, '{{slug}}', {{length.max}})
+    nameUnique: nameUnique(config, '{{slug}}', {{length.max}})
+    {{else}}
+    name: nameSafe(config, '{{slug}}', {{length.max}})
+    nameUnique: nameSafeUnique(config, '{{slug}}', {{length.max}})
+    {{/if}}
+    slug: '{{slug}}'
+  }
+{{/each}}
+}
+
+// ================== //
+//  Type Definitions  //
+// ================== //
+
+@export()
+type ServiceNameType = {
+  name: string
+  nameUnique: string
+  slug: string
+}
+
+@export()
+type NamingConfig = {
+  prefix: array
+  suffix: array
+  uniqueLength: int
+  uniqueSeed: string
+  useDashes: bool
+  useLowerCase: bool
+  location: string
+}
+
+@export()
+type NamingOutput = {
+  {{#each definitions}}
+  {{name}}: ServiceNameType
+  {{/each}}
+}

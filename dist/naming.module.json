@@ -5,8 +5,8 @@
   "metadata": {
     "_generator": {
       "name": "bicep",
-      "version": "0.26.170.59819",
-      "templateHash": "9248964650682956011"
+      "version": "0.30.3.12046",
+      "templateHash": "10322617775603281823"
     },
     "name": "Azure Naming module",
     "description": "Module to maintain a consistent naming of Azure resources.",

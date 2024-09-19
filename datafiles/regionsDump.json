@@ -39,42 +39,6 @@
     "availabilityZoneMappings": [
       {
         "logicalZone": "1",
-        "physicalZone": "eastus2-az1"
-      },
-      {
-        "logicalZone": "2",
-        "physicalZone": "eastus2-az3"
-      },
-      {
-        "logicalZone": "3",
-        "physicalZone": "eastus2-az2"
-      }
-    ],
-    "displayName": "East US 2",
-    "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/eastus2",
-    "metadata": {
-      "geography": "United States",
-      "geographyGroup": "US",
-      "latitude": "36.6681",
-      "longitude": "-78.3889",
-      "pairedRegion": [
-        {
-          "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/centralus",
-          "name": "centralus"
-        }
-      ],
-      "physicalLocation": "Virginia",
-      "regionCategory": "Recommended",
-      "regionType": "Physical"
-    },
-    "name": "eastus2",
-    "regionalDisplayName": "(US) East US 2",
-    "type": "Region"
-  },
-  {
-    "availabilityZoneMappings": [
-      {
-        "logicalZone": "1",
         "physicalZone": "southcentralus-az1"
       },
       {
@@ -821,6 +785,37 @@
     "availabilityZoneMappings": [
       {
         "logicalZone": "1",
+        "physicalZone": "spaincentral-az1"
+      },
+      {
+        "logicalZone": "2",
+        "physicalZone": "spaincentral-az3"
+      },
+      {
+        "logicalZone": "3",
+        "physicalZone": "spaincentral-az2"
+      }
+    ],
+    "displayName": "Spain Central",
+    "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/spaincentral",
+    "metadata": {
+      "geography": "Spain",
+      "geographyGroup": "Europe",
+      "latitude": "40.4259",
+      "longitude": "3.4209",
+      "pairedRegion": [],
+      "physicalLocation": "Madrid",
+      "regionCategory": "Recommended",
+      "regionType": "Physical"
+    },
+    "name": "spaincentral",
+    "regionalDisplayName": "(Europe) Spain Central",
+    "type": "Region"
+  },
+  {
+    "availabilityZoneMappings": [
+      {
+        "logicalZone": "1",
         "physicalZone": "switzerlandnorth-az1"
       },
       {
@@ -1041,6 +1036,42 @@
     "type": "Region"
   },
   {
+    "availabilityZoneMappings": [
+      {
+        "logicalZone": "1",
+        "physicalZone": "eastus2-az1"
+      },
+      {
+        "logicalZone": "2",
+        "physicalZone": "eastus2-az3"
+      },
+      {
+        "logicalZone": "3",
+        "physicalZone": "eastus2-az2"
+      }
+    ],
+    "displayName": "East US 2",
+    "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/eastus2",
+    "metadata": {
+      "geography": "United States",
+      "geographyGroup": "US",
+      "latitude": "36.6681",
+      "longitude": "-78.3889",
+      "pairedRegion": [
+        {
+          "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/centralus",
+          "name": "centralus"
+        }
+      ],
+      "physicalLocation": "Virginia",
+      "regionCategory": "Other",
+      "regionType": "Physical"
+    },
+    "name": "eastus2",
+    "regionalDisplayName": "(US) East US 2",
+    "type": "Region"
+  },
+  {
     "displayName": "East US STG",
     "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/eastusstg",
     "metadata": {
@@ -1206,6 +1237,28 @@
     },
     "name": "eastus2euap",
     "regionalDisplayName": "(US) East US 2 EUAP",
+    "type": "Region"
+  },
+  {
+    "displayName": "South Central US STG",
+    "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/southcentralusstg",
+    "metadata": {
+      "geography": "Stage (US)",
+      "geographyGroup": "US",
+      "latitude": "29.4167",
+      "longitude": "-98.5",
+      "pairedRegion": [
+        {
+          "id": "/subscriptions/1ac22905-6592-404f-b37c-ef26054fa9da/locations/eastusstg",
+          "name": "eastusstg"
+        }
+      ],
+      "physicalLocation": "Texas",
+      "regionCategory": "Other",
+      "regionType": "Physical"
+    },
+    "name": "southcentralusstg",
+    "regionalDisplayName": "(US) South Central US STG",
     "type": "Region"
   },
   {

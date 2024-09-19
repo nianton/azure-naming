@@ -7,10 +7,12 @@
   "directories": {
     "example": "examples"
   },
-  "dependencies": {},
+  "dependencies": {
+    "azure-naming-generator": "file:"
+  },
   "devDependencies": {
-    "lodash": "~4.17.21",
-    "handlebars": "~4.7.7"
+    "handlebars": "~4.7.7",
+    "lodash": "~4.17.21"
   },
   "scripts": {
     "start": "node main",

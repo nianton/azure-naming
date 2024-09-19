@@ -10,10 +10,12 @@ const sampleOutputFile = 'datafiles/sample.output.json'
 
 // Template files
 const bicepTemplateFile = 'templates/naming.module.bicep.hbs'
+const bicepLibraryTemplateFile = 'templates/naming.lib.bicep.hbs'
 const readmeTemplateFile = 'templates/README.md.hbs'
 
 // Generated files
 const bicepFile = 'dist/naming.module.bicep'
+const bicepLibraryFile = 'dist/naming.lib.bicep'
 const bicepPreviewFile = 'dist/naming.module.preview.bicep'
 const readmeFile = 'README.md'
 
@@ -22,11 +24,11 @@ Handlebars.registerHelper('upper', str => str.toUpperCase())
 try {
     if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'bicep') {
         // Generate the templated files
-        generateBicepModule()
+        generateBicepFiles()
         
         // Commented out as type definitions are not supported in Bicep
         // Keeping it here for future preview features
-        // generateBicepModule(true) 
+        generateBicepFiles(true) 
     }
 
     if (typeof fileToGenerate === 'undefined' || fileToGenerate === 'readme') {
@@ -43,12 +45,15 @@ catch (ex) {
 /**
  * Generates the bicep module file based on the template.
  */
-function generateBicepModule(preview) {
+function generateBicepFiles(preview) {
     if (!fs.existsSync(resourceDefinitionsFile))
         throw new Error(`Resource definition file (${resourceDefinitionsFile}) was not found.`)
 
     if (!fs.existsSync(bicepTemplateFile))
         throw new Error(`Template bicep generation file (${bicepTemplateFile}) was not found.`)    
+
+    if (!fs.existsSync(bicepLibraryTemplateFile))
+        throw new Error(`Template bicep generation file (${bicepLibraryTemplateFile}) was not found.`)    
 
     // Prepare for camel cased property names in bicep
     const definitions = readFileAsJson(resourceDefinitionsFile)
@@ -60,6 +65,7 @@ function generateBicepModule(preview) {
     const resultBicepFile = isPreview ? bicepPreviewFile : bicepFile
 
     generateFile(bicepTemplateFile, templateInput, resultBicepFile)
+    generateFile(bicepLibraryTemplateFile, templateInput, bicepLibraryFile)
 }
 
 /**
