@@ -15,6 +15,10 @@ metadata name = 'Azure Naming function library'
 metadata description = 'Function library to maintain a consistent naming of Azure resources.'
 metadata owner = 'https://github.com/nianton'
 
+// ============================= //
+//  Internal utility functions   //
+// ============================= //
+
 func placeholder() string => '[****]'
 
 @export()
@@ -93,10 +97,20 @@ func nameInner(templatedName string, slug string, maxLength int, delimiterChar s
     ? take(replace(templatedName, placeholder(), slug), maxLength - 1) 
     : take(replace(templatedName, placeholder(), slug), maxLength)
 
+
+// ==================== //
+//  Exported functions  //
+// ==================== //
+
+@export()
+@description('Returns a placeholder string for location')
+func locationPlaceholder() string => '**location**'
+
 @export()
 func subnet(config NamingConfig, index int) string => 
   name(configWithIndex(config, index), 'subnet', 80)
 
+@description('Creates the naming convention base on the configuration for Azure resources')
 @export()
 func createResourceNames(config NamingConfig) object => {
 {{#each definitions}}

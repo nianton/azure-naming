@@ -8,17 +8,18 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2024-09-19T05:23:51.135Z
+ * Generated/built on: 2024-09-19T18:47:25.591Z
  */
 
 metadata name = 'Azure Naming function library'
 metadata description = 'Function library to maintain a consistent naming of Azure resources.'
 metadata owner = 'https://github.com/nianton'
 
-func placeholder() string => '[****]'
+// ============================= //
+//  Internal utility functions   //
+// ============================= //
 
-@export()
-func locationPlaceholder() string => '**location**'
+func placeholder() string => '[****]'
 
 func delimiter(useDashes bool) string => useDashes ? '-' : ''
 
@@ -89,8 +90,8 @@ func configWithIndex(config NamingConfig, index int) NamingConfig => {
   location: config.location
 }
 
-func stringify(array array, delimit string) string =>
-  '${replace(replace(replace(string(array), '["', ''), '"]', ''), '","', delimit)}'
+func stringify(array array, delimiterChar string) string =>
+  '${replace(replace(replace(string(array), '["', ''), '"]', ''), '","', delimiterChar)}'
 
 func createNamingPart(prefixOrSuffix array, useDashes bool, useLowerCase bool) string => 
   empty(prefixOrSuffix) 
@@ -144,10 +145,20 @@ func nameInner(templatedName string, slug string, maxLength int, delimiterChar s
     ? take(replace(templatedName, placeholder(), slug), maxLength - 1) 
     : take(replace(templatedName, placeholder(), slug), maxLength)
 
+
+// ==================== //
+//  Exported functions  //
+// ==================== //
+
+@export()
+@description('Returns a placeholder string for location')
+func locationPlaceholder() string => '**location**'
+
 @export()
 func subnet(config NamingConfig, index int) string => 
   name(configWithIndex(config, index), 'subnet', 80)
 
+@description('Creates the naming convention base on the configuration for Azure resources')
 @export()
 func createResourceNames(config NamingConfig) object => {
   aiSearch: { 
