@@ -1,6 +1,6 @@
 targetScope = 'subscription'
 
-import { NamingOutput } from '../dist/naming.module.bicep'
+import { NamingOutput } from '../../dist/module/naming.module.bicep'
 
 param location string
 param applicationName string
@@ -18,7 +18,7 @@ resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   tags: defaultTags
 }
 
-module naming '../dist/naming.module.bicep' = {
+module naming '../../dist/module/naming.module.bicep' = {
   scope: resourceGroup(rg.name)
   name: 'NamingDeployment'  
   params: {

@@ -1,4 +1,4 @@
-import { NamingOutput } from '../dist/naming.module.bicep'
+import { NamingOutput } from '../../dist/module/naming.module.bicep'
 
 param naming NamingOutput
 param location string = resourceGroup().location

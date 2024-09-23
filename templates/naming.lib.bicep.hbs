@@ -42,6 +42,16 @@ func configWithIndex(config NamingConfig, index int) NamingConfig => {
   location: config.location
 }
 
+func configWithSuffix(config NamingConfig, additionalSuffix array) NamingConfig => {
+  prefix: config.prefix
+  suffix: concat(config.suffix, additionalSuffix)
+  useDashes: config.useDashes
+  useLowerCase: config.useLowerCase
+  uniqueLength: config.uniqueLength
+  uniqueSeed: config.uniqueSeed
+  location: config.location
+}
+
 func stringify(array array, delimit string) string =>
   '${replace(replace(replace(string(array), '["', ''), '"]', ''), '","', delimit)}'
 
@@ -111,6 +121,27 @@ func subnet(config NamingConfig, index int) string =>
   name(configWithIndex(config, index), 'subnet', 80)
 
 @description('Creates the naming convention base on the configuration for Azure resources')
+@export()
+func appService(config NamingConfig, localName string) string =>
+  name(configWithSuffix(config, [localName]), 'app', 60)
+
+@description('Create a naming config defining only the suffix values array.')
+@export()
+func createConfig(suffix array) NamingConfig => {
+  location: resourceGroup().location
+  prefix: []
+  suffix: suffix
+  useDashes: true
+  useLowerCase: true
+  uniqueLength: 6
+  uniqueSeed: resourceGroup().id
+}
+
+@description('Create resource names defining only the suffix values array.')
+@export()
+func createResourceNamesWithSuffix(suffix array) NamingOutput => 
+  createResourceNames(createConfig(suffix))
+
 @export()
 func createResourceNames(config NamingConfig) object => {
 {{#each definitions}}

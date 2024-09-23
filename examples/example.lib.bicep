@@ -1,71 +1,102 @@
+targetScope = 'resourceGroup'
 import * as naming from '../dist/naming.lib.bicep'
 
 param location string = resourceGroup().location
 param applicationName string
 param environment string
+param vnetAddressSpace string = '192.168.100.0/24'
+param tags object = {}
 
-param namingConfig naming.NamingConfig = {
-  location: location
-  suffix: [
-    applicationName
-    environment
-    naming.locationPlaceholder()
-  ]
-  uniqueLength: 6
-  uniqueSeed: resourceGroup().id
-  useDashes: true
-  useLowerCase: true
-  prefix: []
-}
+param timestamp string = utcNow()
+
+param namingConfig naming.NamingConfig = naming.createConfig([
+  applicationName
+  environment
+  naming.locationPlaceholder()
+])
+
+var defaultTags = union(tags, {
+  application: applicationName
+  environment: environment
+  latestDeployment: timestamp
+})
 
 var names = naming.createResourceNames(namingConfig)
 
 var resourceNames = {
-  resourceGroupName: names.resourceGroup.name
+  resourceGroup: names.resourceGroup.name
   appServicePlan: names.appServicePlan.name
-  webApplication: names.appService.nameUnique
+  webApplicationFrontEnd: naming.appService(namingConfig, 'frontend')
+  webApplicationBackend: naming.appService(namingConfig, 'backend')
   storageAccount: names.storageAccount.nameUnique
   vnet: names.virtualNetwork.name
-  subnets: [
-    naming.subnet(namingConfig, 1)
-    naming.subnet(namingConfig, 2)
-    naming.subnet(namingConfig, 3)
-    naming.subnet(namingConfig, 4)
-    naming.subnet(namingConfig, 5)
-  ]
 }
 
-// resource storage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
-//   name: serviceNames.storageAccount
-//   location: location
-//   kind: 'StorageV2'
-//   sku: {
-//     name: 'Standard_LRS'
-//   }
-// }
+resource storage 'Microsoft.Storage/storageAccounts@2021-04-01' = {
+  name: resourceNames.storageAccount
+  location: location
+  kind: 'StorageV2'
+  sku: {
+    name: 'Standard_LRS'
+  }
+  tags: defaultTags
+}
 
-// resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
-//   name: serviceNames.appServicePlan
-//   location: location
-//   sku: {
-//     name: 'F1'
-//     capacity: 1
-//   }
-// }
+resource vnet 'Microsoft.Network/virtualNetworks@2024-01-01' = {
+  name: resourceNames.vnet
+  location: location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [vnetAddressSpace]
+    }
+    subnets: [
+      {
+        name: naming.subnet(namingConfig, 1)
+        properties: {
+          addressPrefix: cidrSubnet(vnetAddressSpace, 27, 0)
+          privateEndpointNetworkPolicies: 'Disabled'
+        }
+      }
+      {
+        name: naming.subnet(namingConfig, 2)
+        properties: {
+          addressPrefix: cidrSubnet(vnetAddressSpace, 27, 1)
+          delegations:[ {
+            name: 'webfarmdelegation'
+            properties: {
+              serviceName: 'Microsoft.Web/serverfarms'
+            }
+          }]
+        }
+      }
+    ]
+  }
+  tags: defaultTags
+}
 
-// resource webApplication 'Microsoft.Web/sites@2018-11-01' = {
-//   name: serviceNames.webApplication
-//   location: location
-//   tags: {
-//     'hidden-related:${resourceGroup().id}/providers/Microsoft.Web/serverfarms/${appServicePlan.name}': 'Resource'
-//   }
-//   properties: {
-//     serverFarmId: appServicePlan.id
-//   }
-// }
+resource appServicePlan 'Microsoft.Web/serverfarms@2020-12-01' = {
+  name: resourceNames.appServicePlan
+  location: location
+  sku: {
+    name: 'P0V3'
+    capacity: 1
+  }
+}
 
-// output storageAccountName string = storage.name
-// output appServiceName string = webApplication.name
-// output appServicePlanName string = appServicePlan.name
+resource webAppFrontEnd 'Microsoft.Web/sites@2023-12-01' = {
+  name: resourceNames.webApplicationFrontEnd
+  location: location
+  tags: {
+    'hidden-related:${resourceGroup().id}/providers/Microsoft.Web/serverfarms/${appServicePlan.name}': 'Resource'
+  }
+  properties: {
+    serverFarmId: appServicePlan.id
+    virtualNetworkSubnetId: resourceId('Microsoft.Network/virtualNetworks/subnets', vnet.name, naming.subnet(namingConfig, 2))
+    vnetRouteAllEnabled: true
+  }
+}
 
+output storageAccountName string = storage.name
+output appServiceName string = webAppFrontEnd.name
+output appServicePlanName string = appServicePlan.name
 output serviceNames object = resourceNames
