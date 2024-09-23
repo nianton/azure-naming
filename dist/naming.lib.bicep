@@ -8,7 +8,7 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2024-09-19T05:23:51.135Z
+ * Generated/built on: 2024-09-23T04:44:10.376Z
  */
 
 metadata name = 'Azure Naming function library'
@@ -89,6 +89,16 @@ func configWithIndex(config NamingConfig, index int) NamingConfig => {
   location: config.location
 }
 
+func configWithSuffix(config NamingConfig, additionalSuffix array) NamingConfig => {
+  prefix: config.prefix
+  suffix: concat(config.suffix, additionalSuffix)
+  useDashes: config.useDashes
+  useLowerCase: config.useLowerCase
+  uniqueLength: config.uniqueLength
+  uniqueSeed: config.uniqueSeed
+  location: config.location
+}
+
 func stringify(array array, delimit string) string =>
   '${replace(replace(replace(string(array), '["', ''), '"]', ''), '","', delimit)}'
 
@@ -147,6 +157,27 @@ func nameInner(templatedName string, slug string, maxLength int, delimiterChar s
 @export()
 func subnet(config NamingConfig, index int) string => 
   name(configWithIndex(config, index), 'subnet', 80)
+
+@export()
+func appService(config NamingConfig, localName string) string =>
+  name(configWithSuffix(config, [localName]), 'app', 60)
+
+@description('Create a naming config defining only the suffix values array.')
+@export()
+func createConfig(suffix array) NamingConfig => {
+  location: resourceGroup().location
+  prefix: []
+  suffix: suffix
+  useDashes: true
+  useLowerCase: true
+  uniqueLength: 6
+  uniqueSeed: resourceGroup().id
+}
+
+@description('Create resource names defining only the suffix values array.')
+@export()
+func createResourceNamesWithSuffix(suffix array) NamingOutput => 
+  createResourceNames(createConfig(suffix))
 
 @export()
 func createResourceNames(config NamingConfig) object => {
