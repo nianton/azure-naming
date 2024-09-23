@@ -122,8 +122,8 @@ func subnet(config NamingConfig, index int) string =>
 
 @description('Creates the naming convention base on the configuration for Azure resources')
 @export()
-func appService(config NamingConfig, localName string) string =>
-  name(configWithSuffix(config, [localName]), 'app', 60)
+func appService(config NamingConfig, suffix string) string =>
+  name(configWithSuffix(config, [suffix]), 'app', 60)
 
 @description('Create a naming config defining only the suffix values array.')
 @export()
