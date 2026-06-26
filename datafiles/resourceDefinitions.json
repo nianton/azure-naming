@@ -600,6 +600,18 @@
     "description": "Container Apps Environment"
   },
   {
+    "name": "container_apps_job",
+    "length": {
+      "min": 2,
+      "max": 32
+    },
+    "regex": "^(?=.{2,32}$)(?!.*--)[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]$",
+    "scope": "resourceGroup",
+    "slug": "caj",
+    "dashes": true,
+    "description": "Container Apps Job"
+  },
+  {
     "name": "container_group",
     "length": {
       "min": 1,

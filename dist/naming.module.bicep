@@ -8,7 +8,7 @@
  * Microsoft naming convention best practices (supports user-defined types and compile time imports)
  * https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming
  * ----------------------------------------------------------------------------
- * Generated/built on: 2024-05-02T13:30:03.233Z
+ * Generated/built on: 2026-06-12T21:37:16.404Z
  */
 
 metadata name = 'Azure Naming module'
@@ -367,6 +367,11 @@ var names = {
     name: endsWith(take(replace(nt, ph, 'cae'), 64), d) ? take(replace(nt, ph, 'cae'), 64-1) : take(replace(nt, ph, 'cae'), 64)
     nameUnique: endsWith(take(replace(nut, ph, 'cae'), 64), d) ? take(replace(nut, ph, 'cae'), 64-1) : take(replace(nut, ph, 'cae'), 64)
     slug: 'cae'
+  }
+  containerAppsJob: { 
+    name: endsWith(take(replace(nt, ph, 'caj'), 32), d) ? take(replace(nt, ph, 'caj'), 32-1) : take(replace(nt, ph, 'caj'), 32)
+    nameUnique: endsWith(take(replace(nut, ph, 'caj'), 32), d) ? take(replace(nut, ph, 'caj'), 32-1) : take(replace(nut, ph, 'caj'), 32)
+    slug: 'caj'
   }
   containerGroup: { 
     name: endsWith(take(replace(nt, ph, 'cg'), 63), d) ? take(replace(nt, ph, 'cg'), 63-1) : take(replace(nt, ph, 'cg'), 63)
@@ -1271,6 +1276,7 @@ type NamingOutput = {
   cognitiveServicesTranslator: ServiceNameType
   containerApps: ServiceNameType
   containerAppsEnvironment: ServiceNameType
+  containerAppsJob: ServiceNameType
   containerGroup: ServiceNameType
   containerRegistry: ServiceNameType
   containerRegistryWebhook: ServiceNameType
